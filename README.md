@@ -26,3 +26,5 @@ modellix-skill/
 - **Docs**: [docs.modellix.ai](https://docs.modellix.ai)
 - **Email**: support@modellix.ai
 - **Discord**: [Community](https://discord.gg/N2FbcB2cZT)
+
+This README.md is automatically updated by [GPTBots.ai](https://gptbots.ai) and [Github Actions](https://github.com/features/actions).
