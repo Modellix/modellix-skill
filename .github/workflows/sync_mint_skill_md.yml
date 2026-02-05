@@ -1,4 +1,4 @@
-name: Sync Skill Doc
+name: Sync Mintlify Skill MD
 
 on:
   schedule:
