@@ -33,7 +33,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
           # Add both potential changes
-          git add modellix/SKILL.md references/REFERENCE.md
+          git add SKILL.md references/REFERENCE.md
           
           # Check if there are any staged changes
           if [[ -n "$(git status --porcelain)" ]]; then
