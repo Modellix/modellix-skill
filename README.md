@@ -1,23 +1,28 @@
 # Modellix Agent Skill
 
-This Agent Skill provides a seamless integration with the Modellix platform, enabling AI agents to leverage a vast array of over 100 generative AI models through a unified API. Agents can perform complex tasks such as generating images and videos from text, transforming existing images, performing virtual try-ons, and much more, all powered by cutting-edge AI models from leading providers.
+An Agent Skill that enables AI agents to access the comprehensive suite of generative AI models offered by Modellix, a unified Model as a Service (MaaS) platform. This skill allows agents to leverage advanced AI capabilities for image and video generation, editing, and more, all through a single, convenient API.
 
 ## What is Modellix?
 
-Modellix is a comprehensive Model-as-a-Service (MaaS) platform offering API access to a diverse collection of generative AI models. It simplifies the integration of advanced AI capabilities for various applications, including:
+[Modellix](https://modellix.ai) is a cutting-edge Model as a Service (MaaS) platform that provides API access to over 100 AI models across various generative AI tasks. It aggregates powerful models from leading providers such as Alibaba, ByteDance, and MiniMax, offering a unified interface for a wide range of creative and productive applications.
 
-*   **Generative AI Models**: Access to 100+ AI models for tasks like image generation, video creation, and image editing.
-*   **Key Capabilities**: Includes Text-to-Image, Image-to-Image transformation, Text-to-Video, Image-to-Video generation, specialized Image Editing operations (like text editing in images, color adjustment, style transfer, object addition/removal, outpainting, background generation, and sketch-to-image conversion), Virtual Try-On, and Image Translation.
-*   **Supported Providers**: Integrates models from Alibaba (Qwen, Wan, Wanx), ByteDance (Seedance, Seedream, Seededit), and MiniMax (Hailuo, MiniMax).
-*   **Asynchronous Processing**: All API calls are asynchronous, returning a `task_id` for status tracking and result retrieval, enabling efficient handling of long-running tasks.
-*   **Transparent Pricing**: Clear pricing structures based on usage units (per image, per second of video).
-*   **Enterprise-Grade Features**: Offers detailed logging, transaction clarity, high availability infrastructure, and SLA operational standards.
-*   **Developer Tools**: Supports MCP integration for documentation search and provides SDKs and examples for various AI development environments.
+Key capabilities include:
+
+*   **Text-to-Image Generation**: Create high-quality images from text prompts using models like Qwen Image, Wan 2.6 T2I, and Seedream series.
+*   **Image-to-Image Transformation**: Edit and transform existing images with text prompts, supporting style transfer, object manipulation, and detail enhancement.
+*   **Text-to-Video Generation**: Generate videos from text descriptions with cinematic quality using models like Seedance 1.5 Pro and Wan 2.6 T2V.
+*   **Image-to-Video Generation**: Convert static images into dynamic video sequences with rich artistic styles and motion using models like Wan 2.6 I2V and Seedance.
+*   **Image Editing Operations**: Perform specialized tasks such as bilingual text editing in images, color adjustment, style transfer, object addition/removal, outpainting, background generation, and sketch-to-image conversion.
+*   **Virtual Try-On and Fashion**: Generate AI virtual try-on effects for clothing applications.
+*   **Image Translation**: Translate text within images across multiple languages using Qwen MT Image.
+*   **Specialized Image Generation**: Create WordArt, convert sketches to images, generate backgrounds, and extend images with outpainting.
+
+Modellix supports asynchronous task processing, transparent pricing, detailed logging, and enterprise-grade reliability, backed by extensive IT service expertise.
 
 ## More Information
 
 *   **Docs**: [docs.modellix.ai](https://docs.modellix.ai)
-*   **Email**: support@modellix.ai
-*   **Discord**: [Community](https://discord.gg/N2FbcB2cZT)
+*   **Support**: [support@modellix.ai](mailto:support@modellix.ai)
+*   **Community**: [Discord](https://discord.gg/N2FbcB2cZT)
 
-This README.md is automatically updated by [GPTBots.ai](https://gptbots.ai) and [Github Actions](https://github.com/features/actions).
+This README.md is automatically generated and updated.
