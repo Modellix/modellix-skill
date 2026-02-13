@@ -1,24 +1,24 @@
 # Modellix Agent Skill
 
-An Agent Skill that enables AI agents to access the comprehensive capabilities of the Modellix platform, a unified Model as a Service (MaaS) offering over 100 AI models for generative AI tasks.
+An Agent Skill that provides seamless access to the comprehensive suite of generative AI models offered by Modellix, a unified Model as a Service (MaaS) platform. This skill empowers AI agents to leverage advanced capabilities for image and video generation, editing, and more, all through a single, consistent API.
 
 ## What is Modellix?
 
-[Modellix](https://modellix.ai) is a powerful Model as a Service (MaaS) platform that provides API access to a vast array of generative AI models from leading providers such as Alibaba, ByteDance, and MiniMax. It empowers agents to perform a wide range of tasks, including:
+[Modellix](https://modellix.ai) is a powerful Model as a Service (MaaS) platform that offers API access to over 100 AI models from leading providers such as Alibaba, ByteDance, and MiniMax. It covers a wide spectrum of generative AI tasks, including:
 
-- **Text-to-Image Generation**: Create high-quality images from text prompts using models like Qwen Image, Wan 2.6 T2I, and Seedream series.
-- **Image-to-Image Transformation**: Edit and transform existing images with text prompts, including style transfer, object manipulation, and color adjustments.
-- **Text-to-Video Generation**: Generate videos from text descriptions with cinematic quality using models like Seedance 1.5 Pro and Wan 2.6 T2V.
-- **Image-to-Video Generation**: Convert static images into dynamic video sequences with motion and animation.
-- **Image Editing Operations**: Perform specialized tasks such as bilingual text editing in images, color enhancement, style transfer, object addition/removal, image outpainting, and background generation.
-- **Virtual Try-On and Fashion**: Generate AI virtual try-on effects for clothing applications.
+- **Text-to-Image Generation**: Create stunning images from text prompts using models like Qwen Image, Wan 2.6 T2I, and Seedream series.
+- **Image-to-Image Transformation**: Edit and transform existing images with text prompts, enabling capabilities like style transfer, object manipulation, and detail enhancement.
+- **Text-to-Video Generation**: Generate high-quality videos from text descriptions with models like Seedance 1.5 Pro and Wan 2.6 T2V.
+- **Image-to-Video Generation**: Convert static images into dynamic video sequences with models like Wan 2.6 I2V and Seedance.
+- **Specialized Image Editing**: Perform advanced operations such as text editing in images (bilingual support), color adjustment, object addition/removal, and image outpainting.
+- **Virtual Try-On and Fashion**: Generate realistic AI virtual try-on effects for clothing applications.
 - **Image Translation**: Translate text within images across multiple languages.
-- **Specialized Image Generation**: Create artistic text (Wordart), convert sketches to images, and generate backgrounds.
+- **Specialized Image Generation**: Create WordArt, convert sketches to images, generate backgrounds, and more.
 
-Modellix supports asynchronous task processing, transparent pricing, detailed logging, and enterprise-grade reliability, backed by extensive IT service expertise.
+Modellix features asynchronous task processing, transparent pricing, detailed logging, and enterprise-grade reliability, backed by extensive IT service expertise.
 
 ## More Information
 
 - **Docs**: [docs.modellix.ai](https://docs.modellix.ai)
-- **Email**: support@modellix.ai
-- **Discord**: [Community](https://discord.gg/N2FbcB2cZT)
+- **Support**: [support@modellix.ai](mailto:support@modellix.ai)
+- **Community**: [Discord](https://discord.gg/N2FbcB2cZT)
