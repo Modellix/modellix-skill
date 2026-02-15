@@ -1,5 +1,5 @@
 ---
-name: Modellix
+name: modellix-skill
 description: Documentation and capabilities reference for Modellix
 metadata:
     mintlify-proj: modellix
