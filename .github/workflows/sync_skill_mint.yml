@@ -21,7 +21,6 @@ jobs:
       - name: Fetch Remote Files
         run: |
           # Ensure target directories exist
-          mkdir -p modellix
           mkdir -p references
           
           # Sync SKILL.md
