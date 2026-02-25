@@ -2,7 +2,7 @@ name: Sync SKILL.md & REFERENCE.md from Mintlify
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # Runs every 6 hours
+    - cron: '0 0 * * *' # Runs every day at 0:00
   workflow_dispatch:      # Allows manual trigger
 
 env:
