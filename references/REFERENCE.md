@@ -43,6 +43,7 @@
 - [Wanx Style Repaint V1](https://docs.modellix.ai/alibaba/wanx-style-repaint-v1.md): The wanx-style-repaint-v1 can perform various stylized redraws on input portrait images, allowing the newly generated images to maintain the original facial features while presenting different artistic painting effects.
 - [WordArt Semantic](https://docs.modellix.ai/alibaba/wordart-semantic.md): The wordart-semantic can creatively deform the edge contours of input text based on prompt content, achieving more creative uses of a font, and returns a black-background white mask image containing the text.
 - [Wordart Texture](https://docs.modellix.ai/alibaba/wordart-texture.md): The wordart-texture can perform creative design on input text content or text images, adding materials and textures to the text based on prompt content to achieve effects such as 3D prominence or scene integration, generating exquisite and stylistically diverse artistic text that can be directly used as text posters when combined with backgrounds.
+- [Introduction](https://docs.modellix.ai/api-reference/introduction.md): How to use model API in Modellix.
 - [Query Task Result](https://docs.modellix.ai/api-reference/query-task-result.md): Query the status and results of an async task by task_id
 - [Claude Code setup](https://docs.modellix.ai/archieved/ai-tools/claude-code.md): Configure Claude Code for your documentation workflow
 - [Cursor setup](https://docs.modellix.ai/archieved/ai-tools/cursor.md): Configure Cursor for your documentation workflow
@@ -77,6 +78,40 @@
 - [Product Updates](https://docs.modellix.ai/changelog/product-updates.md): The product updates and announcements.
 - [Overview](https://docs.modellix.ai/get-started/index.md): Welcome to Modellix.
 - [Pricing](https://docs.modellix.ai/get-started/pricing.md): The pricing of each model in [Modellix](https://modellix.ai).
+- [Kling Avatar](https://docs.modellix.ai/kling/kling-avatar.md): Generates realistic talking-head videos from a reference image and audio input, with precise lip synchronization, expressive gestures, and support for multiple languages.
+- [Kling Image Expansion](https://docs.modellix.ai/kling/kling-image-expansion.md): Intelligently extends images in any direction (up, down, left, right) with prompt-guided content generation, ideal for panorama creation, background extension, and canvas expansion.
+- [Kling Image O1](https://docs.modellix.ai/kling/kling-image-o1.md): A multimodal image generation model that accepts text, up to 10 reference images, and element inputs to produce 1K/2K images with precise style control and multi-reference feature extraction.
+- [Kling Image Recognize](https://docs.modellix.ai/kling/kling-image-recognize.md): Detects and segments image content into 4 categories -- object, head (with hair), face (without hair), and clothing -- returning segmentation masks synchronously.
+- [Kling V1.5 I2I](https://docs.modellix.ai/kling/kling-v1-5-i2i.md): An upgraded image-to-image model with improved realism, better prompt interpretation, and subject/face reference modes for precise character control.
+- [Kling V1.5 I2V](https://docs.modellix.ai/kling/kling-v1-5-i2v.md): The most feature-complete V1.x image-to-video model, adding simple camera motion control alongside motion brush and cfg_scale for precise video generation.
+- [Kling V1.5 T2I](https://docs.modellix.ai/kling/kling-v1-5-t2i.md): An enhanced text-to-image model with improved realism and subject/face reference support for generating consistent character images at 1K resolution.
+- [Kling V1.6 I2V](https://docs.modellix.ai/kling/kling-v1-6-i2v.md): An improved image-to-video model with significantly better prompt adherence and visual quality over V1.5, supporting first-and-last frame control for smooth transitions.
+- [Kling V1.6 MI2V](https://docs.modellix.ai/kling/kling-v1-6-mi2v.md): Transforms up to 4 reference images into a cohesive video sequence with multi-element fusion, enabling character interaction and complex visual narratives.
+- [Kling V1.6 T2V](https://docs.modellix.ai/kling/kling-v1-6-t2v.md): An improved text-to-video model with significantly better prompt adherence and visual quality over V1.5, supporting dual standard/professional generation modes.
+- [Kling V1 I2I](https://docs.modellix.ai/kling/kling-v1-i2i.md): Kuaishou's first-generation AI image model using a diffusion transformer architecture, capable of generating 1K-resolution images with strong prompt adherence and realistic detail.
+- [Kling V1 I2V](https://docs.modellix.ai/kling/kling-v1-i2v.md): Kuaishou's first-generation image-to-video model that animates static images into 5s or 10s videos with motion brush support and adjustable prompt relevance.
+- [Kling V1 T2I](https://docs.modellix.ai/kling/kling-v1-t2i.md): Kuaishou's foundational text-to-image model offering fast, cost-effective 1K image generation with strong prompt adherence and multiple aspect ratios.
+- [Kling V1 T2V](https://docs.modellix.ai/kling/kling-v1-t2v.md): Kuaishou's first-generation text-to-video model generating 5s or 10s clips with camera motion presets (pan, tilt, zoom) and adjustable prompt relevance.
+- [Kling V2.1 I2I](https://docs.modellix.ai/kling/kling-v2-1-i2i.md): The latest cost-efficient image-to-image model offering studio-grade quality with faster rendering and excellent prompt adherence.
+- [Kling V2.1 I2V](https://docs.modellix.ai/kling/kling-v2-1-i2v.md): A cost-efficient image-to-video model with advanced frame control and up to 1080p output, suitable for professional content creation.
+- [Kling V2.1 Master I2V](https://docs.modellix.ai/kling/kling-v2-1-master-i2v.md): The recommended high-quality image-to-video model in the V2.1 series, producing studio-grade 1080p videos with precise start and end frame control.
+- [Kling V2.1 Master T2V](https://docs.modellix.ai/kling/kling-v2-1-master-t2v.md): The V2.1-generation text-to-video model with enhanced rendering quality, improved frame consistency, and studio-grade 1080p output.
+- [Kling V2.1 MI2I](https://docs.modellix.ai/kling/kling-v2-1-mi2i.md): The latest and highest-quality multi-image composition model, delivering superior subject fusion, scene replacement, and style transfer with up to 4 subject images.
+- [Kling V2.1 T2I](https://docs.modellix.ai/kling/kling-v2-1-t2i.md): The latest and highest-quality text-to-image model in the Kling family, delivering state-of-the-art results at up to 2K resolution.
+- [Kling V2.5 Turbo I2V](https://docs.modellix.ai/kling/kling-v2-5-turbo-i2v.md): A speed-optimized image-to-video model delivering cinematic 1080p videos with physics-accurate motion at ~30% lower cost than previous versions.
+- [Kling V2.5 Turbo T2V](https://docs.modellix.ai/kling/kling-v2-5-turbo-t2v.md): A speed-optimized text-to-video model delivering cinematic 1080p videos with physics-accurate motion at ~30% lower cost than previous versions.
+- [Kling V2.6 I2V](https://docs.modellix.ai/kling/kling-v2-6-i2v.md): The first Kling image-to-video model to natively generate synchronized audio and video in a single pass, supporting dialogue, sound effects, and lip-synced speech alongside motion brush.
+- [Kling V2.6 T2V](https://docs.modellix.ai/kling/kling-v2-6-t2v.md): The first Kling text-to-video model to natively generate synchronized audio and video in one pass, including dialogue, ambient sounds, and lip-synced speech.
+- [Kling V2 I2I](https://docs.modellix.ai/kling/kling-v2-i2i.md): A major generational leap in image quality and creativity, featuring enhanced style diversity and significantly improved visual fidelity over V1.5.
+- [Kling V2 Master I2V](https://docs.modellix.ai/kling/kling-v2-master-i2v.md): The V2-generation base image-to-video model delivering cinematic-quality animations with superior temporal coherence and smoother motion transitions.
+- [Kling V2 Master T2V](https://docs.modellix.ai/kling/kling-v2-master-t2v.md): The V2-generation base text-to-video model producing cinematic-quality clips with superior motion realism and temporal coherence.
+- [Kling V2 MI2I](https://docs.modellix.ai/kling/kling-v2-mi2i.md): Combines up to 4 subject images with optional scene and style references into a single cohesive output, supporting subject fusion, scene replacement, and style transfer.
+- [Kling V2 New I2I](https://docs.modellix.ai/kling/kling-v2-new-i2i.md): A refined variant of Kling V2 with updated model weights for improved consistency, sharper details, and better prompt-to-image alignment.
+- [Kling V2 New T2I](https://docs.modellix.ai/kling/kling-v2-new-t2i.md): A refined variant of V2 with updated model weights for sharper details, better consistency, and improved prompt-to-image alignment at up to 2K resolution.
+- [Kling V2 T2I](https://docs.modellix.ai/kling/kling-v2-t2i.md): A next-generation text-to-image model with significantly improved detail and visual fidelity, supporting both 1K and 2K resolutions for professional output.
+- [Kling Video Effects](https://docs.modellix.ai/kling/kling-video-effects.md): Applies 212 preset creative video effects -- including dance, transformation, interaction, and animation styles -- to one or two person images for instant viral content.
+- [Kolors Virtual Try-On V1](https://docs.modellix.ai/kling/kolors-virtual-try-on-v1.md): AI-powered virtual clothing try-on built on the Kolors diffusion model, generating realistic fitting results from a person photo and a single garment image (tops, bottoms, or dresses).
+- [Kolors Virtual Try-On V1-5](https://docs.modellix.ai/kling/kolors-virtual-try-on-v1-5.md): Enhanced virtual try-on model that supports both single garments and top+bottom outfit combinations, delivering higher-quality results with automatic clothing type detection.
 - [Hailuo 02 FL2V](https://docs.modellix.ai/minimax/hailuo-02-fl2v.md): Hailuo 02's FL2V function provides unprecedented creative control by generating dynamic videos between a user-defined start and end frame. This feature not only masters extreme physics and complex transitions but also enables the novel capability to deduce a story leading up to a specified final image.
 - [Hailuo 02 I2V](https://docs.modellix.ai/minimax/hailuo-02-i2v.md): Hailuo 02 masters both text-to-video and image-to-video generation with exceptional instruction following, while setting a new standard in visual realism through its extreme physics simulation.
 - [Hailuo 02 T2V](https://docs.modellix.ai/minimax/hailuo-02-t2v.md): Hailuo 02 masters both text-to-video and image-to-video generation with exceptional instruction following, while setting a new standard in visual realism through its extreme physics simulation.
@@ -93,20 +128,20 @@
 - [MiniMax T2V-01](https://docs.modellix.ai/minimax/minimax-t2v-01.md): MiniMax T2V-01 is a text-to-video model that uniquely delivers professional-level camera movement control, transforming written prompts into cinematic video clips with dynamic shots.
 - [MiniMax T2V-01-Director](https://docs.modellix.ai/minimax/minimax-t2v-01-director.md): T2V-01-Director is a text-to-video AI model that offers precise camera control, allowing users to create professional-looking video clips with cinematic movements through a variety of lens instructions
 - [Agent Skill](https://docs.modellix.ai/ways-to-use/agent-skill.md)
+- [API](https://docs.modellix.ai/ways-to-use/api.md): The steps to use the Modellix models API, including how to get an API key, how to use the API, and how to get the result.
 - [Error Handling](https://docs.modellix.ai/ways-to-use/error-handling.md): Learn about error codes, messages, and best practices for the Prediction API.
 - [MCP](https://docs.modellix.ai/ways-to-use/mcp.md): Modellix Docs MCP Server allows you to search the Modellix documentation in your MCP clients.
-- [Steps](https://docs.modellix.ai/ways-to-use/steps.md): The steps to use the Modellix models API, including how to get an API key, how to use the API, and how to get the result.
 
 ## OpenAPI Specs
 
-- [minimax-t2v](https://docs.modellix.ai/model-api/minimax/minimax-t2v.json)
-- [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
-- [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
-- [minimax-i2i](https://docs.modellix.ai/model-api/minimax/minimax-i2i.json)
 - [kling-t2v](https://docs.modellix.ai/model-api/kling/kling-t2v.json)
 - [kling-t2i](https://docs.modellix.ai/model-api/kling/kling-t2i.json)
 - [kling-i2v](https://docs.modellix.ai/model-api/kling/kling-i2v.json)
 - [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
+- [minimax-t2v](https://docs.modellix.ai/model-api/minimax/minimax-t2v.json)
+- [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
+- [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
+- [minimax-i2i](https://docs.modellix.ai/model-api/minimax/minimax-i2i.json)
 - [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
 - [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
 - [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)

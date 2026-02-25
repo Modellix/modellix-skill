@@ -1,158 +1,196 @@
 ---
 name: Modellix
-description: Documentation and capabilities reference for Modellix
+description: Use when building applications that generate images or videos from text/images, integrating AI models via API, querying async task results, or handling rate limiting and error scenarios. Reach for this skill when users request image/video generation, need to understand API authentication, or troubleshoot API errors.
 metadata:
     mintlify-proj: modellix
     version: "1.0"
 ---
 
-## Capabilities
+# Modellix Skill
 
-Modellix is a unified API platform that enables agents to access 100+ cutting-edge AI models for generative tasks. Agents can generate high-quality images and videos from text prompts, transform images using various editing techniques, convert images to videos, and perform advanced video generation with features like multi-shot narratives, audio dubbing, and frame-based control. The platform provides transparent pricing, comprehensive logging, and enterprise-grade reliability with 15 years of IT service expertise.
+## Product Summary
 
-## Skills
+Modellix is a Model-as-a-Service (MaaS) platform providing unified API access to 100+ AI models for text-to-image, text-to-video, image-to-image, image-to-video, and video editing tasks. Agents use Modellix to submit async generation tasks and retrieve results via REST API. The primary endpoint is `https://api.modellix.ai/api/v1/`. All requests require Bearer token authentication. Key file paths: API keys are managed in the Modellix console at `https://modellix.ai/console/api-key`. Task results are queried via `GET /api/v1/tasks/{task_id}`. Results expire after 24 hours.
 
-### Image Generation
-- **Text-to-Image (T2I)**: Generate images from text prompts using models like Qwen Image Plus, Seedream 4.5, and MiniMax Image-01
-- **Image-to-Image (I2I)**: Transform existing images with text instructions using models like Seedream 4.5 I2I, Wanx Image Edit Plus, and MiniMax Image-01 I2I
-- **Image Editing**: Perform specialized editing tasks including background generation, sketch-to-image conversion, style repainting, and text-based image editing
-- **Artistic Text Generation**: Create stylized text effects with WordArt Semantic (text deformation) and WordArt Texture (material/texture application)
+## When to Use
 
-### Video Generation
-- **Text-to-Video (T2V)**: Create videos from text descriptions using models like Wan 2.6 T2V, Seedance 1.5 Pro, and Hailuo 2.3 T2V
-- **Image-to-Video (I2V)**: Convert static images to dynamic videos with models like Wan 2.6 I2V, Seedance 1.5 Pro I2V, and Hailuo 2.3 I2V
-- **First-and-Last-Frame Video (KF2V)**: Generate smooth videos by providing starting and ending frame images with Wan 2.2 KF2V Flash and Wanx 2.1 KF2V Plus
-- **Multi-Shot Narratives**: Create complex video sequences with multiple scenes using Wan 2.6 and Seedance 1.5 Pro
-- **Audio Integration**: Add automatic dubbing or upload custom audio files to videos (Wan 2.5+, Seedance 1.5 Pro)
-- **Professional Camera Control**: Generate cinematic videos with precise camera movements using MiniMax T2V-01-Director and similar models
-- **Character Consistency**: Maintain consistent character identity across video frames using MiniMax S2V-01
+Reach for this skill when:
+- A user requests image or video generation from text or images
+- You need to integrate AI model APIs into an application
+- You're building async task submission and polling workflows
+- You encounter API authentication errors (401) or rate limiting (429)
+- You need to understand task status transitions (pending → processing → success/failed)
+- You're debugging API parameter validation or response parsing
+- You need to implement exponential backoff retry logic
+- You're managing concurrent task limits or team rate limits
 
-### API Operations
-- **Async Task Submission**: Submit generation requests asynchronously via POST endpoints
-- **Task Status Querying**: Check task progress and retrieve results using `GET /api/v1/tasks/{task_id}`
-- **Result Retrieval**: Access generated resources (images/videos) with metadata including dimensions, format, and generation timestamps
-- **Request Logging**: Full-stack logging of all API calls including input parameters, output, timestamps, response time, and cost consumption
+## Quick Reference
 
-### Authentication & Management
-- **API Key Management**: Create, view, and delete API keys from the Modellix console
-- **Bearer Token Authentication**: Use `Authorization: Bearer YOUR_API_KEY` header for all requests
-- **Rate Limiting**: Global limit of 1000 requests/minute with per-API-key limits of 100 requests/minute
-- **Concurrent Task Management**: Control concurrent task execution with team-level limits and client-side semaphore control
+### API Endpoint Structure
+```
+POST https://api.modellix.ai/api/v1/{type}/{provider}/{model_id}/async
+GET https://api.modellix.ai/api/v1/tasks/{task_id}
+```
 
-## Workflows
+### Supported Business Types
+| Type | Use Case |
+|------|----------|
+| `text-to-image` | Generate images from text prompts |
+| `text-to-video` | Generate videos from text prompts |
+| `image-to-image` | Edit, translate, or transform images |
+| `image-to-video` | Animate static images into videos |
 
-### Basic Image Generation Workflow
-1. Register and log in to Modellix console
-2. Navigate to API Key section and create a new API key
-3. Submit a POST request to the text-to-image endpoint with your prompt:
-   ```bash
-   curl --request POST \
-     --url https://api.modellix.ai/api/v1/text-to-image/alibaba/qwen-image-plus/async \
-     --header 'Authorization: Bearer <your_api_key>' \
-     --header 'Content-Type: application/json' \
-     --data '{"prompt": "A cute cat playing in a garden on a sunny day"}'
-   ```
-4. Receive a `task_id` in the response
-5. Query the task result using the task_id:
-   ```bash
-   curl --request GET \
-     --url https://api.modellix.ai/api/v1/tasks/{task_id} \
-     --header 'Authorization: Bearer <your_api_key>'
-   ```
-6. Extract the generated image URL from the `result.resources` array
-7. Download and use the image (results are retained for 24 hours)
+### Authentication
+All requests require the header:
+```
+Authorization: Bearer YOUR_API_KEY
+```
+API keys are created in the Modellix console and displayed only once—save immediately.
 
-### Video Generation with Audio Workflow
-1. Prepare a text prompt describing the desired video
-2. Submit a POST request to a video generation endpoint (e.g., Wan 2.6 T2V or Seedance 1.5 Pro)
-3. Include optional audio parameters for automatic dubbing or custom audio file upload
-4. Receive task_id and poll for completion
-5. Retrieve the generated video with integrated audio from the results
-6. Extract video URL and metadata (duration, resolution, format)
+### Task Status Values
+| Status | Meaning |
+|--------|---------|
+| `pending` | Task queued, waiting to process |
+| `processing` | Task actively running |
+| `success` | Task completed, results available in `result` object |
+| `failed` | Task failed, check error details |
 
-### Image-to-Video Transformation Workflow
-1. Prepare a source image and text prompt describing the desired motion/transformation
-2. Submit POST request to an I2V endpoint with image URL/data and prompt
-3. For frame-based control, provide both first and last frame images to KF2V models
-4. Poll task status until completion
-5. Retrieve the generated video with smooth transitions between frames
-6. Download video within the 24-hour retention window
+### Response Structure
+```json
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "status": "success",
+    "task_id": "task-abc123",
+    "model_id": "qwen-image-plus",
+    "duration": 3500,
+    "result": {
+      "resources": [
+        {
+          "url": "https://cdn.example.com/images/abc123.png",
+          "type": "image",
+          "width": 1024,
+          "height": 1024,
+          "format": "png",
+          "role": "primary"
+        }
+      ],
+      "metadata": { "image_count": 1 },
+      "extensions": { "submit_time": "2024-01-01T10:00:00Z" }
+    }
+  }
+}
+```
 
-### Error Handling Workflow
-1. Check HTTP status code and error response format
-2. Parse error message for category (e.g., "Invalid parameters", "Authentication failed", "Rate limit exceeded")
-3. For 400 errors: Fix parameters and retry
-4. For 401 errors: Verify API key and header format
-5. For 429 errors: Check `X-RateLimit-Reset` header and implement exponential backoff
-6. For 500/503 errors: Retry with exponential backoff (max 3 retries)
-7. Log request timestamp, parameters, error code, and complete message for debugging
+### Timeout Recommendations
+| Task Type | Timeout |
+|-----------|---------|
+| Text-to-image submission | 30–60 seconds |
+| Text-to-video submission | 60–120 seconds |
+| Task query | 10–30 seconds |
 
-## Integration
+### Rate Limit Headers
+When rate limited (429), check response headers:
+```
+X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 0
+X-RateLimit-Reset: 1704067260
+```
 
-### MCP (Model Context Protocol) Integration
-- Connect Modellix Docs MCP server at `https://docs.modellix.ai/mcp` to AI applications
-- Enables AI agents to search Modellix documentation directly within coding environments
-- Compatible with Cursor, Claude Desktop, and other MCP clients
-- Supports filter parameters for version, language, API reference only, and code examples
+## Decision Guidance
 
-### Agent Skills Integration
-- Install Modellix Skill using `npx skills add https://github.com/Modellix/modellix-skill`
-- Available for multiple agent platforms: Claude Code, Cursor, Codex, Antigravity, Gemini CLI, OpenCode, GitHub Copilot
-- Alternatively install from Smithery: `npx @smithery/cli@latest skill add modellix/modellix-skill`
-- Agents automatically leverage Modellix capabilities for development tasks
+### When to Use Async vs Polling
+Modellix only offers async endpoints. Always:
+1. Submit task with POST to `/async` endpoint
+2. Receive `task_id` immediately
+3. Poll `GET /tasks/{task_id}` until status is `success` or `failed`
 
-### OpenAI Integration
-- Use remote MCP servers with OpenAI models via the `mcp` tool type
-- Configure server URL as `https://docs.modellix.ai/mcp`
-- Set `require_approval` to "never" for seamless integration
-- Models can access Modellix documentation and capabilities during response generation
+### When to Retry vs Fail
+| Error Code | Retryable? | Action |
+|-----------|-----------|--------|
+| 400 | ❌ No | Fix parameters (missing required fields, invalid format) |
+| 401 | ❌ No | Verify API key format and validity |
+| 404 | ❌ No | Check task_id exists and hasn't expired (24h limit) |
+| 429 | ✅ Yes | Use exponential backoff; check `X-RateLimit-Reset` |
+| 500 | ✅ Yes | Retry after 1–4 seconds (max 3 retries) |
+| 503 | ✅ Yes | Retry with exponential backoff; service temporarily unavailable |
 
-### Provider Ecosystem
-- Integrates models from Alibaba (Qwen, Wanx, Wan), ByteDance (Seedream, Seedance), MiniMax (Hailuo, Image-01), and others
-- Unified API abstracts provider differences
-- Automatic failover and circuit breaker protection for provider unavailability
+### When to Use Concurrency Control
+- Team concurrent task limit: typically 3 tasks
+- If you hit 429 with "Concurrent limit exceeded", wait for running tasks to complete
+- Implement semaphore or queue to limit concurrent requests
+- Monitor `X-RateLimit-Remaining` and throttle proactively when < 20% quota remains
 
-## Context
+## Workflow
 
-### Model Categories & Providers
-- **Alibaba**: Qwen Image series, Wanx/Wan video models, WordArt text effects
-- **ByteDance**: Seedream image generation, Seedance video generation, SeedEdit image editing
-- **MiniMax**: Hailuo video generation, Image-01 multimodal models, T2V-01 with camera control, S2V-01 for character consistency
+### 1. Submit a Generation Task
+1. Identify the model and business type (e.g., `text-to-image`, `alibaba`, `qwen-image-plus`)
+2. Construct the request body with required parameters (e.g., `prompt` for text-to-image)
+3. POST to `/api/v1/{type}/{provider}/{model_id}/async` with `Authorization: Bearer {key}`
+4. Parse response: extract `task_id` from `data.task_id`
+5. Store `task_id` for later polling
 
-### Pricing Model
-- **Image generation**: Charged per image (USD/img)
-- **Video generation**: Charged per second of video duration (USD/sec)
-- Transparent pricing with granular unit costs for different models and parameters
-- More competitive rates than official pricing for select core models
+### 2. Poll Task Status
+1. Wait 1–5 seconds (task processing time varies)
+2. GET `/api/v1/tasks/{task_id}` with same API key
+3. Check `data.status`:
+   - If `pending` or `processing`: wait and retry
+   - If `success`: extract results from `data.result.resources`
+   - If `failed`: log error and handle failure
+4. Repeat until terminal state (success/failed)
 
-### Rate Limiting & Quotas
-- Global: 1000 requests/minute
-- Per API Key: 100 requests/minute
-- Per Model: Subject to provider limitations
-- Team-level concurrent task limits (typically 3 concurrent tasks)
-- Response headers include `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Reset`
+### 3. Extract and Use Results
+1. Access generated resources in `data.result.resources` array
+2. Each resource has `url`, `type` (image/video), `width`, `height`, `format`, `role`
+3. Download or use the URL immediately—results expire after 24 hours
+4. Store results in your system before expiration
 
-### Response Format
-- Success responses: `code: 0` with HTTP 200
-- Error responses: `code` equals HTTP status code (400, 401, 404, 429, 500, 503)
-- All responses include `message` field with category and details
-- Generated resources in `result.resources` array with URL, type, dimensions, format, and role
-- Metadata includes image count, request ID, submission time, and completion time
+### 4. Handle Errors
+1. Check `code` field: 0 = success, non-zero = error
+2. Parse `message` field for category and detail (format: `"Category: detail"`)
+3. If retryable (429, 500, 503): implement exponential backoff
+4. If non-retryable (400, 401, 404): fix the request and resubmit
+5. Log full error response for debugging
 
-### Task Management
-- All generation requests are asynchronous
-- Tasks return immediately with `task_id` for polling
-- Results retained for 24 hours after generation
-- Task status values: pending, processing, success, failed
-- Duration field indicates milliseconds from submission to completion
+## Common Gotchas
 
-### Enterprise Features
-- AWS Singapore infrastructure with redundant deployment
-- Rolling upgrades and strict SLA operational standards
-- Full request/response logging for debugging and business analysis
-- Financial-grade transaction ledger system with real-time cost tracking
-- Trilingual support (Mandarin, Cantonese, English) via email and Discord community
-- 15-year enterprise IT service expertise backing the platform
+- **API key displayed only once**: Save immediately after creation. If lost, generate a new key.
+- **Results expire after 24 hours**: Download or persist results before expiration. Querying an expired task returns 404.
+- **Bearer token format required**: Use `Authorization: Bearer YOUR_KEY`, not `Authorization: YOUR_KEY` or other formats. Missing or malformed headers return 401.
+- **Task IDs are unique per API key**: A task submitted with key A cannot be queried with key B. Verify you're using the same key for submission and polling.
+- **Async-only API**: There is no synchronous endpoint. Always submit, receive task_id, then poll. Don't expect immediate results.
+- **Concurrent task limits are team-wide**: All API keys under the same team share the concurrent quota. If one key hits the limit, other keys in the team are also blocked.
+- **Rate limits reset per minute**: `X-RateLimit-Reset` is a Unix timestamp. Calculate wait time as `reset_time - current_time`.
+- **Missing required parameters return 400**: Each model has required fields (e.g., `prompt` for text-to-image). Check the model's API reference page for exact parameters.
+- **Parameter format errors are strict**: Size must be `"width*height"` (e.g., `"1024*1024"`), not `"1024"` or `"1024x1024"`. Invalid format returns 400.
+- **Polling too frequently wastes quota**: Implement exponential backoff (1s, 2s, 4s) rather than polling every 100ms.
+- **Task status transitions are one-way**: A task never reverts from `processing` to `pending`. If status seems stuck, check if task_id is correct or if it expired.
+- **Provider and model_id are case-sensitive**: Use exact names from the API reference (e.g., `alibaba`, `qwen-image-plus`). Typos return 404.
+
+## Verification Checklist
+
+Before submitting work:
+- [ ] API key is valid and saved securely (not in version control)
+- [ ] Authorization header uses exact format: `Authorization: Bearer {key}`
+- [ ] Request URL matches the pattern: `/api/v1/{type}/{provider}/{model_id}/async`
+- [ ] Required parameters are present (check model's API reference page)
+- [ ] Parameter formats are correct (e.g., size as `"width*height"`)
+- [ ] Task submission returns `code: 0` and includes `task_id`
+- [ ] Polling loop handles all task statuses: pending, processing, success, failed
+- [ ] Error handling distinguishes retryable (429, 500, 503) from non-retryable (400, 401, 404)
+- [ ] Exponential backoff is implemented for retries
+- [ ] Results are downloaded/persisted before 24-hour expiration
+- [ ] Rate limit headers are monitored; proactive throttling is in place
+- [ ] Concurrent task limit is respected (typically 3 per team)
+- [ ] Timeout values are set appropriately (30–60s for images, 60–120s for videos)
+
+## Resources
+
+- **Comprehensive navigation**: https://docs.modellix.ai/llms.txt
+- **API Usage Guide**: https://docs.modellix.ai/ways-to-use/api
+- **Error Handling & Best Practices**: https://docs.modellix.ai/ways-to-use/error-handling
+- **Model API Reference**: https://docs.modellix.ai/api-reference/introduction
 
 ---
 
