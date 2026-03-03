@@ -7,6 +7,15 @@
 - [AI Try-On Plus](https://docs.modellix.ai/alibaba/ai-try-on-plus.md): Compared to the aitryon, there are improvements in image clarity, clothing texture details, and logo restoration effects, but the generation time is longer, making it suitable for scenarios where timeliness is not a high priority.
 - [AI Try-On Refiner](https://docs.modellix.ai/alibaba/ai-try-on-refiner.md): Perform secondary generation on the effect images created by AI virtual try-on, outputting finely polished virtual try-on effect images with higher fidelity.
 - [Image Outpainting](https://docs.modellix.ai/alibaba/image-outpainting.md): The image-out-painting allows for free image extension, supporting image rotation and expansion through both expansion coefficient and pixel count methods. Users can control image expansion by specifying width, height ratios or pixel values for left, right, top, and bottom extensions. Suitable for creative entertainment, assisted drawing, graphic design, and post-production in film and television.
+
+**Parameter Combination Rules:**
+1. **Aspect Ratio Expansion Only**: Set `output_ratio` to a non-empty value (e.g., "4:3", "16:9")
+2. **Scale Expansion Only**: Set `x_scale` or `y_scale` (at least one > 1.0), can be used individually or together
+3. **Pixel Expansion Only**: Set `left_offset`, `right_offset`, `top_offset`, or `bottom_offset` (at least one > 0), can be used individually or together
+4. **Rotation Only**: Set `angle` to a value in [1, 359] range (excluding 90, 180, 270 for pure rotation)
+5. **Rotation + Expansion**: Set `angle` and combine with any of the above expansion methods. If multiple expansion parameters are set, they take effect according to priority.
+
+**Parameter Priority**: `output_ratio` > `x_scale`/`y_scale` > `top_offset`/`bottom_offset`/`left_offset`/`right_offset`
 - [Qwen Image](https://docs.modellix.ai/alibaba/qwen-image.md): The qwen-image excels in text rendering, particularly for Chinese text. Currently, `qwen-image-plus` and `qwen-image` have the same capabilities, but `qwen-image-plus` is more cost-effective.
 - [Qwen Image Edit](https://docs.modellix.ai/alibaba/qwen-image-edit.md): The qwen-image-edit supports precise bilingual Chinese-English text editing, color adjustment, detail enhancement, style transfer, object addition and removal, and other operations, enabling complex image and text editing.
 - [Qwen Image Edit Plus](https://docs.modellix.ai/alibaba/qwen-image-edit-plus.md): The qwen-image-edit supports precise bilingual Chinese-English text editing, color adjustment, detail enhancement, style transfer, object addition and removal, and other operations, enabling complex image and text editing.
@@ -134,6 +143,8 @@
 
 ## OpenAPI Specs
 
+- [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
+- [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
 - [kling-t2v](https://docs.modellix.ai/model-api/kling/kling-t2v.json)
 - [kling-t2i](https://docs.modellix.ai/model-api/kling/kling-t2i.json)
 - [kling-i2v](https://docs.modellix.ai/model-api/kling/kling-i2v.json)
@@ -147,9 +158,7 @@
 - [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
 - [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
-- [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
 - [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
-- [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
 - [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
 - [openapi](https://docs.modellix.ai/api-reference/openapi.json)
 
