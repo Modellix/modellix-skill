@@ -68,7 +68,7 @@
 - [Introduction](https://docs.modellix.ai/archieved/introduction.md): Example section for showcasing API endpoints
 - [API Overview](https://docs.modellix.ai/archieved/overview.md): Comprehensive overview of the Prediction API including endpoints, authentication, and response formats
 - [Quickstart](https://docs.modellix.ai/archieved/quickstart.md): Start building awesome documentation in minutes
-- [null](https://docs.modellix.ai/archieved/snippets/snippet-intro.md)
+- [Snippet intro](https://docs.modellix.ai/archieved/snippets/snippet-intro.md)
 - [Seedance 1.0 Lite I2V](https://docs.modellix.ai/bytedance/seedance-1-0-lite-i2v.md): ByteDance's small-parameter version of the video generation model achieves excellent video generation quality while significantly increasing generation speed, balancing both effect and efficiency.
 - [Seedance 1.0 Lite T2V](https://docs.modellix.ai/bytedance/seedance-1-0-lite-t2v.md): ByteDance's small-parameter version of the video generation model achieves excellent video generation quality while significantly increasing generation speed, balancing both effect and efficiency.
 - [Seedance 1.0 Pro Fast I2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-fast-i2v.md): Seedance 1.0 pro fast, inheriting the core advantages of the Seedance 1.0 pro model, has a 3x faster generation speed and a 72% lower price. It is a video generation model that achieves an excellent balance among quality, speed, and cost.
@@ -166,3 +166,6 @@
 
 - [Support](mailto:support@modellix.ai)
 - [Community](https://discord.gg/N2FbcB2cZT)
+
+
+Built with [Mintlify](https://mintlify.com).
