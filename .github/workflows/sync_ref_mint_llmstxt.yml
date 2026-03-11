@@ -1,4 +1,4 @@
-name: Sync SKILL.md & REFERENCE.md from Mintlify
+name: Sync REFERENCE.md from Mintlify llms.txt
 
 on:
   schedule:
@@ -23,9 +23,6 @@ jobs:
           # Ensure target directories exist
           mkdir -p references
           
-          # Sync SKILL.md
-          curl -L -s -o "SKILL.md" "${{ env.DOCS_BASE_URL }}/skill.md"
-          
           # Sync REFERENCE.md
           curl -L -s -o "references/REFERENCE.md" "${{ env.DOCS_BASE_URL }}/llms.txt"
 
@@ -34,13 +31,13 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Add both potential changes
-          git add SKILL.md references/REFERENCE.md
+          # Add changes
+          git add references/REFERENCE.md
           
           # Check if there are any staged changes
           if [[ -n "$(git status --porcelain)" ]]; then
             git commit -m "chore: sync docs from remote source"
             git push
           else
-            echo "No changes detected in either file, skipping commit."
+            echo "No changes detected, skipping commit."
           fi
