@@ -1,6 +1,10 @@
 ---
 name: modellix
 description: Integrate Modellix's unified API for AI image and video generation into applications. Use this skill whenever the user wants to generate images from text, create videos from text or images, edit images, do virtual try-on, or call any Modellix model API. Also trigger when the user mentions Modellix, model-as-a-service for media generation, or needs to work with providers like Qwen, Wan, Seedream, Seedance, Kling, Hailuo, or MiniMax through a unified API.
+env:
+  - name: MODELLIX_API_KEY
+    description: API key for authenticating with the Modellix REST API. Create one at https://modellix.ai/console/api-key.
+    required: true
 metadata:
     mintlify-proj: modellix
     version: "2.0"
