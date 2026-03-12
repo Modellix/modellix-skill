@@ -1,5 +1,5 @@
 ---
-name: Modellix
+name: modellix
 description: Integrate Modellix's unified API for AI image and video generation into applications. Use this skill whenever the user wants to generate images from text, create videos from text or images, edit images, do virtual try-on, or call any Modellix model API. Also trigger when the user mentions Modellix, model-as-a-service for media generation, or needs to work with providers like Qwen, Wan, Seedream, Seedance, Kling, Hailuo, or MiniMax through a unified API.
 metadata:
     mintlify-proj: modellix
@@ -55,11 +55,11 @@ POST https://api.modellix.ai/api/v1/{type}/{provider}/{model_id}/async
 
 **Path parameters:**
 
-| Parameter  | Description | Examples |
-|------------|-------------|----------|
-| `type`     | Task type   | text-to-image, text-to-video, image-to-image, image-to-video |
-| `provider` | Model provider | alibaba, bytedance, kling, minimax |
-| `model_id` | Model identifier | qwen-image-plus, seedream-4.5-t2i, kling-v2.1-t2i |
+| Parameter  | Description      | Examples                                                     |
+| ---------- | ---------------- | ------------------------------------------------------------ |
+| `type`     | Task type        | text-to-image, text-to-video, image-to-image, image-to-video |
+| `provider` | Model provider   | alibaba, bytedance, kling, minimax                           |
+| `model_id` | Model identifier | qwen-image-plus, seedream-4.5-t2i, kling-v2.1-t2i            |
 
 **Example — generate an image with Qwen Image Plus:**
 
@@ -98,11 +98,11 @@ curl -X GET https://api.modellix.ai/api/v1/tasks/{task_id} \
 
 **Task statuses:**
 
-| Status    | Meaning                  | Action |
-|-----------|--------------------------|--------|
-| `pending` | Queued or processing     | Wait 2-5 seconds, poll again |
-| `success` | Generation complete      | Extract results from `data.result` |
-| `failed`  | Generation failed        | Check error message |
+| Status    | Meaning              | Action                             |
+| --------- | -------------------- | ---------------------------------- |
+| `pending` | Queued or processing | Wait 2-5 seconds, poll again       |
+| `success` | Generation complete  | Extract results from `data.result` |
+| `failed`  | Generation failed    | Check error message                |
 
 **Successful result example:**
 
@@ -167,14 +167,14 @@ All errors follow a unified format:
 
 The `code` field equals the HTTP status code. The `message` contains a category and detail separated by `: `.
 
-| HTTP Status | Description | Common Scenarios | Retryable |
-|-------------|-------------|------------------|-----------|
-| 400 | Bad Request | Missing or invalid parameters | No — fix parameters first |
-| 401 | Unauthorized | Invalid or missing API key | No — provide a valid key |
-| 404 | Not Found | Task ID or model not found | No — check resource ID |
-| 429 | Too Many Requests | Rate or concurrency limit exceeded | Yes — use exponential backoff |
-| 500 | Internal Server Error | Unexpected server error | Yes — retry up to 3 times |
-| 503 | Service Unavailable | Provider temporarily down | Yes — retry with backoff |
+| HTTP Status | Description           | Common Scenarios                   | Retryable                     |
+| ----------- | --------------------- | ---------------------------------- | ----------------------------- |
+| 400         | Bad Request           | Missing or invalid parameters      | No — fix parameters first     |
+| 401         | Unauthorized          | Invalid or missing API key         | No — provide a valid key      |
+| 404         | Not Found             | Task ID or model not found         | No — check resource ID        |
+| 429         | Too Many Requests     | Rate or concurrency limit exceeded | Yes — use exponential backoff |
+| 500         | Internal Server Error | Unexpected server error            | Yes — retry up to 3 times     |
+| 503         | Service Unavailable   | Provider temporarily down          | Yes — retry with backoff      |
 
 ## Implementation Patterns
 
