@@ -1,27 +1,43 @@
 # Modellix Agent Skill
 
-This Agent Skill provides seamless integration with the Modellix platform, enabling AI agents to leverage a comprehensive suite of over 100 generative AI models for a wide range of creative and analytical tasks.
+An Agent Skill for integrating [Modellix](https://modellix.ai) — a unified Model-as-a-Service (MaaS) platform providing REST API access to 100+ AI models for image and video generation.
 
-## What is Modellix?
+## What It Does
 
-[Modellix](https://modellix.ai) is a unified Model as a Service (MaaS) platform that offers API access to a vast collection of cutting-edge AI models. It empowers agents to perform tasks such as generating high-quality images from text, creating videos from text or images, editing existing images with precision, translating text within images, and executing virtual try-on functionalities. The platform is built for enterprise-grade reliability, featuring asynchronous task processing, transparent pricing, detailed logging, and robust support backed by extensive IT service expertise.
+This skill guides AI agents through the Modellix API workflow:
 
-Key capabilities include:
+1. **Obtain an API Key** — directs users to the Modellix console
+2. **Find the Right Model** — searches the bundled model catalog (`references/REFERENCE.md`) and fetches model-specific API docs
+3. **Submit Async Tasks** — constructs REST API calls to `POST /api/v1/{type}/{provider}/{model_id}/async`
+4. **Poll for Results** — queries task status via `GET /api/v1/tasks/{task_id}` with exponential backoff
+5. **Handle Results** — extracts generated content URLs from the response
 
-*   **Text-to-Image Generation**: Utilizing models like Qwen Image, Wan 2.6 T2I, and Seedream series to create diverse images from text prompts.
-*   **Image-to-Image Transformation**: Editing and transforming images with text prompts, including style transfer, object manipulation, and color adjustments.
-*   **Text-to-Video Generation**: Producing cinematic-quality videos from text descriptions with advanced features like multi-shot narratives and custom audio integration.
-*   **Image-to-Video Generation**: Converting static images into dynamic video sequences with motion and animation.
-*   **Specialized Image Editing**: Performing tasks such as bilingual text editing in images, outpainting, background generation, and sketch-to-image conversion.
-*   **Virtual Try-On and Fashion**: Generating realistic virtual try-on effects for clothing applications.
-*   **Image Translation**: Translating text within images across multiple languages.
+## Supported Task Types
 
-Modellix supports asynchronous task processing, ensuring efficient handling of long-running generation tasks. Pricing is transparent and based on usage units (per image or per second of video).
+| Type | Description |
+|------|-------------|
+| text-to-image | Generate images from text prompts |
+| image-to-image | Edit or transform images with text instructions |
+| text-to-video | Create videos from text descriptions |
+| image-to-video | Convert static images into video sequences |
 
-## More Information
+## Providers
 
-*   **Docs**: [docs.modellix.ai](https://docs.modellix.ai)
-*   **Support**: [support@modellix.ai](mailto:support@modellix.ai)
-*   **Community**: [Discord](https://discord.gg/N2FbcB2cZT)
+Alibaba (Qwen, Wan, Wanx), ByteDance (Seedream, Seedance, SeedEdit), Kling, MiniMax (Hailuo)
 
-This README.md is automatically updated by [GPTBots.ai](https://gptbots.ai) and [Github Actions](https://github.com/features/actions).
+## Project Structure
+
+```
+skill/
+├── SKILL.md                  # Skill instructions
+└── references/
+    └── REFERENCE.md          # Model catalog with API doc links
+```
+
+## Links
+
+- **Docs**: [docs.modellix.ai](https://docs.modellix.ai)
+- **API Guide**: [REST API](https://docs.modellix.ai/ways-to-use/api)
+- **Pricing**: [Pricing](https://docs.modellix.ai/get-started/pricing)
+- **Support**: [support@modellix.ai](mailto:support@modellix.ai)
+- **Community**: [Discord](https://discord.gg/N2FbcB2cZT)
