@@ -129,6 +129,10 @@ curl -X GET https://api.modellix.ai/api/v1/tasks/{task_id} \
       "metadata": {
         "image_count": 1,
         "request_id": "req-123456"
+      },
+      "extensions": {
+        "submit_time": "2024-01-01T10:00:00Z",
+        "end_time": "2024-01-01T10:00:03Z"
       }
     }
   }
@@ -163,22 +167,14 @@ All errors follow a unified format:
 
 The `code` field equals the HTTP status code. The `message` contains a category and detail separated by `: `.
 
-**Retryable vs non-retryable errors:**
-
-| Code | Retryable | Strategy |
-|------|-----------|----------|
-| 400  | No  | Fix request parameters |
-| 401  | No  | Check API key and `Authorization: Bearer <token>` format |
-| 402  | No  | Insufficient balance — recharge account |
-| 404  | No  | Verify task_id or model_id exists |
-| 429  | Yes | Exponential backoff; check `X-RateLimit-Reset` header |
-| 500  | Yes | Retry up to 3 times with backoff |
-| 503  | Yes | Retry with longer backoff — provider temporarily down |
-
-For 429 errors, read the response headers:
-- `X-RateLimit-Limit` — max requests per minute
-- `X-RateLimit-Remaining` — remaining quota
-- `X-RateLimit-Reset` — Unix timestamp when limit resets
+| HTTP Status | Description | Common Scenarios | Retryable |
+|-------------|-------------|------------------|-----------|
+| 400 | Bad Request | Missing or invalid parameters | No — fix parameters first |
+| 401 | Unauthorized | Invalid or missing API key | No — provide a valid key |
+| 404 | Not Found | Task ID or model not found | No — check resource ID |
+| 429 | Too Many Requests | Rate or concurrency limit exceeded | Yes — use exponential backoff |
+| 500 | Internal Server Error | Unexpected server error | Yes — retry up to 3 times |
+| 503 | Service Unavailable | Provider temporarily down | Yes — retry with backoff |
 
 ## Implementation Patterns
 
@@ -260,7 +256,7 @@ Before shipping a Modellix integration:
 - [ ] Task submission returns valid `task_id` (check `code == 0`)
 - [ ] Polling handles all statuses: `pending`, `success`, `failed`
 - [ ] Exponential backoff implemented for polling and retries
-- [ ] Retryable (429/500/503) vs non-retryable (400/401/402/404) errors handled differently
+- [ ] Retryable (429/500/503) vs non-retryable (400/401/404) errors handled differently
 - [ ] Results downloaded/stored before 24-hour expiration
 - [ ] Concurrent task limit respected (semaphore or queue)
 - [ ] Appropriate timeouts set (30-60s for images, 60-120s for videos)
@@ -269,6 +265,5 @@ Before shipping a Modellix integration:
 
 - **Model Catalog**: Read `references/REFERENCE.md` to find available models and their doc page URLs
 - **API Usage Guide**: https://docs.modellix.ai/ways-to-use/api
-- **Error Handling**: https://docs.modellix.ai/ways-to-use/error-handling
 - **Pricing**: https://docs.modellix.ai/get-started/pricing
 - **Full Doc Index**: https://docs.modellix.ai/llms.txt
