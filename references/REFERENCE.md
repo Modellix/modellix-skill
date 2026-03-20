@@ -2,18 +2,12 @@
 
 ## Docs
 
-- [AI Try-On](https://docs.modellix.ai/alibaba/ai-try-on.md): A virtual try-on image generation model that generates try-on images based on portrait photos and clothing images.
-- [AI Try-On Parsing V1](https://docs.modellix.ai/alibaba/ai-try-on-parsing-v1.md): The aitryon-parsing-v1 supports segmentation of model images and clothing images, and can be used for pre-processing and post-processing of AI fitting room images.
-- [AI Try-On Plus](https://docs.modellix.ai/alibaba/ai-try-on-plus.md): Compared to the aitryon, there are improvements in image clarity, clothing texture details, and logo restoration effects, but the generation time is longer, making it suitable for scenarios where timeliness is not a high priority.
-- [AI Try-On Refiner](https://docs.modellix.ai/alibaba/ai-try-on-refiner.md): Perform secondary generation on the effect images created by AI virtual try-on, outputting finely polished virtual try-on effect images with higher fidelity.
-- [Image Outpainting](https://docs.modellix.ai/alibaba/image-outpainting.md): The image-out-painting allows for free image extension, supporting image rotation and expansion through both expansion coefficient and pixel count methods. Users can control image expansion by specifying width, height ratios or pixel values for left, right, top, and bottom extensions. Suitable for c…
 - [Qwen Image](https://docs.modellix.ai/alibaba/qwen-image.md): The qwen-image excels in text rendering, particularly for Chinese text. Currently, `qwen-image-plus` and `qwen-image` have the same capabilities, but `qwen-image-plus` is more cost-effective.
 - [Qwen Image Edit](https://docs.modellix.ai/alibaba/qwen-image-edit.md): The qwen-image-edit supports precise bilingual Chinese-English text editing, color adjustment, detail enhancement, style transfer, object addition and removal, and other operations, enabling complex image and text editing.
 - [Qwen Image Edit Plus](https://docs.modellix.ai/alibaba/qwen-image-edit-plus.md): The qwen-image-edit supports precise bilingual Chinese-English text editing, color adjustment, detail enhancement, style transfer, object addition and removal, and other operations, enabling complex image and text editing.
 - [Qwen Image Edit Plus 2025-10-30](https://docs.modellix.ai/alibaba/qwen-image-edit-plus-2025-10-30.md): The qwen-image-edit supports precise bilingual Chinese-English text editing, color adjustment, detail enhancement, style transfer, object addition and removal, and other operations, enabling complex image and text editing.
 - [Qwen Image Edit Plus 2025-12-15](https://docs.modellix.ai/alibaba/qwen-image-edit-plus-2025-12-15.md): The qwen-image-edit supports precise bilingual Chinese-English text editing, color adjustment, detail enhancement, style transfer, object addition and removal, and other operations, enabling complex image and text editing.
 - [Qwen Image Plus](https://docs.modellix.ai/alibaba/qwen-image-plus.md): The qwen-image excels in text rendering, particularly for Chinese text. Currently, `qwen-image-plus` and `qwen-image` have the same capabilities, but `qwen-image-plus` is more cost-effective.
-- [Qwen MT Image](https://docs.modellix.ai/alibaba/qwen-mt-image.md): The qwen-image-translate supports translating text from images in 11 languages into Chinese or English, accurately preserving original layout and content information, and provides custom features such as terminology definitions, sensitive word filtering, and image subject detection.
 - [Wan 2.2 I2V Flash](https://docs.modellix.ai/alibaba/wan-2-2-i2v-flash.md): The Wan image-to-video model can generate videos using prompts and image references, presenting rich artistic styles and cinematic-quality visuals. Wan 2.2 Flash features ultimate generation speed, with more accurate instruction understanding and camera control, consistent visual elements, and compr…
 - [Wan 2.2 I2V Plus](https://docs.modellix.ai/alibaba/wan-2-2-i2v-plus.md): The Wan image-to-video model can generate videos using prompts and image references, presenting rich artistic styles and cinematic-quality visuals. Wan 2.2 Plus features more accurate instruction understanding, controllable camera movements, consistent visual elements, and comprehensively improved s…
 - [Wan 2.2 KF2V Flash](https://docs.modellix.ai/alibaba/wan-2-2-kf2v-flash.md): The Wan First-and-Last-Frame Video Generation Model: simply provide the first and last frame images, and it can generate a smooth, fluid dynamic video based on the prompt.
@@ -31,18 +25,13 @@
 - [Wanx 2.0 T2I Turbo](https://docs.modellix.ai/alibaba/wanx-2-0-t2i-turbo.md): The Wan text-to-image model generates beautiful images from text. The wanx2.0-t2i-turbo excels in textured portraits and creative design, offering great value for money.
 - [Wanx 2.1 I2V Plus](https://docs.modellix.ai/alibaba/wanx-2-1-i2v-plus.md): The Wan image-to-video model can generate videos using prompts and image references, presenting rich artistic styles and cinematic-quality visuals. Wanx 2.1 Plus offers even more refined image quality.
 - [Wanx 2.1 I2V Turbo](https://docs.modellix.ai/alibaba/wanx-2-1-i2v-turbo.md): The Wan image-to-video model can generate videos using prompts and image references, featuring rich artistic styles and cinematic-quality visuals. Wanx 2.1 Turbo offers high cost-effectiveness.
-- [Wanx 2.1 Image Edit](https://docs.modellix.ai/alibaba/wanx-2-1-image-edit.md): The wanx2.1-imageedit can achieve diverse image editing through simple instructions, suitable for scenarios such as image expansion, watermark removal, style transfer, image restoration, and image enhancement.
 - [Wanx 2.1 KF2V Plus](https://docs.modellix.ai/alibaba/wanx-2-1-kf2v-plus.md): The Wan First-and-Last-Frame Video Generation Model: simply provide the first and last frame images, and it can generate a smooth, fluid dynamic video based on the prompt.
 - [Wanx 2.1 T2I Plus](https://docs.modellix.ai/alibaba/wanx-2-1-t2i-plus.md): The Wan text-to-image model generates beautiful images from text. The wanx2.1-t2i-plus supports multiple styles and generates images with rich details.
 - [Wanx 2.1 T2I Turbo](https://docs.modellix.ai/alibaba/wanx-2-1-t2i-turbo.md): The Wan text-to-image model generates beautiful images from text. The wanx2.1-t2i-turbo supports multiple styles and generates quickly.
 - [Wanx 2.1 T2V Plus](https://docs.modellix.ai/alibaba/wanx-2-1-t2v-plus.md): Wan test-to-video model can generate videos from a single sentence, featuring rich artistic styles and cinematic quality. Wanx 2.1 Plus offers even more refined visuals.
 - [Wanx 2.1 T2V Turbo](https://docs.modellix.ai/alibaba/wanx-2-1-t2v-turbo.md): Wan test-to-video model can generate videos with a single sentence, featuring rich artistic styles and cinematic quality. Wanx 2.1 Turbo offers high cost-effectiveness.
 - [Wanx 2.5 I2V Preview](https://docs.modellix.ai/alibaba/wanx-2-5-i2v-preview.md): The Wan image-to-video model can generate videos using prompts and image references, featuring rich artistic styles and cinematic quality. Wan 2.5 supports automatic dubbing and uploading custom audio files.
-- [Wanx Background Generation V2](https://docs.modellix.ai/alibaba/wanx-background-generation-v2.md): The wanx-background-generation-v2 can expand and generate background information based on input foreground image materials, achieving natural light and shadow fusion effects, as well as delicate and realistic image generation. It supports various methods such as text descriptions and image guidance,…
-- [Wanx Sketch to Image Lite](https://docs.modellix.ai/alibaba/wanx-sketch-to-image-lite.md): Based on input hand-drawn sketches and text descriptions, exquisite doodle artworks can be generated.
 - [Wanx Style Repaint V1](https://docs.modellix.ai/alibaba/wanx-style-repaint-v1.md): The wanx-style-repaint-v1 can perform various stylized redraws on input portrait images, allowing the newly generated images to maintain the original facial features while presenting different artistic painting effects.
-- [WordArt Semantic](https://docs.modellix.ai/alibaba/wordart-semantic.md): The wordart-semantic can creatively deform the edge contours of input text based on prompt content, achieving more creative uses of a font, and returns a black-background white mask image containing the text.
-- [Wordart Texture](https://docs.modellix.ai/alibaba/wordart-texture.md): The wordart-texture can perform creative design on input text content or text images, adding materials and textures to the text based on prompt content to achieve effects such as 3D prominence or scene integration, generating exquisite and stylistically diverse artistic text that can be directly use…
 - [Introduction](https://docs.modellix.ai/api-reference/introduction.md): How to use model API in Modellix.
 - [Query Task Result](https://docs.modellix.ai/api-reference/query-task-result.md): Query the status and results of an async task by task_id
 - [Claude Code setup](https://docs.modellix.ai/archieved/ai-tools/claude-code.md): Configure Claude Code for your documentation workflow
@@ -134,12 +123,12 @@
 
 ## OpenAPI Specs
 
+- [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
+- [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
 - [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
 - [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
 - [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
-- [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
-- [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
 - [kling-t2v](https://docs.modellix.ai/model-api/kling/kling-t2v.json)
 - [kling-t2i](https://docs.modellix.ai/model-api/kling/kling-t2i.json)
 - [kling-i2v](https://docs.modellix.ai/model-api/kling/kling-i2v.json)
