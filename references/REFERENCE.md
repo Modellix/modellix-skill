@@ -57,7 +57,6 @@
 - [Seedance 1.0 Pro T2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-t2v.md): Seedance 1.0 is a video generation foundation model launched by ByteDance. As the large-parameter version of this model series, Seedance 1.0 Pro has unique multi-shot narrative capabilities and performs excellently across all dimensions. It has made breakthroughs in semantic understanding and instru…
 - [Seedance 1.5 Pro I2V](https://docs.modellix.ai/bytedance/seedance-1-5-pro-i2v.md): Seedance 1.5 pro is ByteDance's new professional-grade audio-visual co-generation model.It builds on multi-shot narrative and HD generation capabilities, supporting integrated audio and video output for a unified creation experience (visuals, human voice, music, and sound effects).The model includes…
 - [Seedance 1.5 Pro T2V](https://docs.modellix.ai/bytedance/seedance-1-5-pro-t2v.md): Seedance 1.5 pro is ByteDance's new professional-grade audio-visual co-generation model.It builds on multi-shot narrative and HD generation capabilities, supporting integrated audio and video output for a unified creation experience (visuals, human voice, music, and sound effects).The model includes…
-- [Seededit 3.0 I2I](https://docs.modellix.ai/bytedance/seededit-3-0-i2i.md): SeedEdit 3.0 is an image editing model that supports editing images via text instructions. SeedEdit 3.0 is trained based on the text-to-image model Seedream 3.0, integrated with diverse data fusion methods and specific reward models. Its ability to preserve image subjects, backgrounds, and details h…
 - [Seedream 3.0 T2I](https://docs.modellix.ai/bytedance/seedream-3-0-t2i.md): Seedream 3.0 is a Chinese-English bilingual image generation foundation model that supports native high resolution. Its overall capabilities are comparable to GPT-4o, ranking it among the world's top tier. Faster response speed; more accurate small text generation and enhanced text typesetting effec…
 - [Seedream 4.0 I2I](https://docs.modellix.ai/bytedance/seedream-4-0-i2i.md): A SOTA-level multimodal image creation model based on a leading architecture. It breaks the creative boundaries of traditional text-to-image models and natively supports text, single-image, and multi-image inputs. Users can freely fuse text and images, and in the same model, realize diverse applicat…
 - [Seedream 4.0 T2I](https://docs.modellix.ai/bytedance/seedream-4-0-t2i.md): A SOTA-level multimodal image creation model based on a leading architecture. It breaks the creative boundaries of traditional text-to-image models and natively supports text, single-image, and multi-image inputs. Users can freely fuse text and images, and in the same model, realize diverse applicat…
@@ -123,6 +122,7 @@
 
 ## OpenAPI Specs
 
+- [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
 - [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
 - [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
 - [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
@@ -138,7 +138,6 @@
 - [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
 - [minimax-i2i](https://docs.modellix.ai/model-api/minimax/minimax-i2i.json)
 - [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
-- [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
 - [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
 - [openapi](https://docs.modellix.ai/api-reference/openapi.json)
 
