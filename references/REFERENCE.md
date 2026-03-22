@@ -65,7 +65,8 @@
 - [New Models](https://docs.modellix.ai/changelog/new-models.md): The model integration updates and announcements.
 - [Product Updates](https://docs.modellix.ai/changelog/product-updates.md): The product updates and announcements.
 - [Overview](https://docs.modellix.ai/get-started/index.md): Welcome to Modellix.
-- [Pricing](https://docs.modellix.ai/get-started/pricing.md): The pricing of each model in [Modellix](https://modellix.ai).
+- [Model Providers](https://docs.modellix.ai/get-started/model-providers.md): List all model providers of Modellix.
+- [Pricing](https://docs.modellix.ai/get-started/pricing.md): The pricing of each model in Modellix.
 - [Kling Avatar](https://docs.modellix.ai/kling/kling-avatar.md): Generates realistic talking-head videos from a reference image and audio input, with precise lip synchronization, expressive gestures, and support for multiple languages.
 - [Kling Image Expansion](https://docs.modellix.ai/kling/kling-image-expansion.md): Intelligently extends images in any direction (up, down, left, right) with prompt-guided content generation, ideal for panorama creation, background extension, and canvas expansion.
 - [Kling Image O1](https://docs.modellix.ai/kling/kling-image-o1.md): A multimodal image generation model that accepts text, up to 10 reference images, and element inputs to produce 1K/2K images with precise style control and multi-reference feature extraction.
