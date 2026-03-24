@@ -49,15 +49,12 @@
 - [API Overview](https://docs.modellix.ai/archieved/overview.md): Comprehensive overview of the Prediction API including endpoints, authentication, and response formats
 - [Quickstart](https://docs.modellix.ai/archieved/quickstart.md): Start building awesome documentation in minutes
 - [Snippet intro](https://docs.modellix.ai/archieved/snippets/snippet-intro.md)
-- [Seedance 1.0 Lite I2V](https://docs.modellix.ai/bytedance/seedance-1-0-lite-i2v.md): ByteDance's small-parameter version of the video generation model achieves excellent video generation quality while significantly increasing generation speed, balancing both effect and efficiency.
-- [Seedance 1.0 Lite T2V](https://docs.modellix.ai/bytedance/seedance-1-0-lite-t2v.md): ByteDance's small-parameter version of the video generation model achieves excellent video generation quality while significantly increasing generation speed, balancing both effect and efficiency.
 - [Seedance 1.0 Pro Fast I2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-fast-i2v.md): Seedance 1.0 pro fast, inheriting the core advantages of the Seedance 1.0 pro model, has a 3x faster generation speed and a 72% lower price. It is a video generation model that achieves an excellent balance among quality, speed, and cost.
 - [Seedance 1.0 Pro Fast T2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-fast-t2v.md): Seedance 1.0 pro fast, inheriting the core advantages of the Seedance 1.0 pro model, has a 3x faster generation speed and a 72% lower price. It is a video generation model that achieves an excellent balance among quality, speed, and cost.
 - [Seedance 1.0 Pro I2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-i2v.md): Seedance 1.0 is a video generation foundation model launched by ByteDance. As the large-parameter version of this model series, Seedance 1.0 Pro has unique multi-shot narrative capabilities and performs excellently across all dimensions. It has made breakthroughs in semantic understanding and instru…
 - [Seedance 1.0 Pro T2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-t2v.md): Seedance 1.0 is a video generation foundation model launched by ByteDance. As the large-parameter version of this model series, Seedance 1.0 Pro has unique multi-shot narrative capabilities and performs excellently across all dimensions. It has made breakthroughs in semantic understanding and instru…
 - [Seedance 1.5 Pro I2V](https://docs.modellix.ai/bytedance/seedance-1-5-pro-i2v.md): Seedance 1.5 pro is ByteDance's new professional-grade audio-visual co-generation model.It builds on multi-shot narrative and HD generation capabilities, supporting integrated audio and video output for a unified creation experience (visuals, human voice, music, and sound effects).The model includes…
 - [Seedance 1.5 Pro T2V](https://docs.modellix.ai/bytedance/seedance-1-5-pro-t2v.md): Seedance 1.5 pro is ByteDance's new professional-grade audio-visual co-generation model.It builds on multi-shot narrative and HD generation capabilities, supporting integrated audio and video output for a unified creation experience (visuals, human voice, music, and sound effects).The model includes…
-- [Seedream 3.0 T2I](https://docs.modellix.ai/bytedance/seedream-3-0-t2i.md): Seedream 3.0 is a Chinese-English bilingual image generation foundation model that supports native high resolution. Its overall capabilities are comparable to GPT-4o, ranking it among the world's top tier. Faster response speed; more accurate small text generation and enhanced text typesetting effec…
 - [Seedream 4.0 I2I](https://docs.modellix.ai/bytedance/seedream-4-0-i2i.md): A SOTA-level multimodal image creation model based on a leading architecture. It breaks the creative boundaries of traditional text-to-image models and natively supports text, single-image, and multi-image inputs. Users can freely fuse text and images, and in the same model, realize diverse applicat…
 - [Seedream 4.0 T2I](https://docs.modellix.ai/bytedance/seedream-4-0-t2i.md): A SOTA-level multimodal image creation model based on a leading architecture. It breaks the creative boundaries of traditional text-to-image models and natively supports text, single-image, and multi-image inputs. Users can freely fuse text and images, and in the same model, realize diverse applicat…
 - [Seedream 4.5 I2I](https://docs.modellix.ai/bytedance/seedream-4-5-i2i.md): Seedream 4.5 is the latest in-house image generation model developed by ByteDance. Compared with Seedream 4.0, it delivers comprehensive improvements—especially in editing consistency, including better preservation of subject details, lighting, and color tone. It also enhances portrait refinement an…
@@ -123,12 +120,13 @@
 
 ## OpenAPI Specs
 
+- [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
+- [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
+- [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
 - [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
 - [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
 - [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
-- [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
-- [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
 - [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
 - [kling-t2v](https://docs.modellix.ai/model-api/kling/kling-t2v.json)
@@ -139,7 +137,6 @@
 - [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
 - [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
 - [minimax-i2i](https://docs.modellix.ai/model-api/minimax/minimax-i2i.json)
-- [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
 - [openapi](https://docs.modellix.ai/api-reference/openapi.json)
 
 ## Optional
