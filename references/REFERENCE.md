@@ -22,7 +22,6 @@
 - [Wan 2.6 Image](https://docs.modellix.ai/alibaba/wan-2-6-image.md): The wan-2.6-image supports image editing and mixed text-image output, meeting diverse generation and integration needs.
 - [Wan 2.6 T2I](https://docs.modellix.ai/alibaba/wan-2-6-t2i.md): The wan2.6-t2i supports the newly added synchronization interface, while allowing free selection of dimensions within the constraints of total pixel area and aspect ratio.
 - [Wan 2.6 T2V](https://docs.modellix.ai/alibaba/wan-2-6-t2v.md): The Wan test-to-video model can generate videos from a single sentence, presenting rich artistic styles and cinematic quality. Wan 2.6 introduces multi-shot narrative capabilities and supports both automatic dubbing and uploading custom audio files.
-- [Wanx 2.0 T2I Turbo](https://docs.modellix.ai/alibaba/wanx-2-0-t2i-turbo.md): The Wan text-to-image model generates beautiful images from text. The wanx2.0-t2i-turbo excels in textured portraits and creative design, offering great value for money.
 - [Wanx 2.1 I2V Plus](https://docs.modellix.ai/alibaba/wanx-2-1-i2v-plus.md): The Wan image-to-video model can generate videos using prompts and image references, presenting rich artistic styles and cinematic-quality visuals. Wanx 2.1 Plus offers even more refined image quality.
 - [Wanx 2.1 I2V Turbo](https://docs.modellix.ai/alibaba/wanx-2-1-i2v-turbo.md): The Wan image-to-video model can generate videos using prompts and image references, featuring rich artistic styles and cinematic-quality visuals. Wanx 2.1 Turbo offers high cost-effectiveness.
 - [Wanx 2.1 KF2V Plus](https://docs.modellix.ai/alibaba/wanx-2-1-kf2v-plus.md): The Wan First-and-Last-Frame Video Generation Model: simply provide the first and last frame images, and it can generate a smooth, fluid dynamic video based on the prompt.
@@ -120,19 +119,19 @@
 
 ## OpenAPI Specs
 
+- [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
+- [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
 - [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
 - [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
 - [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
 - [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
-- [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
 - [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
 - [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
 - [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
 - [kling-t2v](https://docs.modellix.ai/model-api/kling/kling-t2v.json)
 - [kling-t2i](https://docs.modellix.ai/model-api/kling/kling-t2i.json)
 - [kling-i2v](https://docs.modellix.ai/model-api/kling/kling-i2v.json)
-- [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
 - [minimax-t2v](https://docs.modellix.ai/model-api/minimax/minimax-t2v.json)
 - [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
 - [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
