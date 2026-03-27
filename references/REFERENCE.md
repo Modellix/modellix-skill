@@ -30,7 +30,6 @@
 - [Wanx 2.1 T2V Plus](https://docs.modellix.ai/alibaba/wanx-2-1-t2v-plus.md): Wan test-to-video model can generate videos from a single sentence, featuring rich artistic styles and cinematic quality. Wanx 2.1 Plus offers even more refined visuals.
 - [Wanx 2.1 T2V Turbo](https://docs.modellix.ai/alibaba/wanx-2-1-t2v-turbo.md): Wan test-to-video model can generate videos with a single sentence, featuring rich artistic styles and cinematic quality. Wanx 2.1 Turbo offers high cost-effectiveness.
 - [Wanx 2.5 I2V Preview](https://docs.modellix.ai/alibaba/wanx-2-5-i2v-preview.md): The Wan image-to-video model can generate videos using prompts and image references, featuring rich artistic styles and cinematic quality. Wan 2.5 supports automatic dubbing and uploading custom audio files.
-- [Wanx Style Repaint V1](https://docs.modellix.ai/alibaba/wanx-style-repaint-v1.md): The wanx-style-repaint-v1 can perform various stylized redraws on input portrait images, allowing the newly generated images to maintain the original facial features while presenting different artistic painting effects.
 - [Introduction](https://docs.modellix.ai/api-reference/introduction.md): How to use model API in Modellix.
 - [Query Task Result](https://docs.modellix.ai/api-reference/query-task-result.md): Query the status and results of an async task by task_id
 - [Claude Code setup](https://docs.modellix.ai/archieved/ai-tools/claude-code.md): Configure Claude Code for your documentation workflow
@@ -92,7 +91,6 @@
 - [Kling V2 Master T2V](https://docs.modellix.ai/kling/kling-v2-master-t2v.md): The V2-generation base text-to-video model producing cinematic-quality clips with superior motion realism and temporal coherence.
 - [Kling V2 MI2I](https://docs.modellix.ai/kling/kling-v2-mi2i.md): Combines up to 4 subject images with optional scene and style references into a single cohesive output, supporting subject fusion, scene replacement, and style transfer.
 - [Kling V2 New I2I](https://docs.modellix.ai/kling/kling-v2-new-i2i.md): A refined variant of Kling V2 with updated model weights for improved consistency, sharper details, and better prompt-to-image alignment.
-- [Kling V2 New T2I](https://docs.modellix.ai/kling/kling-v2-new-t2i.md): A refined variant of V2 with updated model weights for sharper details, better consistency, and improved prompt-to-image alignment at up to 2K resolution.
 - [Kling V2 T2I](https://docs.modellix.ai/kling/kling-v2-t2i.md): A next-generation text-to-image model with significantly improved detail and visual fidelity, supporting both 1K and 2K resolutions for professional output.
 - [Kling Video Effects](https://docs.modellix.ai/kling/kling-video-effects.md): Applies 212 preset creative video effects -- including dance, transformation, interaction, and animation styles -- to one or two person images for instant viral content.
 - [Kolors Virtual Try-On V1](https://docs.modellix.ai/kling/kolors-virtual-try-on-v1.md): AI-powered virtual clothing try-on built on the Kolors diffusion model, generating realistic fitting results from a person photo and a single garment image (tops, bottoms, or dresses).
@@ -119,6 +117,8 @@
 
 ## OpenAPI Specs
 
+- [kling-t2i](https://docs.modellix.ai/model-api/kling/kling-t2i.json)
+- [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
 - [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
 - [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
 - [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
@@ -126,11 +126,9 @@
 - [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
 - [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
-- [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
 - [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
 - [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
 - [kling-t2v](https://docs.modellix.ai/model-api/kling/kling-t2v.json)
-- [kling-t2i](https://docs.modellix.ai/model-api/kling/kling-t2i.json)
 - [kling-i2v](https://docs.modellix.ai/model-api/kling/kling-i2v.json)
 - [minimax-t2v](https://docs.modellix.ai/model-api/minimax/minimax-t2v.json)
 - [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
