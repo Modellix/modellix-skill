@@ -117,6 +117,8 @@
 
 ## OpenAPI Specs
 
+- [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
+- [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
 - [kling-t2i](https://docs.modellix.ai/model-api/kling/kling-t2i.json)
 - [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
 - [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
@@ -126,8 +128,6 @@
 - [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
 - [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
-- [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
-- [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
 - [kling-t2v](https://docs.modellix.ai/model-api/kling/kling-t2v.json)
 - [kling-i2v](https://docs.modellix.ai/model-api/kling/kling-i2v.json)
 - [minimax-t2v](https://docs.modellix.ai/model-api/minimax/minimax-t2v.json)
