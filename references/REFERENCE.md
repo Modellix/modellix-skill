@@ -2,34 +2,34 @@
 
 ## Docs
 
-- [Qwen Image](https://docs.modellix.ai/alibaba/qwen-image.md): The qwen-image excels in text rendering, particularly for Chinese text. Currently, `qwen-image-plus` and `qwen-image` have the same capabilities, but `qwen-image-plus` is more cost-effective.
-- [Qwen Image Edit](https://docs.modellix.ai/alibaba/qwen-image-edit.md): The qwen-image-edit supports precise bilingual Chinese-English text editing, color adjustment, detail enhancement, style transfer, object addition and removal, and other operations, enabling complex image and text editing.
-- [Qwen Image Edit Plus](https://docs.modellix.ai/alibaba/qwen-image-edit-plus.md): The qwen-image-edit supports precise bilingual Chinese-English text editing, color adjustment, detail enhancement, style transfer, object addition and removal, and other operations, enabling complex image and text editing.
-- [Qwen Image Edit Plus 2025-10-30](https://docs.modellix.ai/alibaba/qwen-image-edit-plus-2025-10-30.md): The qwen-image-edit supports precise bilingual Chinese-English text editing, color adjustment, detail enhancement, style transfer, object addition and removal, and other operations, enabling complex image and text editing.
-- [Qwen Image Edit Plus 2025-12-15](https://docs.modellix.ai/alibaba/qwen-image-edit-plus-2025-12-15.md): The qwen-image-edit supports precise bilingual Chinese-English text editing, color adjustment, detail enhancement, style transfer, object addition and removal, and other operations, enabling complex image and text editing.
-- [Qwen Image Plus](https://docs.modellix.ai/alibaba/qwen-image-plus.md): The qwen-image excels in text rendering, particularly for Chinese text. Currently, `qwen-image-plus` and `qwen-image` have the same capabilities, but `qwen-image-plus` is more cost-effective.
-- [Wan 2.2 I2V Flash](https://docs.modellix.ai/alibaba/wan-2-2-i2v-flash.md): The Wan image-to-video model can generate videos using prompts and image references, presenting rich artistic styles and cinematic-quality visuals. Wan 2.2 Flash features ultimate generation speed, with more accurate instruction understanding and camera control, consistent visual elements, and compr…
-- [Wan 2.2 I2V Plus](https://docs.modellix.ai/alibaba/wan-2-2-i2v-plus.md): The Wan image-to-video model can generate videos using prompts and image references, presenting rich artistic styles and cinematic-quality visuals. Wan 2.2 Plus features more accurate instruction understanding, controllable camera movements, consistent visual elements, and comprehensively improved s…
+- [Qwen Image](https://docs.modellix.ai/alibaba/qwen-image.md): Qwen-image excels in text rendering, especially Chinese. qwen-image-plus and qwen-image share the same capabilities, but qwen-image-plus is more cost-effective.
+- [Qwen Image Edit](https://docs.modellix.ai/alibaba/qwen-image-edit.md): Qwen-image-edit supports bilingual text editing, color adjustment, style transfer, object addition/removal, and other complex image editing operations.
+- [Qwen Image Edit Plus](https://docs.modellix.ai/alibaba/qwen-image-edit-plus.md): Qwen-image-edit supports bilingual text editing, color adjustment, style transfer, object addition/removal, and other complex image editing operations.
+- [Qwen Image Edit Plus 2025-10-30](https://docs.modellix.ai/alibaba/qwen-image-edit-plus-2025-10-30.md): Qwen-image-edit supports bilingual text editing, color adjustment, style transfer, object addition/removal, and other complex image editing operations.
+- [Qwen Image Edit Plus 2025-12-15](https://docs.modellix.ai/alibaba/qwen-image-edit-plus-2025-12-15.md): Qwen-image-edit supports bilingual text editing, color adjustment, style transfer, object addition/removal, and other complex image editing operations.
+- [Qwen Image Plus](https://docs.modellix.ai/alibaba/qwen-image-plus.md): Qwen-image excels in text rendering, especially Chinese. qwen-image-plus and qwen-image share the same capabilities, but qwen-image-plus is more cost-effective.
+- [Wan 2.2 I2V Flash](https://docs.modellix.ai/alibaba/wan-2-2-i2v-flash.md): Wan image-to-video model generates videos from prompts and images. Wan 2.2 Flash offers fast generation, accurate instructions, camera control, and improved stability.
+- [Wan 2.2 I2V Plus](https://docs.modellix.ai/alibaba/wan-2-2-i2v-plus.md): Wan image-to-video model generates videos from prompts and images. Wan 2.2 Plus improves instruction accuracy, camera control, visual consistency, and content richness.
 - [Wan 2.2 KF2V Flash](https://docs.modellix.ai/alibaba/wan-2-2-kf2v-flash.md): The Wan First-and-Last-Frame Video Generation Model: simply provide the first and last frame images, and it can generate a smooth, fluid dynamic video based on the prompt.
 - [Wan 2.2 T2I Flash](https://docs.modellix.ai/alibaba/wan-2-2-t2i-flash.md): The Wan text-to-image model generates beautiful images from text. The wan2.2-t2i-flash has been comprehensively upgraded in creativity, stability, and writing texture.
 - [Wan 2.2 T2I Plus](https://docs.modellix.ai/alibaba/wan-2-2-t2i-plus.md): The Wan text-to-image model generates beautiful images from text. The wan2.2-t2i-plus has been comprehensively upgraded in creativity, stability, and writing texture.
-- [Wan 2.2 T2V Plus](https://docs.modellix.ai/alibaba/wan-2-2-t2v-plus.md): The Wan test-to-video model can generate videos from a single sentence, presenting rich artistic styles and cinematic quality. Wan 2.2 features more accurate instruction understanding, stable and smooth motion generation, and richer details.
-- [Wan 2.5 I2I Preview](https://docs.modellix.ai/alibaba/wan-2-5-i2i-preview.md): The wan2.5-i2i-preview supports inputting text, single image, or multiple images to achieve capabilities such as image editing based on subject consistency and multi-image fusion creation.
-- [Wan 2.5 T2I Preview](https://docs.modellix.ai/alibaba/wan-2-5-t2i-preview.md): The Wan text-to-image model generates beautiful images from text. The wan2.5-t2i-preview has removed the unilateral restriction, allowing free size selection within the total pixel area and aspect ratio constraints.
-- [Wan 2.5 T2V Preview](https://docs.modellix.ai/alibaba/wan-2-5-t2v-preview.md): The Wan test-to-video model can generate videos from a single sentence, presenting rich artistic styles and cinematic quality. Wan 2.5 supports automatic dubbing and uploading custom audio files.
-- [Wan 2.6 I2V](https://docs.modellix.ai/alibaba/wan-2-6-i2v.md): The Wan image-to-video model can generate videos using prompts and image references, featuring rich artistic styles and cinematic quality. Wan 2.6 introduces multi-shot narrative capabilities and supports both automatic dubbing and uploading custom audio files.
-- [Wan 2.6 I2V Flash](https://docs.modellix.ai/alibaba/wan-2-6-i2v-flash.md): The Wan image-to-video model can generate videos using prompts and image references, featuring rich artistic styles and cinematic quality. Wan 2.6 introduces multi-shot narrative capabilities and supports both automatic dubbing and uploading custom audio files.
+- [Wan 2.2 T2V Plus](https://docs.modellix.ai/alibaba/wan-2-2-t2v-plus.md): Wan text-to-video model generates videos from text with rich artistic styles. Wan 2.2 improves instruction accuracy, motion smoothness, and detail richness.
+- [Wan 2.5 I2I Preview](https://docs.modellix.ai/alibaba/wan-2-5-i2i-preview.md): Wan 2.5 image-to-image model supports text, single or multiple image input for subject-consistent editing and multi-image fusion creation.
+- [Wan 2.5 T2I Preview](https://docs.modellix.ai/alibaba/wan-2-5-t2i-preview.md): Wan text-to-image model generates images from text. wan2.5-t2i-preview allows free size selection within total pixel area and aspect ratio constraints.
+- [Wan 2.5 T2V Preview](https://docs.modellix.ai/alibaba/wan-2-5-t2v-preview.md): Wan text-to-video model generates videos from text with rich artistic styles and cinematic quality. Wan 2.5 supports dubbing and custom audio.
+- [Wan 2.6 I2V](https://docs.modellix.ai/alibaba/wan-2-6-i2v.md): Wan image-to-video model generates videos from prompts and images with cinematic quality. Wan 2.6 adds multi-shot narrative, automatic dubbing, and custom audio.
+- [Wan 2.6 I2V Flash](https://docs.modellix.ai/alibaba/wan-2-6-i2v-flash.md): Wan image-to-video model generates videos from prompts and images with cinematic quality. Wan 2.6 adds multi-shot narrative, automatic dubbing, and custom audio.
 - [Wan 2.6 Image](https://docs.modellix.ai/alibaba/wan-2-6-image.md): The wan-2.6-image supports image editing and mixed text-image output, meeting diverse generation and integration needs.
 - [Wan 2.6 T2I](https://docs.modellix.ai/alibaba/wan-2-6-t2i.md): The wan2.6-t2i supports the newly added synchronization interface, while allowing free selection of dimensions within the constraints of total pixel area and aspect ratio.
-- [Wan 2.6 T2V](https://docs.modellix.ai/alibaba/wan-2-6-t2v.md): The Wan test-to-video model can generate videos from a single sentence, presenting rich artistic styles and cinematic quality. Wan 2.6 introduces multi-shot narrative capabilities and supports both automatic dubbing and uploading custom audio files.
-- [Wanx 2.1 I2V Plus](https://docs.modellix.ai/alibaba/wanx-2-1-i2v-plus.md): The Wan image-to-video model can generate videos using prompts and image references, presenting rich artistic styles and cinematic-quality visuals. Wanx 2.1 Plus offers even more refined image quality.
-- [Wanx 2.1 I2V Turbo](https://docs.modellix.ai/alibaba/wanx-2-1-i2v-turbo.md): The Wan image-to-video model can generate videos using prompts and image references, featuring rich artistic styles and cinematic-quality visuals. Wanx 2.1 Turbo offers high cost-effectiveness.
+- [Wan 2.6 T2V](https://docs.modellix.ai/alibaba/wan-2-6-t2v.md): Wan text-to-video model generates videos from text with rich artistic styles. Wan 2.6 adds multi-shot narrative, automatic dubbing, and custom audio support.
+- [Wanx 2.1 I2V Plus](https://docs.modellix.ai/alibaba/wanx-2-1-i2v-plus.md): Wan image-to-video model generates videos from prompts and images with rich artistic styles and cinematic quality. Wanx 2.1 Plus offers refined image quality.
+- [Wanx 2.1 I2V Turbo](https://docs.modellix.ai/alibaba/wanx-2-1-i2v-turbo.md): Wan image-to-video model generates videos from prompts and images with rich artistic styles. Wanx 2.1 Turbo offers high cost-effectiveness.
 - [Wanx 2.1 KF2V Plus](https://docs.modellix.ai/alibaba/wanx-2-1-kf2v-plus.md): The Wan First-and-Last-Frame Video Generation Model: simply provide the first and last frame images, and it can generate a smooth, fluid dynamic video based on the prompt.
 - [Wanx 2.1 T2I Plus](https://docs.modellix.ai/alibaba/wanx-2-1-t2i-plus.md): The Wan text-to-image model generates beautiful images from text. The wanx2.1-t2i-plus supports multiple styles and generates images with rich details.
 - [Wanx 2.1 T2I Turbo](https://docs.modellix.ai/alibaba/wanx-2-1-t2i-turbo.md): The Wan text-to-image model generates beautiful images from text. The wanx2.1-t2i-turbo supports multiple styles and generates quickly.
 - [Wanx 2.1 T2V Plus](https://docs.modellix.ai/alibaba/wanx-2-1-t2v-plus.md): Wan test-to-video model can generate videos from a single sentence, featuring rich artistic styles and cinematic quality. Wanx 2.1 Plus offers even more refined visuals.
 - [Wanx 2.1 T2V Turbo](https://docs.modellix.ai/alibaba/wanx-2-1-t2v-turbo.md): Wan test-to-video model can generate videos with a single sentence, featuring rich artistic styles and cinematic quality. Wanx 2.1 Turbo offers high cost-effectiveness.
-- [Wanx 2.5 I2V Preview](https://docs.modellix.ai/alibaba/wanx-2-5-i2v-preview.md): The Wan image-to-video model can generate videos using prompts and image references, featuring rich artistic styles and cinematic quality. Wan 2.5 supports automatic dubbing and uploading custom audio files.
+- [Wanx 2.5 I2V Preview](https://docs.modellix.ai/alibaba/wanx-2-5-i2v-preview.md): Wan image-to-video model generates videos from prompts and images with cinematic quality. Wan 2.5 supports automatic dubbing and custom audio files.
 - [Introduction](https://docs.modellix.ai/api-reference/introduction.md): How to use model API in Modellix.
 - [Query Task Result](https://docs.modellix.ai/api-reference/query-task-result.md): Query the status and results of an async task by task_id
 - [Claude Code setup](https://docs.modellix.ai/archieved/ai-tools/claude-code.md): Configure Claude Code for your documentation workflow
@@ -47,24 +47,24 @@
 - [API Overview](https://docs.modellix.ai/archieved/overview.md): Comprehensive overview of the Prediction API including endpoints, authentication, and response formats
 - [Quickstart](https://docs.modellix.ai/archieved/quickstart.md): Start building awesome documentation in minutes
 - [Snippet intro](https://docs.modellix.ai/archieved/snippets/snippet-intro.md)
-- [Seedance 1.0 Pro Fast I2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-fast-i2v.md): Seedance 1.0 pro fast, inheriting the core advantages of the Seedance 1.0 pro model, has a 3x faster generation speed and a 72% lower price. It is a video generation model that achieves an excellent balance among quality, speed, and cost.
-- [Seedance 1.0 Pro Fast T2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-fast-t2v.md): Seedance 1.0 pro fast, inheriting the core advantages of the Seedance 1.0 pro model, has a 3x faster generation speed and a 72% lower price. It is a video generation model that achieves an excellent balance among quality, speed, and cost.
-- [Seedance 1.0 Pro I2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-i2v.md): Seedance 1.0 is a video generation foundation model launched by ByteDance. As the large-parameter version of this model series, Seedance 1.0 Pro has unique multi-shot narrative capabilities and performs excellently across all dimensions. It has made breakthroughs in semantic understanding and instru…
-- [Seedance 1.0 Pro T2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-t2v.md): Seedance 1.0 is a video generation foundation model launched by ByteDance. As the large-parameter version of this model series, Seedance 1.0 Pro has unique multi-shot narrative capabilities and performs excellently across all dimensions. It has made breakthroughs in semantic understanding and instru…
-- [Seedance 1.5 Pro I2V](https://docs.modellix.ai/bytedance/seedance-1-5-pro-i2v.md): Seedance 1.5 pro is ByteDance's new professional-grade audio-visual co-generation model.It builds on multi-shot narrative and HD generation capabilities, supporting integrated audio and video output for a unified creation experience (visuals, human voice, music, and sound effects).The model includes…
-- [Seedance 1.5 Pro T2V](https://docs.modellix.ai/bytedance/seedance-1-5-pro-t2v.md): Seedance 1.5 pro is ByteDance's new professional-grade audio-visual co-generation model.It builds on multi-shot narrative and HD generation capabilities, supporting integrated audio and video output for a unified creation experience (visuals, human voice, music, and sound effects).The model includes…
-- [Seedream 4.0 I2I](https://docs.modellix.ai/bytedance/seedream-4-0-i2i.md): A SOTA-level multimodal image creation model based on a leading architecture. It breaks the creative boundaries of traditional text-to-image models and natively supports text, single-image, and multi-image inputs. Users can freely fuse text and images, and in the same model, realize diverse applicat…
-- [Seedream 4.0 T2I](https://docs.modellix.ai/bytedance/seedream-4-0-t2i.md): A SOTA-level multimodal image creation model based on a leading architecture. It breaks the creative boundaries of traditional text-to-image models and natively supports text, single-image, and multi-image inputs. Users can freely fuse text and images, and in the same model, realize diverse applicat…
-- [Seedream 4.5 I2I](https://docs.modellix.ai/bytedance/seedream-4-5-i2i.md): Seedream 4.5 is the latest in-house image generation model developed by ByteDance. Compared with Seedream 4.0, it delivers comprehensive improvements—especially in editing consistency, including better preservation of subject details, lighting, and color tone. It also enhances portrait refinement an…
-- [Seedream 4.5 T2I](https://docs.modellix.ai/bytedance/seedream-4-5-t2i.md): Seedream 4.5 is the latest in-house image generation model developed by ByteDance. Compared with Seedream 4.0, it delivers comprehensive improvements—especially in editing consistency, including better preservation of subject details, lighting, and color tone. It also enhances portrait refinement an…
+- [Seedance 1.0 Pro Fast I2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-fast-i2v.md): Seedance 1.0 Pro Fast inherits core advantages of the Pro model with 3x faster generation and 72% lower cost, balancing quality, speed, and price.
+- [Seedance 1.0 Pro Fast T2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-fast-t2v.md): Seedance 1.0 Pro Fast inherits core advantages of the Pro model with 3x faster generation and 72% lower cost, balancing quality, speed, and price.
+- [Seedance 1.0 Pro I2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-i2v.md): ByteDance's flagship image-to-video model with multi-shot narrative, superior semantic understanding, and cinematic 1080P output in diverse styles.
+- [Seedance 1.0 Pro T2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-t2v.md): ByteDance's flagship text-to-video model with multi-shot narrative, superior semantic understanding, and cinematic 1080P output in diverse styles.
+- [Seedance 1.5 Pro I2V](https://docs.modellix.ai/bytedance/seedance-1-5-pro-i2v.md): Seedance 1.5 Pro supports audio-visual co-generation with multi-shot narrative, start/end frame control, and integrated audio output (voice, music, SFX).
+- [Seedance 1.5 Pro T2V](https://docs.modellix.ai/bytedance/seedance-1-5-pro-t2v.md): Seedance 1.5 Pro supports audio-visual co-generation with multi-shot narrative, start/end frame control, and integrated audio output (voice, music, SFX).
+- [Seedream 4.0 I2I](https://docs.modellix.ai/bytedance/seedream-4-0-i2i.md): SOTA multimodal image model supporting text, single-image, and multi-image inputs for subject-consistent fusion, image editing, and group generation.
+- [Seedream 4.0 T2I](https://docs.modellix.ai/bytedance/seedream-4-0-t2i.md): SOTA multimodal image model supporting text, single-image, and multi-image inputs for subject-consistent fusion, image editing, and group generation.
+- [Seedream 4.5 I2I](https://docs.modellix.ai/bytedance/seedream-4-5-i2i.md): ByteDance's latest image model with improved editing consistency, portrait refinement, small-text rendering, and enhanced multi-image composition.
+- [Seedream 4.5 T2I](https://docs.modellix.ai/bytedance/seedream-4-5-t2i.md): ByteDance's latest image model with improved editing consistency, portrait refinement, small-text rendering, and enhanced multi-image composition.
 - [New Models](https://docs.modellix.ai/changelog/new-models.md): The model integration updates and announcements.
 - [Product Updates](https://docs.modellix.ai/changelog/product-updates.md): The product updates and announcements.
 - [Overview](https://docs.modellix.ai/get-started/index.md): Welcome to Modellix.
 - [Model Providers](https://docs.modellix.ai/get-started/model-providers.md): List all model providers of Modellix.
 - [Pricing](https://docs.modellix.ai/get-started/pricing.md): The pricing of each model in Modellix.
 - [Kling Avatar](https://docs.modellix.ai/kling/kling-avatar.md): Generates realistic talking-head videos from a reference image and audio input, with precise lip synchronization, expressive gestures, and support for multiple languages.
-- [Kling Image Expansion](https://docs.modellix.ai/kling/kling-image-expansion.md): Intelligently extends images in any direction (up, down, left, right) with prompt-guided content generation, ideal for panorama creation, background extension, and canvas expansion.
-- [Kling Image O1](https://docs.modellix.ai/kling/kling-image-o1.md): A multimodal image generation model that accepts text, up to 10 reference images, and element inputs to produce 1K/2K images with precise style control and multi-reference feature extraction.
+- [Kling Image Expansion](https://docs.modellix.ai/kling/kling-image-expansion.md): Extends images in any direction (up, down, left, right) with prompt-guided generation, ideal for panorama, background extension, and canvas expansion.
+- [Kling Image O1](https://docs.modellix.ai/kling/kling-image-o1.md): Multimodal image model accepting text, up to 10 reference images, and element inputs to produce 1K/2K images with precise style control and feature extraction.
 - [Kling Image Recognize](https://docs.modellix.ai/kling/kling-image-recognize.md): Detects and segments image content into 4 categories -- object, head (with hair), face (without hair), and clothing -- returning segmentation masks synchronously.
 - [Kling V1.5 I2I](https://docs.modellix.ai/kling/kling-v1-5-i2i.md): An upgraded image-to-image model with improved realism, better prompt interpretation, and subject/face reference modes for precise character control.
 - [Kling V1.5 I2V](https://docs.modellix.ai/kling/kling-v1-5-i2v.md): The most feature-complete V1.x image-to-video model, adding simple camera motion control alongside motion brush and cfg_scale for precise video generation.
@@ -84,7 +84,7 @@
 - [Kling V2.1 T2I](https://docs.modellix.ai/kling/kling-v2-1-t2i.md): The latest and highest-quality text-to-image model in the Kling family, delivering state-of-the-art results at up to 2K resolution.
 - [Kling V2.5 Turbo I2V](https://docs.modellix.ai/kling/kling-v2-5-turbo-i2v.md): A speed-optimized image-to-video model delivering cinematic 1080p videos with physics-accurate motion at ~30% lower cost than previous versions.
 - [Kling V2.5 Turbo T2V](https://docs.modellix.ai/kling/kling-v2-5-turbo-t2v.md): A speed-optimized text-to-video model delivering cinematic 1080p videos with physics-accurate motion at ~30% lower cost than previous versions.
-- [Kling V2.6 I2V](https://docs.modellix.ai/kling/kling-v2-6-i2v.md): The first Kling image-to-video model to natively generate synchronized audio and video in a single pass, supporting dialogue, sound effects, and lip-synced speech alongside motion brush.
+- [Kling V2.6 I2V](https://docs.modellix.ai/kling/kling-v2-6-i2v.md): First Kling I2V model to natively generate synchronized audio and video in one pass, supporting dialogue, sound effects, lip-sync, and motion brush.
 - [Kling V2.6 T2V](https://docs.modellix.ai/kling/kling-v2-6-t2v.md): The first Kling text-to-video model to natively generate synchronized audio and video in one pass, including dialogue, ambient sounds, and lip-synced speech.
 - [Kling V2 I2I](https://docs.modellix.ai/kling/kling-v2-i2i.md): A major generational leap in image quality and creativity, featuring enhanced style diversity and significantly improved visual fidelity over V1.5.
 - [Kling V2 Master I2V](https://docs.modellix.ai/kling/kling-v2-master-i2v.md): The V2-generation base image-to-video model delivering cinematic-quality animations with superior temporal coherence and smoother motion transitions.
@@ -93,23 +93,23 @@
 - [Kling V2 New I2I](https://docs.modellix.ai/kling/kling-v2-new-i2i.md): A refined variant of Kling V2 with updated model weights for improved consistency, sharper details, and better prompt-to-image alignment.
 - [Kling V2 T2I](https://docs.modellix.ai/kling/kling-v2-t2i.md): A next-generation text-to-image model with significantly improved detail and visual fidelity, supporting both 1K and 2K resolutions for professional output.
 - [Kling Video Effects](https://docs.modellix.ai/kling/kling-video-effects.md): Applies 212 preset creative video effects -- including dance, transformation, interaction, and animation styles -- to one or two person images for instant viral content.
-- [Kolors Virtual Try-On V1](https://docs.modellix.ai/kling/kolors-virtual-try-on-v1.md): AI-powered virtual clothing try-on built on the Kolors diffusion model, generating realistic fitting results from a person photo and a single garment image (tops, bottoms, or dresses).
+- [Kolors Virtual Try-On V1](https://docs.modellix.ai/kling/kolors-virtual-try-on-v1.md): AI-powered virtual try-on built on Kolors diffusion model, generating realistic fitting from a person photo and a garment image (tops, bottoms, or dresses).
 - [Kolors Virtual Try-On V1-5](https://docs.modellix.ai/kling/kolors-virtual-try-on-v1-5.md): Enhanced virtual try-on model that supports both single garments and top+bottom outfit combinations, delivering higher-quality results with automatic clothing type detection.
-- [Hailuo 02 FL2V](https://docs.modellix.ai/minimax/hailuo-02-fl2v.md): Hailuo 02's FL2V function provides unprecedented creative control by generating dynamic videos between a user-defined start and end frame. This feature not only masters extreme physics and complex transitions but also enables the novel capability to deduce a story leading up to a specified final ima…
-- [Hailuo 02 I2V](https://docs.modellix.ai/minimax/hailuo-02-i2v.md): Hailuo 02 masters both text-to-video and image-to-video generation with exceptional instruction following, while setting a new standard in visual realism through its extreme physics simulation.
-- [Hailuo 02 T2V](https://docs.modellix.ai/minimax/hailuo-02-t2v.md): Hailuo 02 masters both text-to-video and image-to-video generation with exceptional instruction following, while setting a new standard in visual realism through its extreme physics simulation.
-- [Hailuo 2.3 Fast I2V](https://docs.modellix.ai/minimax/hailuo-2-3-fast-i2v.md): Hailuo 2.3 Fast efficiently transforms images into dynamic videos with extreme physics mastery. It delivers exceptional value by generating high-quality, realistic motion at a reduced computational cost.
-- [Hailuo 2.3 I2V](https://docs.modellix.ai/minimax/hailuo-2-3-i2v.md): Hailuo 2.3 not only generates high-quality videos from text or images with exceptional instruction following, but also redefines realism through its state-of-the-art mastery of extreme physics.
-- [Hailuo 2.3 T2V](https://docs.modellix.ai/minimax/hailuo-2-3-t2v.md): Hailuo 2.3 not only generates high-quality videos from text or images with exceptional instruction following, but also redefines realism through its state-of-the-art mastery of extreme physics.
-- [MiniMax I2V-01](https://docs.modellix.ai/minimax/minimax-i2v-01.md): MiniMax I2V-01 is a foundational image-to-video model that converts static pictures into high-quality video sequences, delivering smooth animation especially optimized for illustrations and anime styles.
-- [MiniMax I2V-01-Director](https://docs.modellix.ai/minimax/minimax-i2v-01-director.md): T2V-01-Director is a text-to-video AI model that offers precise camera control, allowing users to create professional-looking video clips with cinematic movements through a variety of lens instructions.
-- [MiniMax I2V-01-Live](https://docs.modellix.ai/minimax/minimax-i2v-01-live.md): I2V-01-Live is an image-to-video model specifically optimized for animating 2D illustrations and cartoon styles, enhancing smoothness and vivid motion to bring static art to life with fluid character movements and natural expressions.
+- [Hailuo 02 FL2V](https://docs.modellix.ai/minimax/hailuo-02-fl2v.md): Hailuo 02 FL2V generates dynamic videos between user-defined start and end frames, mastering extreme physics, transitions, and reverse story generation.
+- [Hailuo 02 I2V](https://docs.modellix.ai/minimax/hailuo-02-i2v.md): Hailuo 02 masters image-to-video generation with exceptional instruction following and sets a new standard in visual realism via extreme physics.
+- [Hailuo 02 T2V](https://docs.modellix.ai/minimax/hailuo-02-t2v.md): Hailuo 02 masters text-to-video generation with exceptional instruction following and sets a new standard in visual realism via extreme physics.
+- [Hailuo 2.3 Fast I2V](https://docs.modellix.ai/minimax/hailuo-2-3-fast-i2v.md): Hailuo 2.3 Fast transforms images into dynamic videos with extreme physics mastery, delivering high-quality realistic motion at reduced cost.
+- [Hailuo 2.3 I2V](https://docs.modellix.ai/minimax/hailuo-2-3-i2v.md): Hailuo 2.3 generates high-quality videos from images with exceptional instruction following and state-of-the-art extreme physics simulation.
+- [Hailuo 2.3 T2V](https://docs.modellix.ai/minimax/hailuo-2-3-t2v.md): Hailuo 2.3 generates high-quality videos from text with exceptional instruction following and state-of-the-art extreme physics simulation.
+- [MiniMax I2V-01](https://docs.modellix.ai/minimax/minimax-i2v-01.md): MiniMax I2V-01 converts static images into high-quality video sequences with smooth animation, especially optimized for illustrations and anime.
+- [MiniMax I2V-01-Director](https://docs.modellix.ai/minimax/minimax-i2v-01-director.md): I2V-01-Director offers precise camera control for creating professional video clips with cinematic movements through a variety of lens instructions.
+- [MiniMax I2V-01-Live](https://docs.modellix.ai/minimax/minimax-i2v-01-live.md): I2V-01-Live is optimized for animating 2D illustrations and cartoons, enhancing smoothness and vivid motion to bring static art to life.
 - [MiniMax Image-01 I2I](https://docs.modellix.ai/minimax/minimax-image-01-i2i.md): MiniMax’s multimodal vision model that blends text-to-image generation with visual reasoning for seamless cross-modal tasks.
 - [MiniMax Image-01-Live I2I](https://docs.modellix.ai/minimax/minimax-image-01-live-i2i.md): MiniMax’s multimodal vision model that blends text-to-image generation with visual reasoning for seamless cross-modal tasks.
 - [MiniMax Image-01 T2I](https://docs.modellix.ai/minimax/minimax-image-01-t2i.md): MiniMax’s multimodal vision model that blends text-to-image generation with visual reasoning for seamless cross-modal tasks.
-- [MiniMax S2V-01](https://docs.modellix.ai/minimax/minimax-s2v-01.md): The MiniMax S2V-01 is a specialized subject reference video model designed to solve the industry challenge of character consistency. It can generate dynamic videos where the main character's identity stays highly consistent across every frame, using just a single photo as a reference and at a comput…
-- [MiniMax T2V-01](https://docs.modellix.ai/minimax/minimax-t2v-01.md): MiniMax T2V-01 is a text-to-video model that uniquely delivers professional-level camera movement control, transforming written prompts into cinematic video clips with dynamic shots.
-- [MiniMax T2V-01-Director](https://docs.modellix.ai/minimax/minimax-t2v-01-director.md): T2V-01-Director is a text-to-video AI model that offers precise camera control, allowing users to create professional-looking video clips with cinematic movements through a variety of lens instructions
+- [MiniMax S2V-01](https://docs.modellix.ai/minimax/minimax-s2v-01.md): S2V-01 generates videos with highly consistent character identity across frames using a single reference photo, at significantly lower computational cost.
+- [MiniMax T2V-01](https://docs.modellix.ai/minimax/minimax-t2v-01.md): MiniMax T2V-01 delivers professional camera movement control, transforming text prompts into cinematic video clips with dynamic shots.
+- [MiniMax T2V-01-Director](https://docs.modellix.ai/minimax/minimax-t2v-01-director.md): T2V-01-Director offers precise camera control for creating professional video clips with cinematic movements through a variety of lens instructions.
 - [Agent Skill](https://docs.modellix.ai/ways-to-use/agent-skill.md)
 - [REST API](https://docs.modellix.ai/ways-to-use/api.md): The steps to use the Modellix models API, including how to get an API key, how to use the API, and how to get the result.
 - [Error Handling](https://docs.modellix.ai/ways-to-use/error-handling.md): Learn about error codes, messages, and best practices for the Prediction API.
@@ -117,23 +117,23 @@
 
 ## OpenAPI Specs
 
-- [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
-- [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
-- [kling-t2i](https://docs.modellix.ai/model-api/kling/kling-t2i.json)
-- [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
-- [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
-- [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
-- [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
-- [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
-- [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
-- [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
-- [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
-- [kling-t2v](https://docs.modellix.ai/model-api/kling/kling-t2v.json)
-- [kling-i2v](https://docs.modellix.ai/model-api/kling/kling-i2v.json)
 - [minimax-t2v](https://docs.modellix.ai/model-api/minimax/minimax-t2v.json)
 - [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
 - [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
 - [minimax-i2i](https://docs.modellix.ai/model-api/minimax/minimax-i2i.json)
+- [kling-t2v](https://docs.modellix.ai/model-api/kling/kling-t2v.json)
+- [kling-t2i](https://docs.modellix.ai/model-api/kling/kling-t2i.json)
+- [kling-i2v](https://docs.modellix.ai/model-api/kling/kling-i2v.json)
+- [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
+- [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
+- [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
+- [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
+- [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
+- [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
+- [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
+- [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
+- [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
+- [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
 - [openapi](https://docs.modellix.ai/api-reference/openapi.json)
 
 ## Optional
