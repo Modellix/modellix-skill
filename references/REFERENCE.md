@@ -117,6 +117,7 @@
 
 ## OpenAPI Specs
 
+- [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
 - [minimax-t2v](https://docs.modellix.ai/model-api/minimax/minimax-t2v.json)
 - [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
 - [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
@@ -132,7 +133,6 @@
 - [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
 - [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
 - [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
-- [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
 - [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
 - [openapi](https://docs.modellix.ai/api-reference/openapi.json)
 
