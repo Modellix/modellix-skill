@@ -30,23 +30,7 @@
 - [Wanx 2.1 T2V Plus](https://docs.modellix.ai/alibaba/wanx-2-1-t2v-plus.md): Wan test-to-video model can generate videos from a single sentence, featuring rich artistic styles and cinematic quality. Wanx 2.1 Plus offers even more refined visuals.
 - [Wanx 2.1 T2V Turbo](https://docs.modellix.ai/alibaba/wanx-2-1-t2v-turbo.md): Wan test-to-video model can generate videos with a single sentence, featuring rich artistic styles and cinematic quality. Wanx 2.1 Turbo offers high cost-effectiveness.
 - [Wanx 2.5 I2V Preview](https://docs.modellix.ai/alibaba/wanx-2-5-i2v-preview.md): Wan image-to-video model generates videos from prompts and images with cinematic quality. Wan 2.5 supports automatic dubbing and custom audio files.
-- [Introduction](https://docs.modellix.ai/api-reference/introduction.md): How to use model API in Modellix.
 - [Query Task Result](https://docs.modellix.ai/api-reference/query-task-result.md): Query the status and results of an async task by task_id
-- [Claude Code setup](https://docs.modellix.ai/archieved/ai-tools/claude-code.md): Configure Claude Code for your documentation workflow
-- [Cursor setup](https://docs.modellix.ai/archieved/ai-tools/cursor.md): Configure Cursor for your documentation workflow
-- [Windsurf setup](https://docs.modellix.ai/archieved/ai-tools/windsurf.md): Configure Windsurf for your documentation workflow
-- [Authentication](https://docs.modellix.ai/archieved/authentication.md)
-- [Development](https://docs.modellix.ai/archieved/development.md): Preview changes locally to update your docs
-- [Code blocks](https://docs.modellix.ai/archieved/essentials/code.md): Display inline code and code blocks
-- [Images and embeds](https://docs.modellix.ai/archieved/essentials/images.md): Add image, video, and other HTML elements
-- [Markdown syntax](https://docs.modellix.ai/archieved/essentials/markdown.md): Text, title, and styling in standard markdown
-- [Navigation](https://docs.modellix.ai/archieved/essentials/navigation.md): The navigation field in docs.json defines the pages that go in the navigation menu
-- [Reusable snippets](https://docs.modellix.ai/archieved/essentials/reusable-snippets.md): Reusable, custom snippets to keep content in sync
-- [Global Settings](https://docs.modellix.ai/archieved/essentials/settings.md): Mintlify gives you complete control over the look and feel of your documentation using the docs.json file
-- [Introduction](https://docs.modellix.ai/archieved/introduction.md): Example section for showcasing API endpoints
-- [API Overview](https://docs.modellix.ai/archieved/overview.md): Comprehensive overview of the Prediction API including endpoints, authentication, and response formats
-- [Quickstart](https://docs.modellix.ai/archieved/quickstart.md): Start building awesome documentation in minutes
-- [Snippet intro](https://docs.modellix.ai/archieved/snippets/snippet-intro.md)
 - [Seedance 1.0 Pro Fast I2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-fast-i2v.md): Seedance 1.0 Pro Fast inherits core advantages of the Pro model with 3x faster generation and 72% lower cost, balancing quality, speed, and price.
 - [Seedance 1.0 Pro Fast T2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-fast-t2v.md): Seedance 1.0 Pro Fast inherits core advantages of the Pro model with 3x faster generation and 72% lower cost, balancing quality, speed, and price.
 - [Seedance 1.0 Pro I2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-i2v.md): ByteDance's flagship image-to-video model with multi-shot narrative, superior semantic understanding, and cinematic 1080P output in diverse styles.
@@ -112,11 +96,11 @@
 - [MiniMax T2V-01-Director](https://docs.modellix.ai/minimax/minimax-t2v-01-director.md): T2V-01-Director offers precise camera control for creating professional video clips with cinematic movements through a variety of lens instructions.
 - [Agent Skill](https://docs.modellix.ai/ways-to-use/agent-skill.md)
 - [REST API](https://docs.modellix.ai/ways-to-use/api.md): The steps to use the Modellix models API, including how to get an API key, how to use the API, and how to get the result.
-- [Error Handling](https://docs.modellix.ai/ways-to-use/error-handling.md): Learn about error codes, messages, and best practices for the Prediction API.
 - [MCP](https://docs.modellix.ai/ways-to-use/mcp.md): Modellix Docs MCP Server allows you to search the Modellix documentation in your MCP clients.
 
 ## OpenAPI Specs
 
+- [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
 - [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
 - [minimax-t2v](https://docs.modellix.ai/model-api/minimax/minimax-t2v.json)
 - [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
@@ -130,7 +114,6 @@
 - [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
 - [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
-- [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
 - [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
 - [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
 - [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
