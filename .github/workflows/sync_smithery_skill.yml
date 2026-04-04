@@ -1,0 +1,25 @@
+name: Sync Smithery Skill
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  sync-smithery:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Smithery skill
+        env:
+          SMITHERY_TOKEN: ${{ secrets.SMITHERY_TOKEN }}
+        run: |
+          if [ -z "$SMITHERY_TOKEN" ]; then
+            echo "SMITHERY_TOKEN is not set. Please configure it in repository secrets."
+            exit 1
+          fi
+
+          curl --request PUT \
+            --url "https://api.smithery.ai/skills/modellix/modellix-skill" \
+            --header "Authorization: Bearer ${SMITHERY_TOKEN}" \
+            --header "Content-Type: application/json"

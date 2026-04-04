@@ -1,43 +1,98 @@
 # Modellix Agent Skill
 
-An Agent Skill for integrating [Modellix](https://modellix.ai) — a unified Model-as-a-Service (MaaS) platform providing REST API access to 100+ AI models for image and video generation.
+Agent skill for integrating [Modellix](https://modellix.ai), a unified Model-as-a-Service (MaaS) platform for image and video generation.
 
-## What It Does
+## What This Skill Provides
 
-This skill guides AI agents through the Modellix API workflow:
+- CLI-first, REST-fallback workflow for async generation tasks
+- Model discovery using bundled `references/REFERENCE.md`
+- Task submission + polling guidance (`pending` / `success` / `failed`)
+- Retry/error handling for `429`, `500`, `503`
+- Credential and egress transparency (`MODELLIX_API_KEY`, outbound calls to `api.modellix.ai`)
 
-1. **Obtain an API Key** — directs users to the Modellix console
-2. **Find the Right Model** — searches the bundled model catalog (`references/REFERENCE.md`) and fetches model-specific API docs
-3. **Submit Async Tasks** — constructs REST API calls to `POST /api/v1/{type}/{provider}/{model_id}/async`
-4. **Poll for Results** — queries task status via `GET /api/v1/tasks/{task_id}` with exponential backoff
-5. **Handle Results** — extracts generated content URLs from the response
+## Install
+
+### From GitHub
+
+General:
+
+```bash
+npx skills add https://github.com/Modellix/modellix-skill/tree/main/modellix-skill
+```
+
+Cursor:
+
+```bash
+npx skills add https://github.com/Modellix/modellix-skill/tree/main/modellix-skill --agent cursor
+```
+
+Update skills:
+
+```bash
+npx skills update
+```
+
+### From Smithery
+
+General:
+
+```bash
+npx @smithery/cli@latest skill add modellix/modellix-skill
+```
+
+Cursor:
+
+```bash
+npx @smithery/cli@latest skill add modellix/modellix-skill --agent cursor
+```
+
+### From ClawHub
+
+```bash
+clawhub install modellix
+```
+
+Update all installed skills:
+
+```bash
+clawhub update --all
+```
+
+## Credential
+
+This skill requires:
+
+- `MODELLIX_API_KEY` (required)
+
+Create API key at: <https://modellix.ai/console/api-key>
 
 ## Supported Task Types
 
 | Type | Description |
-|------|-------------|
-| text-to-image | Generate images from text prompts |
-| image-to-image | Edit or transform images with text instructions |
-| text-to-video | Create videos from text descriptions |
-| image-to-video | Convert static images into video sequences |
+| --- | --- |
+| `text-to-image` | Generate images from text prompts |
+| `image-to-image` | Edit or transform images with text instructions |
+| `text-to-video` | Create videos from text descriptions |
+| `image-to-video` | Convert static images into video sequences |
+| `video-to-video` | Transform existing videos |
 
-## Providers
+## Skill Structure
 
-Alibaba (Qwen, Wan, Wanx), ByteDance (Seedream, Seedance, SeedEdit), Kling, MiniMax (Hailuo)
-
-## Project Structure
-
-```
-skill/
-├── SKILL.md                  # Skill instructions
-└── references/
-    └── REFERENCE.md          # Model catalog with API doc links
+```text
+modellix-skill/
+├── SKILL.md
+├── skill.json
+├── scripts/
+├── references/
+└── assets/
 ```
 
 ## Links
 
-- **Docs**: [docs.modellix.ai](https://docs.modellix.ai)
-- **API Guide**: [REST API](https://docs.modellix.ai/ways-to-use/api)
-- **Pricing**: [Pricing](https://docs.modellix.ai/get-started/pricing)
-- **Support**: [support@modellix.ai](mailto:support@modellix.ai)
-- **Community**: [Discord](https://discord.gg/N2FbcB2cZT)
+- Docs: [docs.modellix.ai](https://docs.modellix.ai)
+- Agent Skill Guide: [ways-to-use/skill](https://docs.modellix.ai/ways-to-use/skill.md)
+- REST API Guide: [ways-to-use/api](https://docs.modellix.ai/ways-to-use/api.md)
+- CLI Guide: [ways-to-use/cli](https://docs.modellix.ai/ways-to-use/cli.md)
+- Pricing: [get-started/pricing](https://docs.modellix.ai/get-started/pricing)
+- Support: [support@modellix.ai](mailto:support@modellix.ai)
+- Community: [Discord](https://discord.gg/N2FbcB2cZT)
