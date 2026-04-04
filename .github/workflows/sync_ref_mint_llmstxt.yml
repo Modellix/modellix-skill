@@ -24,7 +24,7 @@ jobs:
           mkdir -p references
           
           # Sync REFERENCE.md
-          curl -L -s -o "references/REFERENCE.md" "${{ env.DOCS_BASE_URL }}/llms.txt"
+          curl -L -s -o "modellix-skill/references/REFERENCE.md" "${{ env.DOCS_BASE_URL }}/llms.txt"
 
       - name: Commit and Push if Changed
         run: |

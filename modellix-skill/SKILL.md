@@ -1,13 +1,12 @@
 ---
 name: modellix
 description: Integrate Modellix's unified API for AI image and video generation into applications. Use this skill whenever the user wants to generate images from text, create videos from text or images, edit images, do virtual try-on, or call any Modellix model API. Also trigger when the user mentions Modellix, model-as-a-service for media generation, or needs to work with providers like Qwen, Wan, Seedream, Seedance, Kling, Hailuo, or MiniMax through a unified API.
-env:
-  - name: MODELLIX_API_KEY
-    description: API key for authenticating with Modellix CLI or REST API. Create one at https://modellix.ai/console/api-key.
-    required: true
 metadata:
     mintlify-proj: modellix
     version: "2.0"
+    primaryEnv: MODELLIX_API_KEY
+    requiredEnv:
+      - MODELLIX_API_KEY
 ---
 
 # Modellix Skill
@@ -26,7 +25,7 @@ Always choose execution path in this order:
 
 Use bundled scripts before ad-hoc commands:
 
-1. `scripts/preflight.ps1`
+1. `scripts/preflight.py`
    - Validates CLI availability and API key presence.
    - Returns recommended mode (`cli` or `rest`).
 2. `scripts/invoke_and_poll.py`
@@ -37,7 +36,7 @@ Use bundled scripts before ad-hoc commands:
 Quick commands:
 
 ```powershell
-./scripts/preflight.ps1 -Json
+python scripts/preflight.py --json
 python scripts/invoke_and_poll.py --model-type text-to-image --provider alibaba --model-id qwen-image-plus --body '{"prompt":"A cinematic portrait of a fox in a misty forest at sunrise"}'
 ```
 
@@ -78,6 +77,13 @@ Read only what the task needs:
 
 - Output schema:
   - `assets/output/task-result.schema.json`
+
+## Credential and Data Egress
+
+- Required credential: `MODELLIX_API_KEY` (this skill does not require any other secret).
+- Network egress: sends requests to `https://api.modellix.ai`.
+- User payload handling: prompts and user-provided inputs (including media URLs or file-derived content) may be sent to Modellix endpoints during invocation.
+- Result handling: generated resource URLs come from Modellix response payloads and should be downloaded before expiry (about 24 hours).
 
 ## Error/Retry Policy
 

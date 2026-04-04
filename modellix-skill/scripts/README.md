@@ -2,15 +2,15 @@
 
 These scripts make the Modellix skill executable instead of documentation-only.
 
-## preflight.ps1
+## preflight.py
 
 Windows-first environment check for CLI-first routing.
 
 Usage:
 
 ```powershell
-./scripts/preflight.ps1
-./scripts/preflight.ps1 -Json
+python scripts/preflight.py
+python scripts/preflight.py --json
 ```
 
 Checks:

@@ -1,0 +1,13 @@
+{
+  "name": "modellix",
+  "version": "2.0.0",
+  "description": "Integrate Modellix unified API/CLI for async image and video generation.",
+  "primaryEnv": "MODELLIX_API_KEY",
+  "env": [
+    {
+      "name": "MODELLIX_API_KEY",
+      "description": "API key for Modellix CLI and REST API calls.",
+      "required": true
+    }
+  ]
+}
