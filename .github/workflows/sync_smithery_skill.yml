@@ -5,6 +5,10 @@ on:
     branches:
       - main
   workflow_dispatch:
+  workflow_call:
+    secrets:
+      SMITHERY_TOKEN:
+        required: false
 
 jobs:
   sync-smithery:
@@ -12,14 +16,16 @@ jobs:
     steps:
       - name: Update Smithery skill
         env:
-          SMITHERY_TOKEN: ${{ secrets.SMITHERY_TOKEN }}
+          SMITHERY_TOKEN: ${{ secrets[format('{0}', 'SMITHERY_TOKEN')] || '' }}
+          SKILL_GIT_URL: https://github.com/Modellix/modellix-skill/tree/main/modellix-skill
         run: |
           if [ -z "$SMITHERY_TOKEN" ]; then
             echo "SMITHERY_TOKEN is not set. Please configure it in repository secrets."
             exit 1
           fi
 
-          curl --request PUT \
+          curl --fail-with-body --request PUT \
             --url "https://api.smithery.ai/skills/modellix/modellix-skill" \
             --header "Authorization: Bearer ${SMITHERY_TOKEN}" \
-            --header "Content-Type: application/json"
+            --header "Content-Type: application/json" \
+            --data "{\"gitUrl\":\"${SKILL_GIT_URL}\"}"

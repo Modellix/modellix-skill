@@ -7,6 +7,7 @@ on:
 
 env:
   DOCS_BASE_URL: https://docs.modellix.ai
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
 jobs:
   update-docs:
@@ -16,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Fetch Remote Files
         run: |
