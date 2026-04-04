@@ -3,7 +3,7 @@ name: modellix
 description: Integrate Modellix's unified API for AI image and video generation into applications. Use this skill whenever the user wants to generate images from text, create videos from text or images, edit images, do virtual try-on, or call any Modellix model API. Also trigger when the user mentions Modellix, model-as-a-service for media generation, or needs to work with providers like Qwen, Wan, Seedream, Seedance, Kling, Hailuo, or MiniMax through a unified API.
 env:
   - name: MODELLIX_API_KEY
-    description: API key for authenticating with the Modellix REST API. Create one at https://modellix.ai/console/api-key.
+    description: API key for authenticating with Modellix CLI or REST API. Create one at https://modellix.ai/console/api-key.
     required: true
 metadata:
     mintlify-proj: modellix
@@ -12,7 +12,28 @@ metadata:
 
 # Modellix Skill
 
-Modellix is a Model-as-a-Service (MaaS) platform providing unified API access to 100+ AI models for image and video generation. All models — regardless of provider (Alibaba, ByteDance, Kling, MiniMax) — share the same async API pattern: submit a task, get a `task_id`, poll for results.
+Modellix is a Model-as-a-Service (MaaS) platform providing unified API access to 100+ AI models for image and video generation. All models — regardless of provider (Alibaba, ByteDance, Kling, MiniMax) — share the same async task pattern: submit a task, get a `task_id`, poll for results.
+
+## Execution Policy (CLI-first)
+
+Use this decision rule before generating integration steps:
+
+1. Prefer **Modellix CLI** as the primary path in terminal-capable environments.
+2. Fall back to **REST API** when:
+   - `modellix-cli` is not installed
+   - CLI auth is unavailable
+   - a required capability is not exposed by CLI
+3. Prefer machine-readable output (`--json`) whenever a CLI command supports it.
+
+## Preflight Check
+
+Before invocation, run this quick check:
+
+1. Verify CLI exists: `modellix-cli --version`
+2. Verify auth source:
+   - Preferred: `MODELLIX_API_KEY`
+   - Alternative: `--api-key` per command
+3. If either check fails, switch to REST flow immediately.
 
 ## Workflow
 
@@ -49,7 +70,85 @@ The model catalog is in `references/REFERENCE.md`. Read that file to search for 
 
 This step is essential because each model has different parameters (e.g., `size` format, `seed` range, model-specific options). Always read the model's doc page before writing API calls.
 
-### Step 3: Submit an Async Task
+### Track A (Recommended): Modellix CLI
+
+Use this track when the preflight check passes.
+
+#### Install and validate
+
+```bash
+npm install -g modellix-cli
+modellix-cli --version
+```
+
+#### Authenticate
+
+Preferred:
+
+```bash
+export MODELLIX_API_KEY="your_api_key"
+```
+
+PowerShell:
+
+```powershell
+$env:MODELLIX_API_KEY="your_api_key"
+```
+
+Alternative (per-command): `--api-key <your_api_key>`
+
+#### Get supported model types
+
+```bash
+modellix-cli model types
+modellix-cli model types --json
+```
+
+Current allowed `model-type` values:
+- `text-to-image`
+- `text-to-video`
+- `image-to-image`
+- `image-to-video`
+- `video-to-video`
+
+#### Submit an async task
+
+Inline JSON body:
+
+```bash
+modellix-cli model invoke \
+  --model-type text-to-image \
+  --model-id qwen-image-plus \
+  --body '{"prompt":"A cute cat playing in a garden on a sunny day"}'
+```
+
+Or use a body file:
+
+```bash
+modellix-cli model invoke \
+  --model-type text-to-image \
+  --model-id qwen-image-plus \
+  --body-file ./payload.json
+```
+
+#### Poll task result
+
+```bash
+modellix-cli task get <task_id>
+```
+
+Continue polling until `data.status` becomes `success` or `failed`.
+
+Recommended polling strategy:
+- Start at 1-2 seconds delay
+- Use exponential backoff (`1s -> 2s -> 4s`, cap around 10s)
+- Handle retryable errors (`429`, `500`, `503`)
+
+### Track B: REST API (Fallback)
+
+Use this track when CLI is unavailable or unsuitable.
+
+### Step 3: Submit an Async Task (REST)
 
 All Modellix API calls are asynchronous. Submit a task with a POST request:
 
@@ -91,7 +190,7 @@ curl -X POST https://api.modellix.ai/api/v1/text-to-image/alibaba/qwen-image-plu
 
 A `code` of `0` means success. Any other value indicates an error (see Error Handling below).
 
-### Step 4: Poll for Results
+### Step 4: Poll for Results (REST)
 
 Query the task status using the `task_id`:
 
@@ -147,7 +246,7 @@ The generated content URLs are in `data.result.resources`. Download or use them 
 
 **Implement polling with exponential backoff** (1s, 2s, 4s...) rather than fixed intervals. A typical image takes 3-10 seconds; video generation takes longer (30-120 seconds depending on model and duration).
 
-### Step 5: Handle Results
+### Step 5: Handle Results (REST)
 
 Extract the generated content from the `resources` array:
 
@@ -157,6 +256,13 @@ for resource in data["result"]["resources"]:
     media_type = resource["type"]  # "image" or "video"
     # Download and save before the 24-hour expiration
 ```
+
+## Capability Mapping (CLI <-> REST)
+
+- `modellix-cli model invoke` <-> `POST /api/v1/{type}/{provider}/{model_id}/async`
+- `modellix-cli task get <task_id>` <-> `GET /api/v1/tasks/{task_id}`
+
+Use this mapping whenever you need to switch channels without changing business logic.
 
 ## Error Handling
 
@@ -175,10 +281,13 @@ The `code` field equals the HTTP status code. The `message` contains a category 
 | ----------- | --------------------- | ---------------------------------- | ----------------------------- |
 | 400         | Bad Request           | Missing or invalid parameters      | No — fix parameters first     |
 | 401         | Unauthorized          | Invalid or missing API key         | No — provide a valid key      |
+| 402         | Payment Required      | Insufficient balance or arrears    | No — recharge account first   |
 | 404         | Not Found             | Task ID or model not found         | No — check resource ID        |
 | 429         | Too Many Requests     | Rate or concurrency limit exceeded | Yes — use exponential backoff |
 | 500         | Internal Server Error | Unexpected server error            | Yes — retry up to 3 times     |
 | 503         | Service Unavailable   | Provider temporarily down          | Yes — retry with backoff      |
+
+For `429`, respect `X-RateLimit-Reset` when present. For `500` and `503`, use bounded retry (`<= 3`) with exponential backoff.
 
 ## Implementation Patterns
 
@@ -254,6 +363,11 @@ When submitting multiple tasks, respect the concurrent task limit (typically 3 p
 
 Before shipping a Modellix integration:
 
+- [ ] Preflight decision made (CLI primary or REST fallback)
+- [ ] If using CLI: `modellix-cli --version` succeeds
+- [ ] If using CLI: authentication is set (`MODELLIX_API_KEY` or `--api-key`)
+- [ ] If using CLI: commands validated (`model types`, `model invoke`, `task get`)
+- [ ] If needed: REST fallback path is tested
 - [ ] API key stored as environment variable, not hardcoded
 - [ ] `Authorization: Bearer <key>` header set correctly
 - [ ] Model-specific parameters match the model's API doc (read from REFERENCE.md → model doc page)
@@ -269,5 +383,6 @@ Before shipping a Modellix integration:
 
 - **Model Catalog**: Read `references/REFERENCE.md` to find available models and their doc page URLs
 - **API Usage Guide**: https://docs.modellix.ai/ways-to-use/api
+- **CLI Guide**: https://docs.modellix.ai/ways-to-use/cli
 - **Pricing**: https://docs.modellix.ai/get-started/pricing
 - **Full Doc Index**: https://docs.modellix.ai/llms.txt
