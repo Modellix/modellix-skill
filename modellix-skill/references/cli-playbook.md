@@ -43,9 +43,13 @@ modellix-cli model types --json
 ```bash
 modellix-cli model invoke \
   --model-type text-to-image \
-  --model-id qwen-image-plus \
+  --model-slug bytedance/seedream-4.5-t2i \
   --body '{"prompt":"A cinematic portrait of a fox in a misty forest at sunrise"}'
 ```
+
+`--model-slug` is required and must use `provider/model` format, for example:
+- `bytedance/seedream-4.5-t2i`
+- `alibaba/qwen-image-edit`
 
 3) Poll task result:
 
@@ -65,7 +69,7 @@ The CLI surfaces API errors directly:
 - `400`: invalid request body or parameters
 - `401`: invalid/missing API key
 - `402`: balance/billing issue
-- `404`: invalid task/model/provider
+- `404`: invalid task or model slug
 - `429`: retry with backoff
 - `500`/`503`: retry up to 3 times with backoff
 

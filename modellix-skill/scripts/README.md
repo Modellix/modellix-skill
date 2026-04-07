@@ -27,8 +27,7 @@ Usage:
 ```bash
 python scripts/invoke_and_poll.py \
   --model-type text-to-image \
-  --provider alibaba \
-  --model-id qwen-image-plus \
+  --model-slug bytedance/seedream-4.5-t2i \
   --body '{"prompt":"A cinematic portrait of a fox in a misty forest at sunrise"}'
 ```
 
@@ -36,3 +35,4 @@ Key behavior:
 - Mode `auto` (default): use CLI when available, otherwise REST
 - Retry submit on `429/500/503` (up to 3 retries)
 - Normalize output with task metadata and resources
+- `--model-slug` is required in `provider/model` format

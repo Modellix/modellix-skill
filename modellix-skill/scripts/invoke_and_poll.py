@@ -5,8 +5,7 @@ Submit and poll a Modellix async task using CLI-first with REST fallback.
 Examples:
   python scripts/invoke_and_poll.py \
     --model-type text-to-image \
-    --provider alibaba \
-    --model-id qwen-image-plus \
+    --model-slug bytedance/seedream-4.5-t2i \
     --body '{"prompt":"A cinematic portrait of a fox in a misty forest at sunrise"}'
 """
 
@@ -31,8 +30,11 @@ MAX_RETRIES = 3
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Invoke Modellix and poll result.")
     parser.add_argument("--model-type", required=True, help="Task type, e.g. text-to-image")
-    parser.add_argument("--model-id", required=True, help="Model id, e.g. qwen-image-plus")
-    parser.add_argument("--provider", default="alibaba", help="Model provider for REST endpoint")
+    parser.add_argument(
+        "--model-slug",
+        required=True,
+        help="Model slug in provider/model format, e.g. bytedance/seedream-4.5-t2i",
+    )
     parser.add_argument("--body", help="Inline JSON request body")
     parser.add_argument("--body-file", help="Path to JSON request body file")
     parser.add_argument("--api-key", help="API key override; defaults to MODELLIX_API_KEY")
@@ -59,6 +61,17 @@ def get_api_key(args: argparse.Namespace) -> str:
     return key
 
 
+def parse_model_slug(model_slug: str) -> Tuple[str, str]:
+    if "/" not in model_slug:
+        raise ValueError("Invalid --model-slug. Expected format: <provider>/<model_id>.")
+    provider, model_id = model_slug.split("/", 1)
+    provider = provider.strip()
+    model_id = model_id.strip()
+    if not provider or not model_id:
+        raise ValueError("Invalid --model-slug. Provider and model_id must be non-empty.")
+    return provider, model_id
+
+
 def run_cli(args: argparse.Namespace) -> Dict[str, Any]:
     cmd = [
         "modellix-cli",
@@ -66,8 +79,8 @@ def run_cli(args: argparse.Namespace) -> Dict[str, Any]:
         "invoke",
         "--model-type",
         args.model_type,
-        "--model-id",
-        args.model_id,
+        "--model-slug",
+        args.model_slug,
     ]
     if args.body_file:
         cmd.extend(["--body-file", args.body_file])
@@ -108,7 +121,8 @@ def http_request(url: str, method: str, api_key: str, body: Optional[Dict[str, A
 
 
 def run_rest_submit(args: argparse.Namespace, body: Dict[str, Any], api_key: str) -> Dict[str, Any]:
-    url = f"{BASE_URL}/{args.model_type}/{args.provider}/{args.model_id}/async"
+    provider, model_id = parse_model_slug(args.model_slug)
+    url = f"{BASE_URL}/{args.model_type}/{provider}/{model_id}/async"
     attempts = 0
     wait = args.initial_wait
     while True:
