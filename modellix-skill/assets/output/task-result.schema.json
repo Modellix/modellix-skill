@@ -15,7 +15,7 @@
     },
     "status": {
       "type": "string",
-      "enum": ["pending", "success", "failed"]
+      "enum": ["pending", "processing", "success", "failed"]
     },
     "model_id": {
       "type": ["string", "null"]

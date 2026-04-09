@@ -4,7 +4,6 @@ Submit and poll a Modellix async task using CLI-first with REST fallback.
 
 Examples:
   python scripts/invoke_and_poll.py \
-    --model-type text-to-image \
     --model-slug bytedance/seedream-4.5-t2i \
     --body '{"prompt":"A cinematic portrait of a fox in a misty forest at sunrise"}'
 """
@@ -29,7 +28,6 @@ MAX_RETRIES = 3
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Invoke Modellix and poll result.")
-    parser.add_argument("--model-type", required=True, help="Task type, e.g. text-to-image")
     parser.add_argument(
         "--model-slug",
         required=True,
@@ -77,8 +75,6 @@ def run_cli(args: argparse.Namespace) -> Dict[str, Any]:
         "modellix-cli",
         "model",
         "invoke",
-        "--model-type",
-        args.model_type,
         "--model-slug",
         args.model_slug,
     ]
@@ -122,7 +118,7 @@ def http_request(url: str, method: str, api_key: str, body: Optional[Dict[str, A
 
 def run_rest_submit(args: argparse.Namespace, body: Dict[str, Any], api_key: str) -> Dict[str, Any]:
     provider, model_id = parse_model_slug(args.model_slug)
-    url = f"{BASE_URL}/{args.model_type}/{provider}/{model_id}/async"
+    url = f"{BASE_URL}/{provider}/{model_id}/async"
     attempts = 0
     wait = args.initial_wait
     while True:
@@ -137,8 +133,8 @@ def run_rest_submit(args: argparse.Namespace, body: Dict[str, Any], api_key: str
         wait = min(wait * 2, args.max_wait)
 
 
-def run_rest_poll(task_id: str, api_key: str) -> Dict[str, Any]:
-    url = f"{BASE_URL}/tasks/{task_id}"
+def run_rest_poll(task_id: str, api_key: str, poll_url: Optional[str] = None) -> Dict[str, Any]:
+    url = poll_url or f"{BASE_URL}/tasks/{task_id}"
     return http_request(url=url, method="GET", api_key=api_key)
 
 
@@ -149,11 +145,13 @@ def pick_mode(args: argparse.Namespace, api_key: str) -> str:
     return "cli" if has_cli and api_key else "rest"
 
 
-def extract_task_id(payload: Dict[str, Any]) -> str:
-    task_id = payload.get("data", {}).get("task_id")
+def extract_task_id(payload: Dict[str, Any]) -> Tuple[str, Optional[str]]:
+    data = payload.get("data", {})
+    task_id = data.get("task_id")
     if not task_id:
         raise RuntimeError(f"Missing task_id in response: {json.dumps(payload, ensure_ascii=False)}")
-    return str(task_id)
+    poll_url = (data.get("get_result") or {}).get("url")
+    return str(task_id), poll_url
 
 
 def normalize_output(mode_used: str, submit_payload: Dict[str, Any], poll_payload: Dict[str, Any]) -> Dict[str, Any]:
@@ -185,7 +183,7 @@ def main() -> int:
     else:
         submit_payload = run_rest_submit(args, body, api_key)
 
-    task_id = extract_task_id(submit_payload)
+    task_id, poll_url = extract_task_id(submit_payload)
 
     started = time.time()
     wait = args.initial_wait
@@ -203,7 +201,7 @@ def main() -> int:
                 raise RuntimeError(f"CLI poll failed: {proc.stderr.strip() or proc.stdout.strip()}")
             poll_payload = json.loads(proc.stdout)
         else:
-            poll_payload = run_rest_poll(task_id, api_key)
+            poll_payload = run_rest_poll(task_id, api_key, poll_url)
 
         status = str(poll_payload.get("data", {}).get("status", "")).lower()
         if status in {"success", "failed"}:

@@ -31,18 +31,10 @@ modellix-cli ... --api-key <your_api_key>
 
 ## Core Command Flow
 
-1) Discover model types:
-
-```bash
-modellix-cli model types
-modellix-cli model types --json
-```
-
-2) Invoke async task:
+1) Invoke async task:
 
 ```bash
 modellix-cli model invoke \
-  --model-type text-to-image \
   --model-slug bytedance/seedream-4.5-t2i \
   --body '{"prompt":"A cinematic portrait of a fox in a misty forest at sunrise"}'
 ```
@@ -51,7 +43,25 @@ modellix-cli model invoke \
 - `bytedance/seedream-4.5-t2i`
 - `alibaba/qwen-image-edit`
 
-3) Poll task result:
+The response includes a `get_result` section with the polling endpoint:
+
+```json
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "status": "pending",
+    "task_id": "task-abc123",
+    "model_id": "model-123",
+    "get_result": {
+      "method": "GET",
+      "url": "https://api.modellix.ai/api/v1/tasks/task-abc123"
+    }
+  }
+}
+```
+
+2) Poll task result:
 
 ```bash
 modellix-cli task get <task_id>

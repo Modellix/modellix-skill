@@ -26,7 +26,6 @@ Usage:
 
 ```bash
 python scripts/invoke_and_poll.py \
-  --model-type text-to-image \
   --model-slug bytedance/seedream-4.5-t2i \
   --body '{"prompt":"A cinematic portrait of a fox in a misty forest at sunrise"}'
 ```

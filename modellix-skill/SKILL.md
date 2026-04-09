@@ -37,7 +37,7 @@ Quick commands:
 
 ```powershell
 python scripts/preflight.py --json
-python scripts/invoke_and_poll.py --model-type text-to-image --model-slug bytedance/seedream-4.5-t2i --body '{"prompt":"A cinematic portrait of a fox in a misty forest at sunrise"}'
+python scripts/invoke_and_poll.py --model-slug bytedance/seedream-4.5-t2i --body '{"prompt":"A cinematic portrait of a fox in a misty forest at sunrise"}'
 ```
 
 ## Core Workflow
@@ -104,7 +104,7 @@ Retry behavior:
 - [ ] API key configured (`MODELLIX_API_KEY` or CLI `--api-key`)
 - [ ] Model parameters verified against model doc from `references/REFERENCE.md`
 - [ ] Task submit returns `task_id` with success code
-- [ ] Polling handles `pending`, `success`, `failed`
+- [ ] Polling handles `pending`, `processing`, `success`, `failed`
 - [ ] Retry behavior implemented for `429/500/503`
 - [ ] Result URLs persisted before 24-hour expiration
 - [ ] REST fallback validated when CLI path is unavailable

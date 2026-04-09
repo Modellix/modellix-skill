@@ -19,7 +19,7 @@ Authorization: Bearer <MODELLIX_API_KEY>
 1) Submit async task:
 
 ```http
-POST /{type}/{provider}/{model_id}/async
+POST /{provider}/{model_id}/async
 ```
 
 2) Poll task:
@@ -33,10 +33,28 @@ GET /tasks/{task_id}
 Submit:
 
 ```bash
-curl -X POST "https://api.modellix.ai/api/v1/text-to-image/alibaba/qwen-image-plus/async" \
+curl -X POST "https://api.modellix.ai/api/v1/alibaba/qwen-image-plus/async" \
   -H "Authorization: Bearer $MODELLIX_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"prompt":"A cute cat playing in a garden on a sunny day"}'
+```
+
+The submit response includes `get_result` with the polling endpoint:
+
+```json
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "status": "pending",
+    "task_id": "task-abc123",
+    "model_id": "model-123",
+    "get_result": {
+      "method": "GET",
+      "url": "https://api.modellix.ai/api/v1/tasks/task-abc123"
+    }
+  }
+}
 ```
 
 Poll:
@@ -48,7 +66,8 @@ curl -X GET "https://api.modellix.ai/api/v1/tasks/<task_id>" \
 
 ## Status Model
 
-- `pending`: still processing, continue polling
+- `pending`: queued, not yet started
+- `processing`: actively generating, continue polling
 - `success`: read output from `data.result.resources`
 - `failed`: inspect error payload
 
