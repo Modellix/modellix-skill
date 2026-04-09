@@ -46,6 +46,25 @@
 - [Overview](https://docs.modellix.ai/get-started/index.md): Welcome to Modellix.
 - [Model Providers](https://docs.modellix.ai/get-started/model-providers.md): List all model providers of Modellix.
 - [Pricing](https://docs.modellix.ai/get-started/pricing.md): The pricing of each model in Modellix.
+- [Imagen 4.0 Fast](https://docs.modellix.ai/google/imagen-4-0-fast-generate-001.md): Google Imagen 4.0 Fast text-to-image model optimized for speed. Supports `prompt`, `sampleCount`, `aspectRatio`, and `personGeneration`.
+- [Imagen 4.0](https://docs.modellix.ai/google/imagen-4-0-generate-001.md): Google Imagen 4.0 standard text-to-image model. High-quality photorealistic output. Supports batch generation (up to 4), person control, and up to 2K.
+- [Imagen 4.0 Ultra](https://docs.modellix.ai/google/imagen-4-0-ultra-generate-001.md): Google Imagen 4.0 Ultra text-to-image model with the highest quality. Optimized for detail and photorealism. Supports batch generation and up to 2K.
+- [Nano Banana](https://docs.modellix.ai/google/nano-banana.md): Nano Banana image generation model. Returns results via async task polling. Supports prompt and optional aspect ratio.
+- [Nano Banana 2](https://docs.modellix.ai/google/nano-banana-2.md): Nano Banana 2 multimodal image model. Omit `image` for text-to-image or include it for image-to-image. Supports 14 aspect ratios, 512-4K.
+- [Nano Banana 2 Edit](https://docs.modellix.ai/google/nano-banana-2-edit.md): Nano Banana 2 multimodal model in image-to-image mode. Requires a base64 data URI image input. Supports multiple aspect ratios and resolutions.
+- [Nano Banana Edit](https://docs.modellix.ai/google/nano-banana-edit.md): Nano Banana image editing model. Transforms images based on prompt instructions. Input image must be a base64 data URI.
+- [Nano Banana Pro](https://docs.modellix.ai/google/nano-banana-pro.md): Nano Banana Pro image generation model with higher quality output. Supports aspect ratio and image size (1K/2K/4K resolution).
+- [Nano Banana Pro Edit](https://docs.modellix.ai/google/nano-banana-pro-edit.md): Nano Banana Pro image editing model with higher quality. Superior detail preservation and prompt adherence. Supports up to 4K.
+- [Veo 2 I2V](https://docs.modellix.ai/google/veo-2-i2v.md): Google Veo 2.0 classic image-to-video model. Supports `prompt`, `image`, `aspectRatio`, `durationSeconds` (5/6/8), and `personGeneration`.
+- [Veo 2 T2V](https://docs.modellix.ai/google/veo-2-t2v.md): Google Veo 2.0 classic text-to-video model. Supports `prompt`, `aspectRatio`, `durationSeconds` (5/6/8), and `personGeneration`.
+- [Veo 3.1 Fast I2V](https://docs.modellix.ai/google/veo-3-1-fast-i2v.md): Google Veo 3.1 Fast image-to-video model. Same capabilities as Veo 3.1 with faster generation. Supports up to 4K. Duration: 4-8s.
+- [Veo 3.1 Fast T2V](https://docs.modellix.ai/google/veo-3-1-fast-t2v.md): Google Veo 3.1 Fast text-to-video model. Same capabilities as Veo 3.1 with faster generation. Supports up to 4K and reference images. Duration: 4-8s.
+- [Veo 3.1 I2V](https://docs.modellix.ai/google/veo-3-1-i2v.md): Google Veo 3.1 flagship image-to-video model. Supports `prompt`, `image`, `aspectRatio`, `durationSeconds`, `resolution` (up to 4k), and `personGeneration`.
+- [Veo 3.1 T2V](https://docs.modellix.ai/google/veo-3-1-t2v.md): Google Veo 3.1 flagship text-to-video model. Supports up to 4K and optional reference images (up to 3) for style consistency. Duration: 4-8s.
+- [Veo 3 Fast I2V](https://docs.modellix.ai/google/veo-3-fast-i2v.md): Google Veo 3.0 Fast image-to-video model. Faster generation with the same parameters as Veo 3, supporting resolutions up to **1080p**. Duration: 4/6/8 seconds.
+- [Veo 3 Fast T2V](https://docs.modellix.ai/google/veo-3-fast-t2v.md): Google Veo 3.0 Fast text-to-video model. Same capabilities as Veo 3 with faster generation. Supports up to 1080p. Duration: 4-8s.
+- [Veo 3 I2V](https://docs.modellix.ai/google/veo-3-i2v.md): Google Veo 3.0 stable image-to-video model. Supports `prompt`, `image`, `aspectRatio`, `durationSeconds`, `resolution` (up to 1080p), and `personGeneration`.
+- [Veo 3 T2V](https://docs.modellix.ai/google/veo-3-t2v.md): Google Veo 3.0 stable text-to-video model. Supports `prompt`, `aspectRatio`, `durationSeconds`, `resolution` (up to 1080p), and `personGeneration`.
 - [Kling Avatar](https://docs.modellix.ai/kling/kling-avatar.md): Generates realistic talking-head videos from a reference image and audio input, with precise lip synchronization, expressive gestures, and support for multiple languages.
 - [Kling Image Expansion](https://docs.modellix.ai/kling/kling-image-expansion.md): Extends images in any direction (up, down, left, right) with prompt-guided generation, ideal for panorama, background extension, and canvas expansion.
 - [Kling Image O1](https://docs.modellix.ai/kling/kling-image-o1.md): Multimodal image model accepting text, up to 10 reference images, and element inputs to produce 1K/2K images with precise style control and feature extraction.
@@ -101,6 +120,10 @@
 
 ## OpenAPI Specs
 
+- [google-t2v](https://docs.modellix.ai/model-api/google/google-t2v.json)
+- [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
+- [google-t2i](https://docs.modellix.ai/model-api/google/google-t2i.json)
+- [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
 - [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
 - [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
 - [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
