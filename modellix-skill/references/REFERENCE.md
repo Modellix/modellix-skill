@@ -147,6 +147,7 @@
 
 - [Support](mailto:support@modellix.ai)
 - [Community](https://discord.gg/N2FbcB2cZT)
+- [Blog](https://www.modellix.ai/blog)
 
 
 Built with [Mintlify](https://mintlify.com).
