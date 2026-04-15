@@ -62,7 +62,8 @@ jobs:
 
       - name: Sync skill to ClawHub
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: clawhub sync . --bump patch --changelog "Auto-synced from GitHub Actions" --yes
+        working-directory: ./modellix-skill
+        run: clawhub sync --all --bump patch --changelog "Auto-synced from GitHub Actions"
 
       # Sync action 3/3: wait then run npx skills add.
       - name: Wait 60 seconds before adding skill
