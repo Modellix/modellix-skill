@@ -9,8 +9,6 @@ on:
     secrets:
       SMITHERY_TOKEN:
         required: false
-      CLAWHUB_TOKEN:
-        required: false
 
 jobs:
   sync-smithery:
@@ -33,49 +31,7 @@ jobs:
             --header "Content-Type: application/json" \
             --data "{\"gitUrl\":\"${SKILL_GIT_URL}\"}"
 
-      # Sync action 2/3: publish to fixed ClawHub slug (modellix) after push to main.
-      - name: Checkout code for ClawHub sync
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js for ClawHub
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install ClawHub CLI
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: npm install -g clawhub
-
-      - name: Authenticate with ClawHub
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        env:
-          CLAWHUB_TOKEN: ${{ secrets[format('{0}', 'CLAWHUB_TOKEN')] || '' }}
-        run: |
-          if [ -z "$CLAWHUB_TOKEN" ]; then
-            echo "CLAWHUB_TOKEN is not set. Please configure it in repository secrets."
-            exit 1
-          fi
-
-          clawhub login --token "${CLAWHUB_TOKEN}" --no-browser
-
-      - name: Verify ClawHub owner is modellix
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: |
-          WHOAMI_OUTPUT="$(clawhub whoami 2>&1)"
-          echo "${WHOAMI_OUTPUT}"
-          if ! echo "${WHOAMI_OUTPUT}" | tr '[:upper:]' '[:lower:]' | grep -Eq '@modellix|modellix'; then
-            echo "Expected ClawHub owner/account 'modellix', but got a different identity."
-            exit 1
-          fi
-
-      - name: "Publish skill to ClawHub (slug: modellix)"
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        working-directory: ./modellix-skill
-        run: clawhub --no-input skill publish . --slug modellix --name "Modellix" --version "$(node -p "require('./skill.json').version")" --changelog "Auto-synced from GitHub Actions" --tags latest
-
-      # Sync action 3/3: wait then run npx skills add.
+      # Sync action 2/2: wait then run npx skills add.
       - name: Wait 60 seconds before adding skill
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: sleep 60
