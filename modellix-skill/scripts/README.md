@@ -1,6 +1,6 @@
 # Scripts
 
-These scripts make the Modellix skill executable instead of documentation-only.
+These scripts are optional helpers for automation. The default execution path is the direct CLI pair: `modellix-cli model invoke` then `modellix-cli task get`.
 
 ## preflight.py
 
@@ -26,7 +26,8 @@ Credential handling policy:
 
 ## invoke_and_poll.py
 
-Submit a task and poll until `success` or `failed` with exponential backoff.
+Optional wrapper script to submit and poll until `success` or `failed` with exponential backoff.
+If this script fails in your environment, switch immediately to the direct CLI pair.
 
 Usage:
 

@@ -73,7 +73,9 @@ When replacement fails validation, keep the flow blocked, report the validation 
 
 ## Preflight and Deterministic Execution
 
-Use bundled scripts before ad-hoc commands:
+Default execution path is the CLI command pair (`model invoke` -> `task get`).
+
+Bundled scripts are optional helpers for automation:
 
 1. `scripts/preflight.py`
    - Validates CLI availability and API key presence.
@@ -121,12 +123,11 @@ Read `references/REFERENCE.md` to find model docs and parameters.
 
 ### 3) Run invocation and poll
 
-- Preferred: `scripts/invoke_and_poll.py`
-- Manual CLI flow: `references/cli-playbook.md`
-- Manual REST flow: `references/rest-playbook.md`
-- CLI command pair (default manual path):
+- Preferred default: CLI command pair from `references/cli-playbook.md`
   - `modellix-cli model invoke ...`
   - `modellix-cli task get <task_id>`
+- Manual REST flow: `references/rest-playbook.md`
+- Optional helper: `scripts/invoke_and_poll.py` for auto polling/normalized output
 
 ### 4) Consume resources
 

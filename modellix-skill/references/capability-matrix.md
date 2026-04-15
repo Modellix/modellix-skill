@@ -12,6 +12,7 @@ CLI command policy:
 - Use the two-command pair above as canonical CLI flow.
 - Do not use deprecated guessed flags (for example `--model-type`).
 - Use command help only when behavior is unclear.
+- Python wrappers are optional helpers and must not block CLI execution.
 
 ## Slug Mapping
 

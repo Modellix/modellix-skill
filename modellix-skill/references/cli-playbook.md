@@ -44,6 +44,33 @@ Command-first policy:
   - `modellix-cli model invoke --help`
   - `modellix-cli task get --help`
 
+### PowerShell reliable payload patterns
+
+Use one of these patterns to avoid quote escaping issues in PowerShell.
+
+`--body` with object-to-JSON conversion:
+
+```powershell
+$payload = @{
+  prompt = "A beautiful Mother's Day poster design with elegant typography."
+  aspectRatio = "3:4"
+} | ConvertTo-Json -Compress
+
+modellix-cli model invoke --model-slug google/nano-banana --body $payload
+```
+
+`--body-file` for complex prompts (recommended on Windows):
+
+```powershell
+$payload = @{
+  prompt = "A beautiful Mother's Day poster design with elegant typography."
+  aspectRatio = "3:4"
+}
+
+$payload | ConvertTo-Json -Depth 10 | Set-Content -Path ".\poster_body.json" -Encoding UTF8
+modellix-cli model invoke --model-slug google/nano-banana --body-file ".\poster_body.json"
+```
+
 1) Invoke async task:
 
 ```bash

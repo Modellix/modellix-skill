@@ -71,6 +71,12 @@ This skill requires:
 
 Create API key at: <https://modellix.ai/console/api-key>
 
+## Execution Guidance
+
+- Preferred path: direct CLI pair (`modellix-cli model invoke` -> `modellix-cli task get`).
+- Python scripts in `modellix-skill/scripts/` are optional automation helpers.
+- If a Python helper fails on your platform, switch directly to the CLI pair and continue.
+
 ## Supported Task Types
 
 | Type | Description |
