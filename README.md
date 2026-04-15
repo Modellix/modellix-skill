@@ -63,6 +63,11 @@ clawhub update --all
 This skill requires:
 
 - `MODELLIX_API_KEY` (required)
+- Primary credential: `MODELLIX_API_KEY`
+- Required env vars: `MODELLIX_API_KEY`
+- Registry-facing requirement: package metadata should expose `MODELLIX_API_KEY` as both primary credential and required env var.
+- CLI usage policy: default to the two-command flow (`modellix-cli model invoke` and `modellix-cli task get`); use `--help` as assistive fallback, not as trial-and-error.
+- If CLI is missing, install is optional (`npm i -g modellix-cli`) and should be done only with explicit user consent; REST fallback is supported.
 
 Create API key at: <https://modellix.ai/console/api-key>
 
