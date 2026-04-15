@@ -1,4 +1,4 @@
-name: Sync Smithery Skill
+name: Skill Update
 
 on:
   push:
@@ -29,3 +29,11 @@ jobs:
             --header "Authorization: Bearer ${SMITHERY_TOKEN}" \
             --header "Content-Type: application/json" \
             --data "{\"gitUrl\":\"${SKILL_GIT_URL}\"}"
+
+      - name: Wait 60 seconds before adding skill
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: sleep 60
+
+      - name: Add skill via npx
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: npx skills add https://github.com/Modellix/modellix-skill/tree/main/modellix-skill
