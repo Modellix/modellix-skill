@@ -14,6 +14,13 @@ metadata:
 
 Modellix is a Model-as-a-Service (MaaS) platform with async image/video generation APIs. The invariant flow is: submit task -> get `task_id` -> poll until `success` or `failed`.
 
+## Official Docs
+
+- AI Onboarding (agent quick start): https://docs.modellix.ai/get-started.md
+- API: https://docs.modellix.ai/ways-to-use/api.md
+- CLI: https://docs.modellix.ai/ways-to-use/cli.md
+- Full Models Docs Index: https://docs.modellix.ai/llms.txt
+
 ## Execution Policy (CLI-first)
 
 Always choose execution path in this order:
@@ -166,16 +173,14 @@ Read only what the task needs:
 
 ## Error/Retry Policy
 
-Unified non-success codes:
-
-- Non-retryable: `400`, `401`, `402`, `404`
-- Retryable: `429`, `500`, `503`
-
-Retry behavior:
-
-- Exponential backoff (`1s -> 2s -> 4s`, capped)
-- For `500`/`503`, max 3 retries
-- For `429`, respect `X-RateLimit-Reset` if present
+| Code | Action |
+|------|--------|
+| 400 | Do not retry. Fix parameters or request body format. |
+| 401 | Do not retry. Verify API key. |
+| 402 | Do not retry. Insufficient balance. |
+| 404 | Do not retry. Verify task_id or model-slug. |
+| 429 | Retry with exponential backoff. |
+| 500/503 | Retry with exponential backoff (max 3 times). |
 
 ## Verification Checklist
 
@@ -187,10 +192,3 @@ Retry behavior:
 - [ ] Retry behavior implemented for `429/500/503`
 - [ ] Result URLs persisted before 24-hour expiration
 - [ ] REST fallback validated when CLI path is unavailable
-
-## Official Docs
-
-- API: https://docs.modellix.ai/ways-to-use/api
-- CLI: https://docs.modellix.ai/ways-to-use/cli
-- Pricing: https://docs.modellix.ai/get-started/pricing
-- Full docs index: https://docs.modellix.ai/llms.txt
