@@ -68,8 +68,9 @@
 - [Seedream 5.0 Lite Edit](https://docs.modellix.ai/bytedance/seedream-5-0-lite-edit.md): ByteDance Seedream 5.0 Lite Edit image-to-image model supporting single-image editing, multi-image fusion, and configurable output format.
 - [New Models](https://docs.modellix.ai/changelog/new-models.md): The model integration updates and announcements.
 - [Product Updates](https://docs.modellix.ai/changelog/product-updates.md): The product updates and announcements.
-- [Overview](https://docs.modellix.ai/get-started/index.md): Welcome to Modellix.
+- [AI Onboarding](https://docs.modellix.ai/get-started/index.md): Everything you need to onboard your AI agent to Modellix.
 - [Model Providers](https://docs.modellix.ai/get-started/model-providers.md): List all model providers of Modellix.
+- [Overview](https://docs.modellix.ai/get-started/overview.md): Welcome to Modellix.
 - [Pricing](https://docs.modellix.ai/get-started/pricing.md): The pricing of each model in Modellix.
 - [Imagen 4.0 Fast](https://docs.modellix.ai/google/imagen-4-0-fast-generate-001.md): Google Imagen 4.0 Fast text-to-image model optimized for speed. Supports `prompt`, `sampleCount`, `aspectRatio`, and `personGeneration`.
 - [Imagen 4.0](https://docs.modellix.ai/google/imagen-4-0-generate-001.md): Google Imagen 4.0 standard text-to-image model. High-quality photorealistic output. Supports batch generation (up to 4), person control, and up to 2K.
