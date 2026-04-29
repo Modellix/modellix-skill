@@ -122,13 +122,13 @@
 - [Kling V2 New I2I](https://docs.modellix.ai/kling/kling-v2-new-i2i.md): A refined variant of Kling V2 with updated model weights for improved consistency, sharper details, and better prompt-to-image alignment.
 - [Kling V2 T2I](https://docs.modellix.ai/kling/kling-v2-t2i.md): A next-generation text-to-image model with significantly improved detail and visual fidelity, supporting both 1K and 2K resolutions for professional output.
 - [Kling V3 I2I](https://docs.modellix.ai/kling/kling-v3-i2i.md): Kling V3 image-to-image model for higher-fidelity editing and restyling with 1K/2K output support.
-- [Kling V3 I2V](https://docs.modellix.ai/kling/kling-v3-i2v.md): Kling V3 image-to-video model supporting prompt-driven animation, storyboard workflows, element references, and 3-15 second output duration.
-- [Kling V3 Omni Image](https://docs.modellix.ai/kling/kling-v3-omni-image.md): Kling V3 Omni image model supporting single-image and series generation with image references, element references, and up to 4K output.
-- [Kling V3 Omni Video](https://docs.modellix.ai/kling/kling-v3-omni-video.md): Kling V3 Omni video model for advanced video-to-video generation, combining prompts, storyboard segments, image references, element references, and optional video inputs.
+- [Kling V3 I2V](https://docs.modellix.ai/kling/kling-v3-i2v.md): Kling V3 image-to-video model supporting prompt-driven animation from a single reference image with 3-15 second output duration. The public API supports `image`, `prompt`, `negative_prompt`, `sound`, `cfg_scale`, `mode`, `aspect_ratio`, and `duration`.
+- [Kling V3 Omni Image](https://docs.modellix.ai/kling/kling-v3-omni-image.md): Kling V3 Omni image model supporting single-image and series generation with flattened image references, element references, and up to 4K output.
+- [Kling V3 Omni Video](https://docs.modellix.ai/kling/kling-v3-omni-video.md): Kling V3 Omni video model for advanced prompt-guided video generation with simplified intelligent multi-shot support and flattened media references.
 - [Kling V3 T2I](https://docs.modellix.ai/kling/kling-v3-t2i.md): Kling V3 text-to-image model with improved prompt adherence and 1K/2K output support for higher-fidelity creative generation.
-- [Kling V3 T2V](https://docs.modellix.ai/kling/kling-v3-t2v.md): Kling V3 text-to-video model supporting single-shot and storyboard-based multi-shot generation with 3-15 second output duration.
+- [Kling V3 T2V](https://docs.modellix.ai/kling/kling-v3-t2v.md): Kling V3 text-to-video model using the simplified public single-shot interface with 3-15 second output duration.
 - [Kling Video Effects](https://docs.modellix.ai/kling/kling-video-effects.md): Applies 212 preset creative video effects -- including dance, transformation, interaction, and animation styles -- to one or two person images for instant viral content.
-- [Kling Video O1 V2V](https://docs.modellix.ai/kling/kling-video-o1.md): Kling Video O1 omni video model for storyboard-driven video-to-video generation, supporting reference videos, optional first/end frames, and element-guided editing.
+- [Kling Video O1 V2V](https://docs.modellix.ai/kling/kling-video-o1.md): Kling Video O1 omni video model for prompt-guided video generation and editing with flattened image and video references. Based on current production behavior, image-guided generation without `videos` only supports 5s or 10s duration.
 - [Kolors Virtual Try-On V1](https://docs.modellix.ai/kling/kolors-virtual-try-on-v1.md): AI-powered virtual try-on built on Kolors diffusion model, generating realistic fitting from a person photo and a garment image (tops, bottoms, or dresses).
 - [Kolors Virtual Try-On V1-5](https://docs.modellix.ai/kling/kolors-virtual-try-on-v1-5.md): Enhanced virtual try-on model that supports both single garments and top+bottom outfit combinations, delivering higher-quality results with automatic clothing type detection.
 - [Hailuo 02 FL2V](https://docs.modellix.ai/minimax/hailuo-02-fl2v.md): Hailuo 02 FL2V generates dynamic videos between user-defined start and end frames, mastering extreme physics, transitions, and reverse story generation.
@@ -156,9 +156,9 @@
 
 - [kling-v2v](https://docs.modellix.ai/model-api/kling/kling-v2v.json)
 - [kling-t2v](https://docs.modellix.ai/model-api/kling/kling-t2v.json)
-- [kling-t2i](https://docs.modellix.ai/model-api/kling/kling-t2i.json)
 - [kling-i2v](https://docs.modellix.ai/model-api/kling/kling-i2v.json)
 - [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
+- [kling-t2i](https://docs.modellix.ai/model-api/kling/kling-t2i.json)
 - [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
 - [minimax-i2i](https://docs.modellix.ai/model-api/minimax/minimax-i2i.json)
 - [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
