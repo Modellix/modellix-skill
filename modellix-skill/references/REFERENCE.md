@@ -2,6 +2,10 @@
 
 ## Docs
 
+- [HappyHorse 1.0 I2V](https://docs.modellix.ai/alibaba/happyhorse-1-0-i2v.md): HappyHorse image-to-video model generates physically realistic and smoothly animated video content from a first frame image. The model can optionally use text prompts for guidance, supporting 720P/1080P resolution and 3-15 seconds duration. The output video aspect ratio follows the input first frame…
+- [HappyHorse 1.0 R2V](https://docs.modellix.ai/alibaba/happyhorse-1-0-r2v.md): HappyHorse reference-to-video model generates fluid videos by fusing characters from multiple reference images (1-9 images) through text prompts with character references (character1, character2, etc.). Supports 720P/1080P resolution, multiple aspect ratios, and 3-15 seconds duration.
+- [HappyHorse 1.0 T2V](https://docs.modellix.ai/alibaba/happyhorse-1-0-t2v.md): HappyHorse text-to-video model generates physically realistic and smoothly animated video content from text prompts. The model focuses on physical realism and motion fluidity, supporting various resolution and aspect ratio combinations with 3-15 seconds duration.
+- [HappyHorse 1.0 Video Edit](https://docs.modellix.ai/alibaba/happyhorse-1-0-video-edit.md): HappyHorse video editing model supports style transformation and local replacement by combining input video with reference images (0-5) and text instructions. Input video duration: 3-60 seconds. Output video duration: 3-15 seconds (automatically truncates to first 15 seconds if input exceeds). Proce…
 - [Qwen Image](https://docs.modellix.ai/alibaba/qwen-image.md): Qwen-image excels in text rendering, especially Chinese. qwen-image-plus and qwen-image share the same capabilities, but qwen-image-plus is more cost-effective.
 - [Qwen Image 2.0](https://docs.modellix.ai/alibaba/qwen-image-2-0.md): Qwen-Image 2.0 is an accelerated model balancing quality and speed. Supports larger resolutions (up to 2688*1536) and batch generation of 1-6 images per request.
 - [Qwen Image 2.0 Edit](https://docs.modellix.ai/alibaba/qwen-image-2-0-edit.md): Qwen-image-2.0 accelerated edition for image editing, balancing quality and response speed. Supports 1-3 input images, outputs 1-6 images with customizable resolution.
@@ -67,8 +71,9 @@
 - [Seedream 5.0 Lite Edit](https://docs.modellix.ai/bytedance/seedream-5-0-lite-edit.md): ByteDance Seedream 5.0 Lite Edit image-to-image model supporting single-image editing, multi-image fusion, and configurable output format.
 - [New Models](https://docs.modellix.ai/changelog/new-models.md): The model integration updates and announcements.
 - [Product Updates](https://docs.modellix.ai/changelog/product-updates.md): The product updates and announcements.
-- [Overview](https://docs.modellix.ai/get-started/index.md): Welcome to Modellix.
+- [AI Onboarding](https://docs.modellix.ai/get-started/index.md): Everything you need to onboard your AI agent to Modellix.
 - [Model Providers](https://docs.modellix.ai/get-started/model-providers.md): List all model providers of Modellix.
+- [Overview](https://docs.modellix.ai/get-started/overview.md): Welcome to Modellix.
 - [Pricing](https://docs.modellix.ai/get-started/pricing.md): The pricing of each model in Modellix.
 - [Imagen 4.0 Fast](https://docs.modellix.ai/google/imagen-4-0-fast-generate-001.md): Google Imagen 4.0 Fast text-to-image model optimized for speed. Supports `prompt`, `sampleCount`, `aspectRatio`, and `personGeneration`.
 - [Imagen 4.0](https://docs.modellix.ai/google/imagen-4-0-generate-001.md): Google Imagen 4.0 standard text-to-image model. High-quality photorealistic output. Supports batch generation (up to 4), person control, and up to 2K.
@@ -79,16 +84,16 @@
 - [Nano Banana Edit](https://docs.modellix.ai/google/nano-banana-edit.md): Nano Banana image editing model. Transforms images based on prompt instructions. Input image must be a base64 data URI.
 - [Nano Banana Pro](https://docs.modellix.ai/google/nano-banana-pro.md): Nano Banana Pro image generation model with higher quality output. Supports aspect ratio and image size (1K/2K/4K resolution).
 - [Nano Banana Pro Edit](https://docs.modellix.ai/google/nano-banana-pro-edit.md): Nano Banana Pro image editing model with higher quality. Superior detail preservation and prompt adherence. Supports up to 4K.
-- [Veo 2 I2V](https://docs.modellix.ai/google/veo-2-i2v.md): Google Veo 2.0 classic image-to-video model. Supports `prompt`, `image`, `aspectRatio`, `durationSeconds` (5/6/8), and `personGeneration`.
-- [Veo 2 T2V](https://docs.modellix.ai/google/veo-2-t2v.md): Google Veo 2.0 classic text-to-video model. Supports `prompt`, `aspectRatio`, `durationSeconds` (5/6/8), and `personGeneration`.
-- [Veo 3.1 Fast I2V](https://docs.modellix.ai/google/veo-3-1-fast-i2v.md): Google Veo 3.1 Fast image-to-video model. Same capabilities as Veo 3.1 with faster generation. Supports up to 4K. Duration: 4-8s.
-- [Veo 3.1 Fast T2V](https://docs.modellix.ai/google/veo-3-1-fast-t2v.md): Google Veo 3.1 Fast text-to-video model. Same capabilities as Veo 3.1 with faster generation. Supports up to 4K and reference images. Duration: 4-8s.
-- [Veo 3.1 I2V](https://docs.modellix.ai/google/veo-3-1-i2v.md): Google Veo 3.1 flagship image-to-video model. Supports `prompt`, `image`, `aspectRatio`, `durationSeconds`, `resolution` (up to 4k), and `personGeneration`.
-- [Veo 3.1 T2V](https://docs.modellix.ai/google/veo-3-1-t2v.md): Google Veo 3.1 flagship text-to-video model. Supports up to 4K and optional reference images (up to 3) for style consistency. Duration: 4-8s.
-- [Veo 3 Fast I2V](https://docs.modellix.ai/google/veo-3-fast-i2v.md): Google Veo 3.0 Fast image-to-video model. Faster generation with the same parameters as Veo 3, supporting resolutions up to **1080p**. Duration: 4/6/8 seconds.
-- [Veo 3 Fast T2V](https://docs.modellix.ai/google/veo-3-fast-t2v.md): Google Veo 3.0 Fast text-to-video model. Same capabilities as Veo 3 with faster generation. Supports up to 1080p. Duration: 4-8s.
-- [Veo 3 I2V](https://docs.modellix.ai/google/veo-3-i2v.md): Google Veo 3.0 stable image-to-video model. Supports `prompt`, `image`, `aspectRatio`, `durationSeconds`, `resolution` (up to 1080p), and `personGeneration`.
-- [Veo 3 T2V](https://docs.modellix.ai/google/veo-3-t2v.md): Google Veo 3.0 stable text-to-video model. Supports `prompt`, `aspectRatio`, `durationSeconds`, `resolution` (up to 1080p), and `personGeneration`.
+- [Veo 2 I2V](https://docs.modellix.ai/google/veo-2-i2v.md): Google Veo 2.0 classic image-to-video model. Supports `prompt`, `image`, `lastFrame`, `negativePrompt`, `aspectRatio`, `durationSeconds` (5/6/8), and `personGeneration`.
+- [Veo 2 T2V](https://docs.modellix.ai/google/veo-2-t2v.md): Google Veo 2.0 classic text-to-video model. Supports `prompt`, `negativePrompt`, `aspectRatio`, `durationSeconds` (5/6/8), and `personGeneration`.
+- [Veo 3.1 Fast I2V](https://docs.modellix.ai/google/veo-3-1-fast-i2v.md): Google Veo 3.1 Fast image-to-video model. Supports two input modes: `image` mode (with optional `lastFrame` and `negativePrompt`) or `referenceImages`-only mode. Resolution up to 4k. See each parameter's description for detailed constraints.
+- [Veo 3.1 Fast T2V](https://docs.modellix.ai/google/veo-3-1-fast-t2v.md): Google Veo 3.1 Fast text-to-video model. Supports `prompt`, `negativePrompt`, `aspectRatio`, `durationSeconds`, `resolution` (up to 4k), and `personGeneration`.
+- [Veo 3.1 I2V](https://docs.modellix.ai/google/veo-3-1-i2v.md): Google Veo 3.1 flagship image-to-video model. Supports two input modes: `image` mode (with optional `lastFrame` and `negativePrompt`) or `referenceImages`-only mode. Resolution up to 4k. See each parameter's description for detailed constraints.
+- [Veo 3.1 T2V](https://docs.modellix.ai/google/veo-3-1-t2v.md): Google Veo 3.1 flagship text-to-video model. Supports `prompt`, `negativePrompt`, `aspectRatio`, `durationSeconds`, `resolution` (up to 4k), and `personGeneration`.
+- [Veo 3 Fast I2V](https://docs.modellix.ai/google/veo-3-fast-i2v.md): Google Veo 3.0 Fast image-to-video model. Supports `prompt`, `image`, `lastFrame`, `negativePrompt`, `aspectRatio`, `durationSeconds`, `resolution` (up to 1080p), and `personGeneration`.
+- [Veo 3 Fast T2V](https://docs.modellix.ai/google/veo-3-fast-t2v.md): Google Veo 3.0 Fast text-to-video model. Supports `prompt`, `negativePrompt`, `aspectRatio`, `durationSeconds`, `resolution` (up to 1080p), and `personGeneration`.
+- [Veo 3 I2V](https://docs.modellix.ai/google/veo-3-i2v.md): Google Veo 3.0 stable image-to-video model. Supports `prompt`, `image`, `lastFrame`, `negativePrompt`, `aspectRatio`, `durationSeconds`, `resolution` (up to 1080p), and `personGeneration`.
+- [Veo 3 T2V](https://docs.modellix.ai/google/veo-3-t2v.md): Google Veo 3.0 stable text-to-video model. Supports `prompt`, `negativePrompt`, `aspectRatio`, `durationSeconds`, `resolution` (up to 1080p), and `personGeneration`.
 - [Kling Avatar](https://docs.modellix.ai/kling/kling-avatar.md): Generates realistic talking-head videos from a reference image and audio input, with precise lip synchronization, expressive gestures, and support for multiple languages.
 - [Kling Image Expansion](https://docs.modellix.ai/kling/kling-image-expansion.md): Extends images in any direction (up, down, left, right) with prompt-guided generation, ideal for panorama, background extension, and canvas expansion.
 - [Kling Image O1](https://docs.modellix.ai/kling/kling-image-o1.md): Multimodal image model accepting text, up to 10 reference images, and element inputs to produce 1K/2K images with precise style control and feature extraction.
@@ -120,13 +125,13 @@
 - [Kling V2 New I2I](https://docs.modellix.ai/kling/kling-v2-new-i2i.md): A refined variant of Kling V2 with updated model weights for improved consistency, sharper details, and better prompt-to-image alignment.
 - [Kling V2 T2I](https://docs.modellix.ai/kling/kling-v2-t2i.md): A next-generation text-to-image model with significantly improved detail and visual fidelity, supporting both 1K and 2K resolutions for professional output.
 - [Kling V3 I2I](https://docs.modellix.ai/kling/kling-v3-i2i.md): Kling V3 image-to-image model for higher-fidelity editing and restyling with 1K/2K output support.
-- [Kling V3 I2V](https://docs.modellix.ai/kling/kling-v3-i2v.md): Kling V3 image-to-video model supporting prompt-driven animation, storyboard workflows, element references, and 3-15 second output duration.
-- [Kling V3 Omni Image](https://docs.modellix.ai/kling/kling-v3-omni-image.md): Kling V3 Omni image model supporting single-image and series generation with image references, element references, and up to 4K output.
-- [Kling V3 Omni Video](https://docs.modellix.ai/kling/kling-v3-omni-video.md): Kling V3 Omni video model for advanced video-to-video generation, combining prompts, storyboard segments, image references, element references, and optional video inputs.
+- [Kling V3 I2V](https://docs.modellix.ai/kling/kling-v3-i2v.md): Kling V3 image-to-video model supporting prompt-driven animation from a single reference image with 3-15 second output duration. The public API supports `image`, `prompt`, `negative_prompt`, `sound`, `cfg_scale`, `mode`, `aspect_ratio`, and `duration`.
+- [Kling V3 Omni Image](https://docs.modellix.ai/kling/kling-v3-omni-image.md): Kling V3 Omni image model supporting single-image and series generation with flattened image references, element references, and up to 4K output.
+- [Kling V3 Omni Video](https://docs.modellix.ai/kling/kling-v3-omni-video.md): Kling V3 Omni video model for advanced prompt-guided video generation with simplified intelligent multi-shot support and flattened media references.
 - [Kling V3 T2I](https://docs.modellix.ai/kling/kling-v3-t2i.md): Kling V3 text-to-image model with improved prompt adherence and 1K/2K output support for higher-fidelity creative generation.
-- [Kling V3 T2V](https://docs.modellix.ai/kling/kling-v3-t2v.md): Kling V3 text-to-video model supporting single-shot and storyboard-based multi-shot generation with 3-15 second output duration.
+- [Kling V3 T2V](https://docs.modellix.ai/kling/kling-v3-t2v.md): Kling V3 text-to-video model using the simplified public single-shot interface with 3-15 second output duration.
 - [Kling Video Effects](https://docs.modellix.ai/kling/kling-video-effects.md): Applies 212 preset creative video effects -- including dance, transformation, interaction, and animation styles -- to one or two person images for instant viral content.
-- [Kling Video O1 V2V](https://docs.modellix.ai/kling/kling-video-o1.md): Kling Video O1 omni video model for storyboard-driven video-to-video generation, supporting reference videos, optional first/end frames, and element-guided editing.
+- [Kling Video O1 V2V](https://docs.modellix.ai/kling/kling-video-o1.md): Kling Video O1 omni video model for prompt-guided video generation and editing with flattened image and video references. Based on current production behavior, image-guided generation without `videos` only supports 5s or 10s duration.
 - [Kolors Virtual Try-On V1](https://docs.modellix.ai/kling/kolors-virtual-try-on-v1.md): AI-powered virtual try-on built on Kolors diffusion model, generating realistic fitting from a person photo and a garment image (tops, bottoms, or dresses).
 - [Kolors Virtual Try-On V1-5](https://docs.modellix.ai/kling/kolors-virtual-try-on-v1-5.md): Enhanced virtual try-on model that supports both single garments and top+bottom outfit combinations, delivering higher-quality results with automatic clothing type detection.
 - [Hailuo 02 FL2V](https://docs.modellix.ai/minimax/hailuo-02-fl2v.md): Hailuo 02 FL2V generates dynamic videos between user-defined start and end frames, mastering extreme physics, transitions, and reverse story generation.
@@ -152,18 +157,21 @@
 
 ## OpenAPI Specs
 
+- [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
+- [google-t2v](https://docs.modellix.ai/model-api/google/google-t2v.json)
+- [alibaba-v2v](https://docs.modellix.ai/model-api/alibaba/alibaba-v2v.json)
+- [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
+- [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
 - [kling-v2v](https://docs.modellix.ai/model-api/kling/kling-v2v.json)
 - [kling-t2v](https://docs.modellix.ai/model-api/kling/kling-t2v.json)
-- [kling-t2i](https://docs.modellix.ai/model-api/kling/kling-t2i.json)
 - [kling-i2v](https://docs.modellix.ai/model-api/kling/kling-i2v.json)
 - [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
+- [kling-t2i](https://docs.modellix.ai/model-api/kling/kling-t2i.json)
 - [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
 - [minimax-i2i](https://docs.modellix.ai/model-api/minimax/minimax-i2i.json)
 - [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
 - [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
-- [alibaba-v2v](https://docs.modellix.ai/model-api/alibaba/alibaba-v2v.json)
 - [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
-- [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
 - [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
 - [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
 - [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
@@ -176,10 +184,7 @@
 - [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
 - [minimax-t2v](https://docs.modellix.ai/model-api/minimax/minimax-t2v.json)
 - [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
-- [google-t2v](https://docs.modellix.ai/model-api/google/google-t2v.json)
 - [google-t2i](https://docs.modellix.ai/model-api/google/google-t2i.json)
-- [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
-- [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
 - [openapi](https://docs.modellix.ai/api-reference/openapi.json)
 
 ## Optional
