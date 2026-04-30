@@ -18,8 +18,8 @@ CLI command policy:
 
 - `model-slug` uses `provider/model` format for both CLI and REST.
 - REST path transformation:
-  - Input: `bytedance/seedream-4.5-t2i`
-  - Derived path parts: `provider=bytedance`, `model_id=seedream-4.5-t2i`
+  - Input: `bytedance/seedream-5.0-lite`
+  - Derived path parts: `provider=bytedance`, `model_id=seedream-5.0-lite`
 
 ## Fallback Rules
 
@@ -28,6 +28,6 @@ Use REST when any condition is true:
 - CLI auth unavailable
 - CLI command surface does not expose required behavior
 
-If CLI is not installed, you may offer install (`npm i -g modellix-cli`) with explicit user consent first.
+If CLI is not installed, auto-install globally with `npm i -g modellix-cli` (no user prompt). Fall back to REST only if the install fails.
 
 Otherwise use CLI-first.

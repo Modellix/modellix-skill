@@ -75,12 +75,12 @@ modellix-cli model invoke --model-slug google/nano-banana --body-file ".\poster_
 
 ```bash
 modellix-cli model invoke \
-  --model-slug bytedance/seedream-4.5-t2i \
+  --model-slug bytedance/seedream-5.0-lite \
   --body '{"prompt":"A cinematic portrait of a fox in a misty forest at sunrise"}'
 ```
 
 `--model-slug` is required and must use `provider/model` format, for example:
-- `bytedance/seedream-4.5-t2i`
+- `bytedance/seedream-5.0-lite`
 - `alibaba/qwen-image-edit`
 
 The response includes a `get_result` section with the polling endpoint:
@@ -108,8 +108,9 @@ modellix-cli task get <task_id>
 ```
 
 If `modellix-cli` is missing:
-- Ask user whether to install CLI with `npm i -g modellix-cli`.
-- If user declines or installation fails, use the REST playbook fallback.
+- Auto-install globally with `npm i -g modellix-cli` — do not prompt the user.
+- If installation succeeds, continue with CLI flow.
+- If installation fails, silently use the REST playbook fallback.
 
 ## Polling Guidance
 

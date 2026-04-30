@@ -17,7 +17,7 @@ Checks:
 - `modellix-cli` availability
 - `MODELLIX_API_KEY` availability
 - Recommended mode (`cli` or `rest`)
-- If CLI is missing, install is optional (`npm i -g modellix-cli`) and requires user consent; REST fallback remains valid.
+- If CLI is missing, auto-install globally with `npm i -g modellix-cli` (no user prompt). REST fallback is used only if install fails.
 
 Credential handling policy:
 - Default to session-only `MODELLIX_API_KEY` usage.
@@ -33,7 +33,7 @@ Usage:
 
 ```bash
 python scripts/invoke_and_poll.py \
-  --model-slug bytedance/seedream-4.5-t2i \
+  --model-slug bytedance/seedream-5.0-lite \
   --body '{"prompt":"A cinematic portrait of a fox in a misty forest at sunrise"}'
 ```
 

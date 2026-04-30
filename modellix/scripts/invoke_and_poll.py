@@ -4,7 +4,7 @@ Submit and poll a Modellix async task using CLI-first with REST fallback.
 
 Examples:
   python scripts/invoke_and_poll.py \
-    --model-slug bytedance/seedream-4.5-t2i \
+    --model-slug bytedance/seedream-5.0-lite \
     --body '{"prompt":"A cinematic portrait of a fox in a misty forest at sunrise"}'
 """
 
@@ -31,7 +31,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--model-slug",
         required=True,
-        help="Model slug in provider/model format, e.g. bytedance/seedream-4.5-t2i",
+        help="Model slug in provider/model format, e.g. bytedance/seedream-5.0-lite",
     )
     parser.add_argument("--body", help="Inline JSON request body")
     parser.add_argument("--body-file", help="Path to JSON request body file")
