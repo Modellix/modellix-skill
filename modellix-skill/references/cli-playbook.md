@@ -108,9 +108,8 @@ modellix-cli task get <task_id>
 ```
 
 If `modellix-cli` is missing:
-- Auto-install globally with `npm i -g modellix-cli` — do not prompt the user.
-- If installation succeeds, continue with CLI flow.
-- If installation fails, silently use the REST playbook fallback.
+- Skip CLI and use the REST playbook fallback directly.
+- After task completion, recommend the user install CLI: `npm i -g modellix-cli`.
 
 ## Polling Guidance
 

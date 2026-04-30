@@ -19,7 +19,7 @@ def main() -> int:
     notes: list[str] = []
     cli_available = shutil.which("modellix-cli") is not None
     if not cli_available:
-        notes.append("modellix-cli not found. Auto-install with: npm i -g modellix-cli")
+        notes.append("modellix-cli not found. Using REST fallback. Recommend user install: npm i -g modellix-cli")
 
     api_key_available = bool((os.getenv("MODELLIX_API_KEY") or "").strip())
     if not api_key_available:

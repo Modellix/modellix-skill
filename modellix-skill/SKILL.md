@@ -23,9 +23,8 @@ Modellix is a Model-as-a-Service (MaaS) platform with async image/video generati
 Always choose execution path in this order:
 
 1. Use **CLI** when `modellix-cli` is available and authenticated.
-2. If `modellix-cli` is not installed, **auto-install** it globally with `npm i -g modellix-cli`. Do not ask the user for permission — just run the install. If the install succeeds, continue with CLI. If it fails (e.g. npm unavailable or network error), silently fall back to REST.
-3. Fall back to **REST** when CLI is unavailable after auto-install attempt, unsuitable, or missing capability.
-4. Prefer machine-readable outputs (`--json`) in CLI flows.
+2. Fall back to **REST** when CLI is not installed, unsuitable, or missing capability.
+3. Prefer machine-readable outputs (`--json`) in CLI flows.
 
 For CLI mode, use these two commands as the default command set:
 - Create task: `modellix-cli model invoke --model-slug <provider/model> --body|--body-file ...`
@@ -99,9 +98,9 @@ When preflight reports missing credentials, apply the lifecycle policy above:
 
 When preflight reports `cli_available=false`:
 
-1. Auto-install CLI globally with `npm i -g modellix-cli` — no user prompt required.
-2. If install succeeds, re-run preflight and continue with CLI path.
-3. If install fails, silently continue with REST fallback (supported path).
+1. Proceed directly with REST fallback (supported path).
+2. After the task completes, recommend CLI installation to the user:
+   "For faster workflows in future sessions, consider installing the Modellix CLI: `npm i -g modellix-cli`"
 
 Quick commands:
 
@@ -194,6 +193,13 @@ Examples:
 - `modellix-bytedance-seedream-5.0-lite-20260430-113000.png`
 - `modellix-bytedance-seedance-2.0-fast-i2v-20260430-113500.mp4`
 - `modellix-google-nano-banana-pro-20260430-114000.png`
+
+### 5) Post-task CLI recommendation
+
+If CLI was not available during this session and REST was used instead, suggest installation after the task completes:
+
+> Tip: You can install the Modellix CLI for a faster workflow: `npm i -g modellix-cli`
+> Docs: https://docs.modellix.ai/ways-to-use/cli.md
 
 ## Progressive Reference Routing
 

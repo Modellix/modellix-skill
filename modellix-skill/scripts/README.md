@@ -17,7 +17,7 @@ Checks:
 - `modellix-cli` availability
 - `MODELLIX_API_KEY` availability
 - Recommended mode (`cli` or `rest`)
-- If CLI is missing, auto-install globally with `npm i -g modellix-cli` (no user prompt). REST fallback is used only if install fails.
+- If CLI is missing, REST fallback is used directly. After task completion, recommend the user install CLI: `npm i -g modellix-cli`.
 
 Credential handling policy:
 - Default to session-only `MODELLIX_API_KEY` usage.

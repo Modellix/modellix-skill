@@ -28,6 +28,6 @@ Use REST when any condition is true:
 - CLI auth unavailable
 - CLI command surface does not expose required behavior
 
-If CLI is not installed, auto-install globally with `npm i -g modellix-cli` (no user prompt). Fall back to REST only if the install fails.
+If CLI is not installed, use REST directly. After the task completes, recommend CLI installation: `npm i -g modellix-cli`.
 
 Otherwise use CLI-first.
