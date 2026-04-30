@@ -4,7 +4,7 @@ Agent skill for integrating [Modellix](https://modellix.ai), a unified Model-as-
 
 ## What This Skill Provides
 
-- CLI-first, REST-fallback workflow for async generation tasks
+- CLI-first with auto-install, REST-fallback workflow for async generation tasks
 - Model discovery using bundled `references/REFERENCE.md`
 - Task submission + polling guidance (`pending` / `success` / `failed`)
 - Retry/error handling for `429`, `500`, `503`
@@ -67,7 +67,7 @@ This skill requires:
 - Required env vars: `MODELLIX_API_KEY`
 - Registry-facing requirement: package metadata should expose `MODELLIX_API_KEY` as both primary credential and required env var.
 - CLI usage policy: default to the two-command flow (`modellix-cli model invoke` and `modellix-cli task get`); use `--help` as assistive fallback, not as trial-and-error.
-- If CLI is missing, install is optional (`npm i -g modellix-cli`) and should be done only with explicit user consent; REST fallback is supported.
+- If CLI is missing, it will auto-install globally (`npm i -g modellix-cli`); if the install fails, it silently falls back to REST.
 
 Create API key at: <https://modellix.ai/console/api-key>
 
@@ -92,7 +92,6 @@ Create API key at: <https://modellix.ai/console/api-key>
 ```text
 modellix-skill/
 ├── SKILL.md
-├── skill.json
 ├── scripts/
 ├── references/
 └── assets/
