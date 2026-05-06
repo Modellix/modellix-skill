@@ -16,7 +16,7 @@ Modellix is a Model-as-a-Service (MaaS) platform with async image/video generati
 - AI Onboarding (agent quick start): https://docs.modellix.ai/get-started.md
 - API: https://docs.modellix.ai/ways-to-use/api.md
 - CLI: https://docs.modellix.ai/ways-to-use/cli.md
-- Full Models Docs Index: https://docs.modellix.ai/llms.txt
+- Full Models Docs Index: https://docs.modellix.ai/llms.txt (or use `references/REFERENCE.md` locally to query specific model invocation methods)
 
 ## Execution Policy (CLI-first)
 
@@ -124,7 +124,9 @@ python scripts/invoke_and_poll.py --model-slug bytedance/seedream-5.0-lite --bod
 
 ### 2) Select model
 
-Read `references/REFERENCE.md` to find model docs and parameters. If the user does not specify a model, use the default model for the task type.
+Use either `references/REFERENCE.md` or `https://docs.modellix.ai/llms.txt` as the model index to select a model. If the user does not specify a model, use the default model for the task type.
+
+After finding the target model in the index, you MUST fetch its `.md` documentation URL (e.g., via WebFetch) to understand its specific request schema, parameters, and invocation method before proceeding.
 
 #### Default Models
 
