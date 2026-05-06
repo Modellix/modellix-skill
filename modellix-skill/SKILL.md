@@ -128,6 +128,8 @@ Use either `references/REFERENCE.md` or `https://docs.modellix.ai/llms.txt` as t
 
 After finding the target model in the index, you MUST fetch its `.md` documentation URL (e.g., via WebFetch) to understand its specific request schema, parameters, and invocation method before proceeding.
 
+**CRITICAL**: Do NOT guess the model slug from the `.md` filename (e.g. `hailuo-2-3-t2v.md`). You MUST read the OpenAPI spec inside the fetched documentation to find the actual API path (e.g. `/hailuo-2.3-t2v/async`) or `model_id` field to determine the exact slug (which often preserves decimals, e.g. `minimax/hailuo-2.3-t2v`).
+
 #### Default Models
 
 | Task Type | Default Model Slug |
