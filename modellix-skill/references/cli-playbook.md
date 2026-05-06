@@ -5,7 +5,7 @@ Use this reference when `modellix-cli` is available and authenticated.
 ## Install
 
 ```bash
-npm install -g modellix-cli
+npm install -g modellix-cli@latest
 modellix-cli --version
 ```
 
@@ -109,7 +109,7 @@ modellix-cli task get <task_id>
 
 If `modellix-cli` is missing:
 - Skip CLI and use the REST playbook fallback directly.
-- After task completion, recommend the user install CLI: `npm i -g modellix-cli`.
+- After task completion, recommend the user install CLI: `npm i -g modellix-cli@latest`.
 
 ## Polling Guidance
 

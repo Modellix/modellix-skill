@@ -100,7 +100,7 @@ When preflight reports `cli_available=false`:
 
 1. Proceed directly with REST fallback (supported path).
 2. After the task completes, recommend CLI installation to the user:
-   "For faster workflows in future sessions, consider installing the Modellix CLI: `npm i -g modellix-cli`"
+   "For faster workflows in future sessions, consider installing the Modellix CLI: `npm i -g modellix-cli@latest`"
 
 Quick commands:
 
@@ -200,7 +200,7 @@ Examples:
 
 If CLI was not available during this session and REST was used instead, suggest installation after the task completes:
 
-> Tip: You can install the Modellix CLI for a faster workflow: `npm i -g modellix-cli`
+> Tip: You can install the Modellix CLI for a faster workflow: `npm i -g modellix-cli@latest`
 > Docs: https://docs.modellix.ai/ways-to-use/cli.md
 
 ## Progressive Reference Routing
@@ -228,6 +228,7 @@ Read only what the task needs:
 - User payload handling: prompts and user-provided inputs (including media URLs or file-derived content) may be sent to Modellix endpoints during invocation.
 - Result handling: generated resource URLs come from Modellix response payloads and should be downloaded before expiry (about 24 hours).
 - Secret hygiene:
+  - Advise the user to use a scoped or revocable API key when possible, and to prefer session-only environment variables over persistent storage.
   - Never expose API keys in terminal output, logs, screenshots, transcripts, or commit content.
   - Mask sensitive values when showing command examples.
   - Default to session-only credential usage.

@@ -28,6 +28,6 @@ Use REST when any condition is true:
 - CLI auth unavailable
 - CLI command surface does not expose required behavior
 
-If CLI is not installed, use REST directly. After the task completes, recommend CLI installation: `npm i -g modellix-cli`.
+If CLI is not installed, use REST directly. After the task completes, recommend CLI installation: `npm i -g modellix-cli@latest`.
 
 Otherwise use CLI-first.

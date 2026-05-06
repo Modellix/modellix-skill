@@ -133,8 +133,8 @@ def run_rest_submit(args: argparse.Namespace, body: Dict[str, Any], api_key: str
         wait = min(wait * 2, args.max_wait)
 
 
-def run_rest_poll(task_id: str, api_key: str, poll_url: Optional[str] = None) -> Dict[str, Any]:
-    url = poll_url or f"{BASE_URL}/tasks/{task_id}"
+def run_rest_poll(task_id: str, api_key: str) -> Dict[str, Any]:
+    url = f"{BASE_URL}/tasks/{task_id}"
     return http_request(url=url, method="GET", api_key=api_key)
 
 
@@ -145,13 +145,12 @@ def pick_mode(args: argparse.Namespace, api_key: str) -> str:
     return "cli" if has_cli and api_key else "rest"
 
 
-def extract_task_id(payload: Dict[str, Any]) -> Tuple[str, Optional[str]]:
+def extract_task_id(payload: Dict[str, Any]) -> str:
     data = payload.get("data", {})
     task_id = data.get("task_id")
     if not task_id:
         raise RuntimeError(f"Missing task_id in response: {json.dumps(payload, ensure_ascii=False)}")
-    poll_url = (data.get("get_result") or {}).get("url")
-    return str(task_id), poll_url
+    return str(task_id)
 
 
 def normalize_output(mode_used: str, submit_payload: Dict[str, Any], poll_payload: Dict[str, Any]) -> Dict[str, Any]:
@@ -183,7 +182,7 @@ def main() -> int:
     else:
         submit_payload = run_rest_submit(args, body, api_key)
 
-    task_id, poll_url = extract_task_id(submit_payload)
+    task_id = extract_task_id(submit_payload)
 
     started = time.time()
     wait = args.initial_wait
@@ -201,7 +200,7 @@ def main() -> int:
                 raise RuntimeError(f"CLI poll failed: {proc.stderr.strip() or proc.stdout.strip()}")
             poll_payload = json.loads(proc.stdout)
         else:
-            poll_payload = run_rest_poll(task_id, api_key, poll_url)
+            poll_payload = run_rest_poll(task_id, api_key)
 
         status = str(poll_payload.get("data", {}).get("status", "")).lower()
         if status in {"success", "failed"}:
