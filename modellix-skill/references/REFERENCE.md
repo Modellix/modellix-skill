@@ -157,6 +157,7 @@
 
 ## OpenAPI Specs
 
+- [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
 - [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
 - [google-t2v](https://docs.modellix.ai/model-api/google/google-t2v.json)
 - [alibaba-v2v](https://docs.modellix.ai/model-api/alibaba/alibaba-v2v.json)
@@ -165,7 +166,6 @@
 - [kling-v2v](https://docs.modellix.ai/model-api/kling/kling-v2v.json)
 - [kling-t2v](https://docs.modellix.ai/model-api/kling/kling-t2v.json)
 - [kling-i2v](https://docs.modellix.ai/model-api/kling/kling-i2v.json)
-- [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
 - [kling-t2i](https://docs.modellix.ai/model-api/kling/kling-t2i.json)
 - [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
 - [minimax-i2i](https://docs.modellix.ai/model-api/minimax/minimax-i2i.json)
