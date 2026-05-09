@@ -149,7 +149,6 @@
 - [MiniMax S2V-01](https://docs.modellix.ai/minimax/minimax-s2v-01.md): S2V-01 generates videos with highly consistent character identity across frames using a single reference photo, at significantly lower computational cost.
 - [MiniMax T2V-01](https://docs.modellix.ai/minimax/minimax-t2v-01.md): MiniMax T2V-01 delivers professional camera movement control, transforming text prompts into cinematic video clips with dynamic shots.
 - [MiniMax T2V-01-Director](https://docs.modellix.ai/minimax/minimax-t2v-01-director.md): T2V-01-Director offers precise camera control for creating professional video clips with cinematic movements through a variety of lens instructions.
-- [SKILL](https://docs.modellix.ai/skills/mintlify/SKILL.md): Build and maintain documentation sites with Mintlify. Use when creating docs pages, configuring navigation, adding components, or setting up API references.
 - [REST API](https://docs.modellix.ai/ways-to-use/api.md): The steps to use the Modellix models API, including how to get an API key, how to use the API, and how to get the result.
 - [CLI](https://docs.modellix.ai/ways-to-use/cli.md): Use Modellix from terminal to create model tasks and fetch results.
 - [MCP](https://docs.modellix.ai/ways-to-use/mcp.md): Modellix Docs MCP Server allows you to search the Modellix documentation in your MCP clients.
@@ -176,10 +175,6 @@
 - [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
 - [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
 - [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
-- [google-t2v 2](https://docs.modellix.ai/model-api/google/google-t2v 2.json)
-- [google-t2i 2](https://docs.modellix.ai/model-api/google/google-t2i 2.json)
-- [google-i2v 2](https://docs.modellix.ai/model-api/google/google-i2v 2.json)
-- [google-i2i 2](https://docs.modellix.ai/model-api/google/google-i2i 2.json)
 - [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
 - [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
 - [minimax-t2v](https://docs.modellix.ai/model-api/minimax/minimax-t2v.json)
