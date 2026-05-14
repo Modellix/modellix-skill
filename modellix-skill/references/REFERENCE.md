@@ -152,6 +152,7 @@
 - [REST API](https://docs.modellix.ai/ways-to-use/api.md): The steps to use the Modellix models API, including how to get an API key, how to use the API, and how to get the result.
 - [CLI](https://docs.modellix.ai/ways-to-use/cli.md): Use Modellix from terminal to create model tasks and fetch results.
 - [MCP](https://docs.modellix.ai/ways-to-use/mcp.md): Modellix Docs MCP Server allows you to search the Modellix documentation in your MCP clients.
+- [Playground](https://docs.modellix.ai/ways-to-use/playground.md): Use the interactive Playground to generate content directly in your browser without writing code.
 - [Agent Skill](https://docs.modellix.ai/ways-to-use/skill.md)
 
 ## OpenAPI Specs
