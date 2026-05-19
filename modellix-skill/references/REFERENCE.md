@@ -59,10 +59,10 @@
 - [Seedance 1.0 Pro T2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-t2v.md): ByteDance's flagship text-to-video model with multi-shot narrative, superior semantic understanding, and cinematic 1080P output in diverse styles.
 - [Seedance 1.5 Pro I2V](https://docs.modellix.ai/bytedance/seedance-1-5-pro-i2v.md): Seedance 1.5 Pro supports audio-visual co-generation with multi-shot narrative, start/end frame control, and integrated audio output (voice, music, SFX).
 - [Seedance 1.5 Pro T2V](https://docs.modellix.ai/bytedance/seedance-1-5-pro-t2v.md): Seedance 1.5 Pro supports audio-visual co-generation with multi-shot narrative, start/end frame control, and integrated audio output (voice, music, SFX).
-- [Seedance 2.0 Fast I2V](https://docs.modellix.ai/bytedance/seedance-2-0-fast-i2v.md): Dreamina Seedance 2.0 Fast multimodal image-to-video: requires at least one image parameter (first_frame_image, last_frame_image, or reference_images). Same request shape as Seedance 2.0 I2V.
-- [Seedance 2.0 Fast V2V](https://docs.modellix.ai/bytedance/seedance-2-0-fast-v2v.md): Same request schema as Seedance 2.0 V2V; differs only by downstream model id.
-- [Seedance 2.0 I2V](https://docs.modellix.ai/bytedance/seedance-2-0-i2v.md): Dreamina Seedance 2.0 multimodal image-to-video: requires at least one image parameter (first_frame_image, last_frame_image, or reference_images) and optionally audio (1-3 tracks). No service_tier or frames.
-- [Seedance 2.0 V2V](https://docs.modellix.ai/bytedance/seedance-2-0-v2v.md): Dreamina Seedance 2.0 video-to-video: requires video_urls (1-3 reference videos). Optional: prompt, reference_images (1-9), audio_urls (1-3), first_frame_image, last_frame_image. Same optional scalars as 2.0 I2V; no service_tier or frames.
+- [Seedance 2.0 Fast I2V](https://docs.modellix.ai/bytedance/seedance-2-0-fast-i2v.md): Faster variant of Dreamina Seedance 2.0 image-to-video. Accepts the same multimodal inputs as Seedance 2.0 I2V—text prompt plus optional reference images and audio—with lower latency.
+- [Seedance 2.0 Fast V2V](https://docs.modellix.ai/bytedance/seedance-2-0-fast-v2v.md): Faster variant of Dreamina Seedance 2.0 video-to-video. Accepts the same request body as Seedance 2.0 V2V.
+- [Seedance 2.0 I2V](https://docs.modellix.ai/bytedance/seedance-2-0-i2v.md): Dreamina Seedance 2.0 image-to-video model. Generate video from a text prompt, optionally conditioned on a first or last frame, up to nine reference images, and up to three reference audio tracks. Outputs 480p or 720p with adaptive aspect ratio.
+- [Seedance 2.0 V2V](https://docs.modellix.ai/bytedance/seedance-2-0-v2v.md): Dreamina Seedance 2.0 video-to-video model. Edit or extend one to three reference videos using a text prompt, with optional reference images, audio tracks, or frame images. Shares generation settings with Seedance 2.0 I2V.
 - [Seedream 4.0 I2I](https://docs.modellix.ai/bytedance/seedream-4-0-i2i.md): SOTA multimodal image model supporting text, single-image, and multi-image inputs for subject-consistent fusion, image editing, and group generation.
 - [Seedream 4.0 T2I](https://docs.modellix.ai/bytedance/seedream-4-0-t2i.md): SOTA multimodal image model supporting text, single-image, and multi-image inputs for subject-consistent fusion, image editing, and group generation.
 - [Seedream 4.5 I2I](https://docs.modellix.ai/bytedance/seedream-4-5-i2i.md): ByteDance's latest image model with improved editing consistency, portrait refinement, small-text rendering, and enhanced multi-image composition.
@@ -79,9 +79,9 @@
 - [Imagen 4.0](https://docs.modellix.ai/google/imagen-4-0-generate-001.md): Google Imagen 4.0 standard text-to-image model. High-quality photorealistic output. Supports batch generation (up to 4), person control, and up to 2K.
 - [Imagen 4.0 Ultra](https://docs.modellix.ai/google/imagen-4-0-ultra-generate-001.md): Google Imagen 4.0 Ultra text-to-image model with the highest quality. Optimized for detail and photorealism. Supports batch generation and up to 2K.
 - [Nano Banana](https://docs.modellix.ai/google/nano-banana.md): Nano Banana image generation model. Returns results via async task polling. Supports prompt and optional aspect ratio.
-- [Nano Banana 2](https://docs.modellix.ai/google/nano-banana-2.md): Nano Banana 2 multimodal image model. Omit `image` for text-to-image or include it for image-to-image. Supports 14 aspect ratios, 512-4K.
-- [Nano Banana 2 Edit](https://docs.modellix.ai/google/nano-banana-2-edit.md): Nano Banana 2 multimodal model in image-to-image mode. Requires a base64 data URI image input. Supports multiple aspect ratios and resolutions.
-- [Nano Banana Edit](https://docs.modellix.ai/google/nano-banana-edit.md): Nano Banana image editing model. Transforms images based on prompt instructions. Input image must be a base64 data URI.
+- [Nano Banana 2](https://docs.modellix.ai/google/nano-banana-2.md): Nano Banana 2 text-to-image model. Supports 14 aspect ratios and 512-4K resolution.
+- [Nano Banana 2 Edit](https://docs.modellix.ai/google/nano-banana-2-edit.md): Nano Banana 2 multimodal model in image-to-image mode. Accepts an image URL. Supports multiple aspect ratios and resolutions.
+- [Nano Banana Edit](https://docs.modellix.ai/google/nano-banana-edit.md): Nano Banana image editing model. Transforms images based on prompt instructions. Accepts an image URL.
 - [Nano Banana Pro](https://docs.modellix.ai/google/nano-banana-pro.md): Nano Banana Pro image generation model with higher quality output. Supports aspect ratio and image size (1K/2K/4K resolution).
 - [Nano Banana Pro Edit](https://docs.modellix.ai/google/nano-banana-pro-edit.md): Nano Banana Pro image editing model with higher quality. Superior detail preservation and prompt adherence. Supports up to 4K.
 - [Veo 2 I2V](https://docs.modellix.ai/google/veo-2-i2v.md): Google Veo 2.0 classic image-to-video model. Supports `prompt`, `image`, `lastFrame`, `negativePrompt`, `aspectRatio`, `durationSeconds` (5/6/8), and `personGeneration`.
@@ -89,6 +89,8 @@
 - [Veo 3.1 Fast I2V](https://docs.modellix.ai/google/veo-3-1-fast-i2v.md): Google Veo 3.1 Fast image-to-video model. Supports two input modes: `image` mode (with optional `lastFrame` and `negativePrompt`) or `referenceImages`-only mode. Resolution up to 4k. See each parameter's description for detailed constraints.
 - [Veo 3.1 Fast T2V](https://docs.modellix.ai/google/veo-3-1-fast-t2v.md): Google Veo 3.1 Fast text-to-video model. Supports `prompt`, `negativePrompt`, `aspectRatio`, `durationSeconds`, `resolution` (up to 4k), and `personGeneration`.
 - [Veo 3.1 I2V](https://docs.modellix.ai/google/veo-3-1-i2v.md): Google Veo 3.1 flagship image-to-video model. Supports two input modes: `image` mode (with optional `lastFrame` and `negativePrompt`) or `referenceImages`-only mode. Resolution up to 4k. See each parameter's description for detailed constraints.
+- [Veo 3.1 Lite I2V](https://docs.modellix.ai/google/veo-3-1-lite-i2v.md): Google Veo 3.1 Lite image-to-video model. Supports `prompt`, `negativePrompt`, `aspectRatio`, `durationSeconds`, `resolution` (up to 1080p), and `personGeneration`.
+- [Veo 3.1 Lite T2V](https://docs.modellix.ai/google/veo-3-1-lite-t2v.md): Google Veo 3.1 Lite text-to-video model. Supports `prompt`, `negativePrompt`, `aspectRatio`, `durationSeconds`, `resolution` (up to 1080p), and `personGeneration`.
 - [Veo 3.1 T2V](https://docs.modellix.ai/google/veo-3-1-t2v.md): Google Veo 3.1 flagship text-to-video model. Supports `prompt`, `negativePrompt`, `aspectRatio`, `durationSeconds`, `resolution` (up to 4k), and `personGeneration`.
 - [Veo 3 Fast I2V](https://docs.modellix.ai/google/veo-3-fast-i2v.md): Google Veo 3.0 Fast image-to-video model. Supports `prompt`, `image`, `lastFrame`, `negativePrompt`, `aspectRatio`, `durationSeconds`, `resolution` (up to 1080p), and `personGeneration`.
 - [Veo 3 Fast T2V](https://docs.modellix.ai/google/veo-3-fast-t2v.md): Google Veo 3.0 Fast text-to-video model. Supports `prompt`, `negativePrompt`, `aspectRatio`, `durationSeconds`, `resolution` (up to 1080p), and `personGeneration`.
@@ -163,9 +165,13 @@
 
 - [openai-t2i](https://docs.modellix.ai/model-api/openai/openai-t2i.json)
 - [openai-i2i](https://docs.modellix.ai/model-api/openai/openai-i2i.json)
-- [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
-- [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
+- [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
+- [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [google-t2v](https://docs.modellix.ai/model-api/google/google-t2v.json)
+- [google-t2i](https://docs.modellix.ai/model-api/google/google-t2i.json)
+- [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
+- [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
+- [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
 - [alibaba-v2v](https://docs.modellix.ai/model-api/alibaba/alibaba-v2v.json)
 - [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
 - [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
@@ -175,18 +181,14 @@
 - [kling-t2i](https://docs.modellix.ai/model-api/kling/kling-t2i.json)
 - [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
 - [minimax-i2i](https://docs.modellix.ai/model-api/minimax/minimax-i2i.json)
-- [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
-- [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
 - [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
 - [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
 - [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
 - [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
-- [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
 - [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
 - [minimax-t2v](https://docs.modellix.ai/model-api/minimax/minimax-t2v.json)
 - [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
-- [google-t2i](https://docs.modellix.ai/model-api/google/google-t2i.json)
 - [openapi](https://docs.modellix.ai/api-reference/openapi.json)
 
 ## Optional
