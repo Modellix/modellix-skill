@@ -153,8 +153,8 @@
 - [MiniMax T2V-01-Director](https://docs.modellix.ai/minimax/minimax-t2v-01-director.md): T2V-01-Director offers precise camera control for creating professional video clips with cinematic movements through a variety of lens instructions.
 - [GPT Image 1.5](https://docs.modellix.ai/openai/gpt-image-1-5.md): GPT Image 1.5 balances performance and quality with transparent background support. Supports preset resolutions up to 1536x1024. Default quality is low when omitted.
 - [GPT Image 1.5 Edit](https://docs.modellix.ai/openai/gpt-image-1-5-edit.md): GPT Image 1.5 Edit balances performance and quality with transparent background support and input fidelity control. Supports multi-image editing (up to 16 images) and streaming output. Default quality is low when omitted.
-- [GPT Image 2](https://docs.modellix.ai/openai/gpt-image-2.md): GPT Image 2 is the state-of-the-art image generation model for fast, high-quality image generation. Uses the size parameter for output dimensions including 2K (2560x1440) and 4K (3840x2160). Default quality is low when omitted. Does not support transparent backgrounds.
-- [GPT Image 2 Edit](https://docs.modellix.ai/openai/gpt-image-2-edit.md): GPT Image 2 Edit is the state-of-the-art image editing model supporting high-resolution outputs including 2K (2560x1440) and 4K (3840x2160). Uses the size parameter for output dimensions. Default quality is low when omitted. Does not support transparent backgrounds or input fidelity control.
+- [GPT Image 2](https://docs.modellix.ai/openai/gpt-image-2.md): GPT Image 2 is the state-of-the-art image generation model for fast, high-quality image generation. Uses the size parameter for output dimensions including 2K (2048x2048, 2048x1152) and 4K (3840x2160, 2160x3840). Default quality is low when omitted. Does not support transparent backgrounds.
+- [GPT Image 2 Edit](https://docs.modellix.ai/openai/gpt-image-2-edit.md): GPT Image 2 Edit is the state-of-the-art image editing model supporting high-resolution outputs including 2K (2048x2048, 2048x1152) and 4K (3840x2160, 2160x3840). Uses the size parameter for output dimensions. Default quality is low when omitted. Does not support transparent backgrounds or input fid…
 - [REST API](https://docs.modellix.ai/ways-to-use/api.md): The steps to use the Modellix models API, including how to get an API key, how to use the API, and how to get the result.
 - [CLI](https://docs.modellix.ai/ways-to-use/cli.md): Use Modellix from terminal to create model tasks and fetch results.
 - [MCP](https://docs.modellix.ai/ways-to-use/mcp.md): Modellix Docs MCP Server allows you to search the Modellix documentation in your MCP clients.
@@ -163,6 +163,8 @@
 
 ## OpenAPI Specs
 
+- [openai-t2i](https://docs.modellix.ai/model-api/openai/openai-t2i.json)
+- [openai-i2i](https://docs.modellix.ai/model-api/openai/openai-i2i.json)
 - [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
 - [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
 - [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
@@ -186,8 +188,6 @@
 - [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
 - [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
 - [minimax-i2i](https://docs.modellix.ai/model-api/minimax/minimax-i2i.json)
-- [openai-t2i](https://docs.modellix.ai/model-api/openai/openai-t2i.json)
-- [openai-i2i](https://docs.modellix.ai/model-api/openai/openai-i2i.json)
 - [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
 - [openapi](https://docs.modellix.ai/api-reference/openapi.json)
 
