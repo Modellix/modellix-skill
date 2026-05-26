@@ -163,6 +163,7 @@
 
 ## OpenAPI Specs
 
+- [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
 - [openai-t2i](https://docs.modellix.ai/model-api/openai/openai-t2i.json)
 - [openai-i2i](https://docs.modellix.ai/model-api/openai/openai-i2i.json)
 - [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
@@ -183,7 +184,6 @@
 - [google-t2v](https://docs.modellix.ai/model-api/google/google-t2v.json)
 - [google-t2i](https://docs.modellix.ai/model-api/google/google-t2i.json)
 - [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
-- [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
 - [minimax-t2v](https://docs.modellix.ai/model-api/minimax/minimax-t2v.json)
 - [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
 - [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
