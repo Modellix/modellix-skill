@@ -59,9 +59,9 @@
 - [Seedance 1.0 Pro T2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-t2v.md): ByteDance's flagship text-to-video model with multi-shot narrative, superior semantic understanding, and cinematic 1080P output in diverse styles.
 - [Seedance 1.5 Pro I2V](https://docs.modellix.ai/bytedance/seedance-1-5-pro-i2v.md): Seedance 1.5 Pro supports audio-visual co-generation with multi-shot narrative, start/end frame control, and integrated audio output (voice, music, SFX).
 - [Seedance 1.5 Pro T2V](https://docs.modellix.ai/bytedance/seedance-1-5-pro-t2v.md): Seedance 1.5 Pro supports audio-visual co-generation with multi-shot narrative, start/end frame control, and integrated audio output (voice, music, SFX).
-- [Seedance 2.0 Fast I2V](https://docs.modellix.ai/bytedance/seedance-2-0-fast-i2v.md): Faster variant of Dreamina Seedance 2.0 image-to-video. Accepts the same multimodal inputs as Seedance 2.0 I2V—text prompt plus optional reference images and audio—with lower latency.
-- [Seedance 2.0 Fast V2V](https://docs.modellix.ai/bytedance/seedance-2-0-fast-v2v.md): Faster variant of Dreamina Seedance 2.0 video-to-video. Accepts the same request body as Seedance 2.0 V2V.
-- [Seedance 2.0 I2V](https://docs.modellix.ai/bytedance/seedance-2-0-i2v.md): Dreamina Seedance 2.0 image-to-video model. Generate video from a text prompt, optionally conditioned on a first or last frame, up to nine reference images, and up to three reference audio tracks. Outputs 480p or 720p with adaptive aspect ratio.
+- [Seedance 2.0 Fast I2V](https://docs.modellix.ai/bytedance/seedance-2-0-fast-i2v.md): Faster variant of Dreamina Seedance 2.0 image-to-video. Accepts the same multimodal inputs as Seedance 2.0 I2V—text prompt plus optional reference images and audio—with lower latency. Resolution limited to 480p/720p.
+- [Seedance 2.0 Fast V2V](https://docs.modellix.ai/bytedance/seedance-2-0-fast-v2v.md): Faster variant of Dreamina Seedance 2.0 video-to-video. Accepts the same request body as Seedance 2.0 V2V but resolution limited to 480p/720p.
+- [Seedance 2.0 I2V](https://docs.modellix.ai/bytedance/seedance-2-0-i2v.md): Dreamina Seedance 2.0 image-to-video model. Generate video from a text prompt, optionally conditioned on a first or last frame, up to nine reference images, and up to three reference audio tracks. Outputs 480p, 720p, or 1080p with configurable aspect ratio.
 - [Seedance 2.0 V2V](https://docs.modellix.ai/bytedance/seedance-2-0-v2v.md): Dreamina Seedance 2.0 video-to-video model. Edit or extend one to three reference videos using a text prompt, with optional reference images, audio tracks, or frame images. Shares generation settings with Seedance 2.0 I2V.
 - [Seedream 4.0 I2I](https://docs.modellix.ai/bytedance/seedream-4-0-i2i.md): SOTA multimodal image model supporting text, single-image, and multi-image inputs for subject-consistent fusion, image editing, and group generation.
 - [Seedream 4.0 T2I](https://docs.modellix.ai/bytedance/seedream-4-0-t2i.md): SOTA multimodal image model supporting text, single-image, and multi-image inputs for subject-consistent fusion, image editing, and group generation.
@@ -163,14 +163,14 @@
 
 ## OpenAPI Specs
 
+- [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
+- [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
 - [openai-t2i](https://docs.modellix.ai/model-api/openai/openai-t2i.json)
 - [openai-i2i](https://docs.modellix.ai/model-api/openai/openai-i2i.json)
 - [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
 - [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
-- [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
 - [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
-- [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [alibaba-v2v](https://docs.modellix.ai/model-api/alibaba/alibaba-v2v.json)
 - [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
 - [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
