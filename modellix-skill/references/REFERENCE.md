@@ -37,11 +37,13 @@
 - [Wan 2.6 Reference-to-Video Flash](https://docs.modellix.ai/alibaba/wan-2-6-r2v-flash.md): Wan 2.6 Reference-to-Video Flash model provides faster generation with support for audio/silent video switching. Ideal for quick previews and cost-effective video generation.
 - [Wan 2.6 T2I](https://docs.modellix.ai/alibaba/wan-2-6-t2i.md): The wan2.6-t2i supports the newly added synchronization interface, while allowing free selection of dimensions within the constraints of total pixel area and aspect ratio.
 - [Wan 2.6 T2V](https://docs.modellix.ai/alibaba/wan-2-6-t2v.md): Wan text-to-video model generates videos from text with rich artistic styles. Wan 2.6 adds multi-shot narrative, automatic dubbing, and custom audio support.
+- [Wan 2.7 I2V](https://docs.modellix.ai/alibaba/wan-2-7-i2v.md): Wan 2.7 image-to-video model supports three task modes with flattened media parameters: first-frame generation, first-last-frame generation, and continuation. Parameter combination must conform to allowed mode combinations.
 - [Wan 2.7 Image](https://docs.modellix.ai/alibaba/wan-2-7-image.md): Wan 2.7 Image is the standard text-to-image model with faster generation speed. Supports up to 2K resolution, thinking mode, sequential generation, and custom color themes. Does not support 4K.
 - [Wan 2.7 Image Edit](https://docs.modellix.ai/alibaba/wan-2-7-image-edit.md): Wan 2.7 Image Edit is the standard image editing model with faster generation speed. Supports multi-image reference, interactive editing, sequential generation, and custom color themes. Max 2K output. Does not support 4K.
 - [Wan 2.7 Image Pro](https://docs.modellix.ai/alibaba/wan-2-7-image-pro.md): Wan 2.7 Image Pro is the professional text-to-image model supporting up to 4K resolution, thinking mode for enhanced reasoning, sequential multi-image generation, and custom color themes. Supports Chinese and English prompts up to 5000 characters.
 - [Wan 2.7 Image Pro Edit](https://docs.modellix.ai/alibaba/wan-2-7-image-pro-edit.md): Wan 2.7 Image Pro Edit is the professional image editing model supporting multi-image reference generation, interactive bounding-box editing, sequential multi-image generation, and custom color themes. Supports 1-9 input images, max 2K output.
 - [Wan 2.7 Reference-to-Video](https://docs.modellix.ai/alibaba/wan-2-7-r2v.md): Wan 2.7 Reference-to-Video model generates videos from reference media (images and videos) with prompts. Requires at least one media parameter (reference_images, reference_videos, or first_frame_image). Supports multi-subject references, storyboard generation, and custom audio for voice cloning.
+- [Wan 2.7 T2V](https://docs.modellix.ai/alibaba/wan-2-7-t2v.md): Wan 2.7 text-to-video model generates high-quality videos from text prompts using the new protocol (resolution+ratio instead of size). Supports multi-shot narrative, automatic dubbing, custom audio, 720P/1080P resolutions, and 2–15 second durations.
 - [Wan 2.7 Video Editing](https://docs.modellix.ai/alibaba/wan-2-7-videoedit.md): Wan 2.7 Video Editing model supports video style modification and video editing with multi-modal inputs (text/image/video). Processing time: 1-5 minutes.
 - [Wanx 2.1 I2V Plus](https://docs.modellix.ai/alibaba/wanx-2-1-i2v-plus.md): Wan image-to-video model generates videos from prompts and images with rich artistic styles and cinematic quality. Wanx 2.1 Plus offers refined image quality.
 - [Wanx 2.1 I2V Turbo](https://docs.modellix.ai/alibaba/wanx-2-1-i2v-turbo.md): Wan image-to-video model generates videos from prompts and images with rich artistic styles. Wanx 2.1 Turbo offers high cost-effectiveness.
@@ -163,6 +165,8 @@
 
 ## OpenAPI Specs
 
+- [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
+- [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
 - [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
 - [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
@@ -172,9 +176,7 @@
 - [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
 - [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
 - [alibaba-v2v](https://docs.modellix.ai/model-api/alibaba/alibaba-v2v.json)
-- [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
 - [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
-- [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
 - [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
 - [kling-v2v](https://docs.modellix.ai/model-api/kling/kling-v2v.json)
 - [kling-t2v](https://docs.modellix.ai/model-api/kling/kling-t2v.json)
