@@ -165,6 +165,8 @@
 
 ## OpenAPI Specs
 
+- [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
+- [minimax-i2i](https://docs.modellix.ai/model-api/minimax/minimax-i2i.json)
 - [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
 - [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
 - [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
@@ -187,9 +189,7 @@
 - [google-t2i](https://docs.modellix.ai/model-api/google/google-t2i.json)
 - [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
 - [minimax-t2v](https://docs.modellix.ai/model-api/minimax/minimax-t2v.json)
-- [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
 - [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
-- [minimax-i2i](https://docs.modellix.ai/model-api/minimax/minimax-i2i.json)
 - [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
 - [openapi](https://docs.modellix.ai/api-reference/openapi.json)
 
