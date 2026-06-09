@@ -157,6 +157,26 @@
 - [GPT Image 1.5 Edit](https://docs.modellix.ai/openai/gpt-image-1-5-edit.md): GPT Image 1.5 Edit balances performance and quality with transparent background support and input fidelity control. Supports multi-image editing (up to 16 images) and streaming output. Default quality is low when omitted.
 - [GPT Image 2](https://docs.modellix.ai/openai/gpt-image-2.md): GPT Image 2 is the state-of-the-art image generation model for fast, high-quality image generation. Uses the size parameter for output dimensions including 2K (2048x2048, 2048x1152) and 4K (3840x2160, 2160x3840). Default quality is low when omitted. Does not support transparent backgrounds.
 - [GPT Image 2 Edit](https://docs.modellix.ai/openai/gpt-image-2-edit.md): GPT Image 2 Edit is the state-of-the-art image editing model supporting high-resolution outputs including 2K (2048x2048, 2048x1152) and 4K (3840x2160, 2160x3840). Uses the size parameter for output dimensions. Default quality is low when omitted. Does not support transparent backgrounds or input fid…
+- [Vidu Lip Sync](https://docs.modellix.ai/vidu/lip-sync.md): Vidu lip sync model. Reanimates the lip movements in a video to match a replacement audio track. `video_url` is required. Provide `audio_url` as the new audio to sync lips to. Use `reference_face_image_url` to preserve face identity consistency across the video.
+- [Vidu Motion Sync](https://docs.modellix.ai/vidu/motion-sync.md): Vidu motion sync model. Transfers motion from a source video onto a target character image. Both `image_url` and `video_url` are required.
+- [Vidu One-Click AD-Film](https://docs.modellix.ai/vidu/one-click-ad-film.md): Vidu one-click ad film model. Automatically generates a marketing video from 1-7 product or scene images. `images` is required. Supports `prompt` (up to 2000 chars), `duration` (10-60s, default 15), `aspect_ratio`, and `language` (zh/en).
+- [Vidu One-Click General Film](https://docs.modellix.ai/vidu/one-click-general-film.md): Vidu one-click general film model. Automatically generates a cinematic film from 1-7 images. Both `images` and `duration` (10-180s) are required. Optionally accepts `prompt` (up to 3000 chars) and `aspect_ratio`.
+- [Vidu One-Click Trending Replicate](https://docs.modellix.ai/vidu/one-click-trending-replicate.md): Vidu one-click trending replicate model. Recreates a trending video style with your own subjects. Both `video_url` (reference trend video) and `images` (subject images, 1-7) are required. Supports `prompt`, `aspect_ratio`, `resolution` (default 1080p), and `remove_audio`.
+- [Vidu Template Story](https://docs.modellix.ai/vidu/template-story.md): Vidu template story model. Generates a narrative video by placing your characters into a predefined story template. Both `story` and `images` are required. Available templates: `love_story`, `workday_feels`, `monkey_king`, `pigsy`, `monk_tang`, `one_shot`.
+- [Vidu Q2 Pro Digital Human](https://docs.modellix.ai/vidu/viduq2-pro-digital-human.md): Vidu Q2 Pro digital human video model. High quality portrait animation. `image_url` is required. Supports `prompt`, `audio_url`, and `resolution`.
+- [Vidu Q2 Pro Multi-Frame](https://docs.modellix.ai/vidu/viduq2-pro-multi-frame.md): Vidu Q2 Pro multi-frame animation model. High quality animation through a sequence of up to 9 frames. Both `start_image` and `key_images` are required. Supports `resolution`.
+- [Vidu Q2 Turbo Digital Human](https://docs.modellix.ai/vidu/viduq2-turbo-digital-human.md): Vidu Q2 Turbo digital human video model. Animates a portrait image into a speaking or moving digital human. `image_url` is required. Supports `prompt`, `audio_url`, and `resolution`.
+- [Vidu Q2 Turbo Multi-Frame](https://docs.modellix.ai/vidu/viduq2-turbo-multi-frame.md): Vidu Q2 Turbo multi-frame animation model. Animates through a sequence of up to 9 frames (1 start + up to 8 key images). Both `start_image` and `key_images` are required. Supports `resolution`.
+- [Vidu Q3 Mix R2V](https://docs.modellix.ai/vidu/viduq3-mix-r2v.md): Vidu Q3 Mix reference-to-video model. Generates a video with your characters from 1-7 reference images using mixed-style synthesis. Both `prompt` and `reference_images` are required. `aspect_ratio` supports 16:9/9:16/1:1; `resolution` supports 720p/1080p only; `duration` range 1-16s.
+- [Vidu Q3 Pro Fast I2V](https://docs.modellix.ai/vidu/viduq3-pro-fast-i2v.md): Vidu Q3 Pro Fast image-to-video model. High-speed generation from a starting frame image. Supports `first_frame_image`, `prompt`, `duration` (1-16s), `resolution` (720p/1080p only), and `seed`.
+- [Vidu Q3 Pro FL2V](https://docs.modellix.ai/vidu/viduq3-pro-fl2v.md): Vidu Q3 Pro first-last frame to video model. High quality video transition between a starting and ending frame. Both `first_frame_image` and `last_frame_image` are required. Supports `prompt`, `duration` (1-16s), `resolution`, and `seed`.
+- [Vidu Q3 Pro I2V](https://docs.modellix.ai/vidu/viduq3-pro-i2v.md): Vidu Q3 Pro image-to-video model. High quality generation from a starting frame. Supports `first_frame_image`, `prompt`, `duration` (1-16s), `resolution` (540p/720p/1080p), and `seed`.
+- [Vidu Q3 Pro T2V](https://docs.modellix.ai/vidu/viduq3-pro-t2v.md): Vidu Q3 Pro text-to-video model. Higher quality generation with support for `prompt`, `duration` (1-16s), `aspect_ratio`, `resolution`, and `seed`.
+- [Vidu Q3 R2V](https://docs.modellix.ai/vidu/viduq3-r2v.md): Vidu Q3 reference-to-video model. Balanced quality from 1-7 reference images. Both `prompt` and `reference_images` are required. `aspect_ratio` supports 16:9/9:16/1:1; `resolution` supports 540p/720p/1080p; `duration` range 3-16s.
+- [Vidu Q3 Turbo FL2V](https://docs.modellix.ai/vidu/viduq3-turbo-fl2v.md): Vidu Q3 Turbo first-last frame to video model. Generates a smooth video transition between a starting and ending frame. Both `first_frame_image` and `last_frame_image` are required. Supports `prompt`, `duration` (1-16s), `resolution`, and `seed`.
+- [Vidu Q3 Turbo I2V](https://docs.modellix.ai/vidu/viduq3-turbo-i2v.md): Vidu Q3 Turbo image-to-video model. Fast generation from a starting frame. Supports `first_frame_image`, `prompt`, `duration` (1-16s), `resolution` (540p/720p/1080p), and `seed`.
+- [Vidu Q3 Turbo R2V](https://docs.modellix.ai/vidu/viduq3-turbo-r2v.md): Vidu Q3 Turbo reference-to-video model. Fast generation with your characters from 1-7 reference images. Both `prompt` and `reference_images` are required. `aspect_ratio` supports 16:9/9:16/1:1; `resolution` supports 540p/720p/1080p; `duration` range 3-16s.
+- [Vidu Q3 Turbo T2V](https://docs.modellix.ai/vidu/viduq3-turbo-t2v.md): Vidu Q3 Turbo text-to-video model. Fast generation with support for `prompt`, `duration` (1-16s), `aspect_ratio`, `resolution`, and `seed`.
 - [REST API](https://docs.modellix.ai/ways-to-use/api.md): The steps to use the Modellix models API, including how to get an API key, how to use the API, and how to get the result.
 - [CLI](https://docs.modellix.ai/ways-to-use/cli.md): Use Modellix from terminal to create model tasks and fetch results.
 - [MCP](https://docs.modellix.ai/ways-to-use/mcp.md): Modellix Docs MCP Server allows you to search the Modellix documentation in your MCP clients.
@@ -165,18 +185,21 @@
 
 ## OpenAPI Specs
 
+- [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
+- [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
+- [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
+- [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
+- [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
+- [vidu-v2v](https://docs.modellix.ai/model-api/vidu/vidu-v2v.json)
+- [vidu-t2v](https://docs.modellix.ai/model-api/vidu/vidu-t2v.json)
+- [vidu-i2v](https://docs.modellix.ai/model-api/vidu/vidu-i2v.json)
 - [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
 - [minimax-i2i](https://docs.modellix.ai/model-api/minimax/minimax-i2i.json)
 - [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
 - [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
-- [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
-- [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
 - [openai-t2i](https://docs.modellix.ai/model-api/openai/openai-t2i.json)
 - [openai-i2i](https://docs.modellix.ai/model-api/openai/openai-i2i.json)
-- [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
-- [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
-- [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
 - [alibaba-v2v](https://docs.modellix.ai/model-api/alibaba/alibaba-v2v.json)
 - [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
 - [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
