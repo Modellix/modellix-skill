@@ -82,7 +82,7 @@
 - [Imagen 4.0 Ultra](https://docs.modellix.ai/google/imagen-4-0-ultra-generate-001.md): Google Imagen 4.0 Ultra text-to-image model with the highest quality. Optimized for detail and photorealism. Supports batch generation and up to 2K.
 - [Nano Banana](https://docs.modellix.ai/google/nano-banana.md): Nano Banana image generation model. Returns results via async task polling. Supports prompt and optional aspect ratio.
 - [Nano Banana 2](https://docs.modellix.ai/google/nano-banana-2.md): Nano Banana 2 text-to-image model. Supports 14 aspect ratios and 512-4K resolution.
-- [Nano Banana 2 Edit](https://docs.modellix.ai/google/nano-banana-2-edit.md): Nano Banana 2 multimodal model in image-to-image mode. Accepts an image URL. Supports multiple aspect ratios and resolutions.
+- [Nano Banana 2 Edit](https://docs.modellix.ai/google/nano-banana-2-edit.md): Nano Banana 2 image editing model. Supports image and video inputs, multiple aspect ratios, and resolutions up to 4K.
 - [Nano Banana Edit](https://docs.modellix.ai/google/nano-banana-edit.md): Nano Banana image editing model. Transforms images based on prompt instructions. Accepts an image URL.
 - [Nano Banana Pro](https://docs.modellix.ai/google/nano-banana-pro.md): Nano Banana Pro image generation model with higher quality output. Supports aspect ratio and image size (1K/2K/4K resolution).
 - [Nano Banana Pro Edit](https://docs.modellix.ai/google/nano-banana-pro-edit.md): Nano Banana Pro image editing model with higher quality. Superior detail preservation and prompt adherence. Supports up to 4K.
@@ -185,6 +185,7 @@
 
 ## OpenAPI Specs
 
+- [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
 - [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
 - [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
 - [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
@@ -197,7 +198,6 @@
 - [minimax-i2i](https://docs.modellix.ai/model-api/minimax/minimax-i2i.json)
 - [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
 - [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
-- [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
 - [openai-t2i](https://docs.modellix.ai/model-api/openai/openai-t2i.json)
 - [openai-i2i](https://docs.modellix.ai/model-api/openai/openai-i2i.json)
 - [alibaba-v2v](https://docs.modellix.ai/model-api/alibaba/alibaba-v2v.json)
