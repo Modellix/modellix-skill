@@ -54,7 +54,8 @@
 - [Wanx 2.1 T2V Turbo](https://docs.modellix.ai/alibaba/wanx-2-1-t2v-turbo.md): Wan test-to-video model can generate videos with a single sentence, featuring rich artistic styles and cinematic quality. Wanx 2.1 Turbo offers high cost-effectiveness.
 - [Wanx 2.5 I2V Preview](https://docs.modellix.ai/alibaba/wanx-2-5-i2v-preview.md): Wan image-to-video model generates videos from prompts and images with cinematic quality. Wan 2.5 supports automatic dubbing and custom audio files.
 - [Z-Image Turbo](https://docs.modellix.ai/alibaba/z-image-turbo.md): Z-Image Turbo is a lightweight text-to-image model that quickly generates images with Chinese and English text rendering support. It always outputs 1 PNG image per request.
-- [Query Task Result](https://docs.modellix.ai/api-reference/query-task-result.md): Query the status and results of an async task by task_id
+- [Query Task Result](https://docs.modellix.ai/api/get-task-result.md): Query the status and results of an async task by task_id
+- [List Active Models](https://docs.modellix.ai/api/list-models.md): Returns all currently active (published) models with their slug, type, and documentation URL.
 - [Seedance 1.0 Pro Fast I2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-fast-i2v.md): Seedance 1.0 Pro Fast inherits core advantages of the Pro model with 3x faster generation and 72% lower cost, balancing quality, speed, and price.
 - [Seedance 1.0 Pro Fast T2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-fast-t2v.md): Seedance 1.0 Pro Fast inherits core advantages of the Pro model with 3x faster generation and 72% lower cost, balancing quality, speed, and price.
 - [Seedance 1.0 Pro I2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-i2v.md): ByteDance's flagship image-to-video model with multi-shot narrative, superior semantic understanding, and cinematic 1080P output in diverse styles.
@@ -185,6 +186,8 @@
 
 ## OpenAPI Specs
 
+- [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
+- [list-active-models](https://docs.modellix.ai/common-api/list-active-models.json)
 - [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
 - [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
 - [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
@@ -213,7 +216,6 @@
 - [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
 - [minimax-t2v](https://docs.modellix.ai/model-api/minimax/minimax-t2v.json)
 - [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
-- [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
 - [openapi](https://docs.modellix.ai/api-reference/openapi.json)
 
 ## Optional
