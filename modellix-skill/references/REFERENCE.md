@@ -7,6 +7,9 @@
 - [HappyHorse 1.0 R2V](https://docs.modellix.ai/alibaba/happyhorse-1-0-r2v.md): **[Core Function]** HappyHorse 1.0 R2V is a reference-to-video model. **[Strengths]** It excels at maintaining character consistency using up to 9 reference images while generating new video actions based on a prompt. **[Best For]** Highly recommended for: character-consistent storytelling and gener…
 - [HappyHorse 1.0 T2V](https://docs.modellix.ai/alibaba/happyhorse-1-0-t2v.md): **[Core Function]** HappyHorse 1.0 T2V is a breakout, highly optimized text-to-video model. **[Strengths]** It provides streamlined, fast, and high-quality video generation (up to 15s at 1080p) with native audio support, acting as a highly efficient alternative to Wan 2.7. **[Best For]** Highly reco…
 - [HappyHorse 1.0 Video Edit](https://docs.modellix.ai/alibaba/happyhorse-1-0-video-edit.md): **[Core Function]** HappyHorse 1.0 Video Edit is a streamlined video editing model. **[Strengths]** It provides high-quality video editing capabilities (with or without reference images) within the highly optimized HappyHorse architecture. **[Best For]** Highly recommended for: fast, high-quality vi…
+- [HappyHorse 1.1 I2V](https://docs.modellix.ai/alibaba/happyhorse-1-1-i2v.md): **[Core Function]** HappyHorse 1.1 I2V is Alibaba's latest streamlined first-frame image-to-video model. **[Strengths]** It turns a single image into high-quality 720P/1080P video with native audio support and 3-15 second duration; output aspect ratio follows the first frame image. **[Best For]** Hi…
+- [HappyHorse 1.1 R2V](https://docs.modellix.ai/alibaba/happyhorse-1-1-r2v.md): **[Core Function]** HappyHorse 1.1 R2V is Alibaba's latest reference-image-to-video model. **[Strengths]** It uses 1-9 reference images to preserve subject or character appearance while generating new video actions, supports 720P/1080P output, 3-15 second duration, and expanded aspect ratios includi…
+- [HappyHorse 1.1 T2V](https://docs.modellix.ai/alibaba/happyhorse-1-1-t2v.md): **[Core Function]** HappyHorse 1.1 T2V is Alibaba's latest streamlined text-to-video model. **[Strengths]** It generates 720P/1080P video with native audio support, 3-15 second duration, and an expanded set of aspect ratios including 4:5, 5:4, 9:21, and 21:9. **[Best For]** Highly recommended for: f…
 - [Qwen Image](https://docs.modellix.ai/alibaba/qwen-image.md): **[Core Function]** Qwen Image is an older generation text-to-image model. **[Strengths]** Maintained primarily for backward compatibility and stable API contracts. **[Best For]** Existing legacy integrations and workflows that strictly depend on this specific model version's quirks. **[Limitations]…
 - [Qwen Image 2.0](https://docs.modellix.ai/alibaba/qwen-image-2-0.md): **[Core Function]** Qwen Image 2.0 is a fast, photorealistic image generation model. **[Strengths]** Balances speed and cost while delivering high-quality 2K generation and standard Qwen 2.0 text rendering. **[Best For]** Recommended for: cost-effective photorealism and fast concept art. **[Limitati…
 - [Qwen Image 2.0 Edit](https://docs.modellix.ai/alibaba/qwen-image-2-0-edit.md): **[Core Function]** Qwen Image 2.0 Edit is a fast, highly capable image editing model. **[Strengths]** Provides strong structural adherence and editing speed. **[Best For]** Recommended for: cost-effective image modifications. **[Limitations]** Lacks the finer detail rendering of the Pro version. **…
@@ -56,7 +59,7 @@
 - [Wanx 2.5 I2V Preview](https://docs.modellix.ai/alibaba/wanx-2-5-i2v-preview.md): **[Core Function]** Wanx 2.5 I2V Preview is an older generation image-to-video model. **[Strengths]** Maintained primarily for backward compatibility and stable API contracts. **[Best For]** Existing legacy integrations and workflows that strictly depend on this specific model version's quirks. **[L…
 - [Z-Image Turbo](https://docs.modellix.ai/alibaba/z-image-turbo.md): **[Core Function]** Z-Image Turbo is an older generation text-to-image model. **[Strengths]** Historically provided faster generation times and lower latency compared to its standard counterparts. Maintained for backward compatibility. **[Best For]** Existing legacy integrations that require the spe…
 - [Query Task Result](https://docs.modellix.ai/api/get-task-result.md): Query the status and results of an async task by task_id
-- [List Active Models](https://docs.modellix.ai/api/list-models.md): Returns all currently active (published) models with their slug, type, and documentation URL.
+- [List Active Models](https://docs.modellix.ai/api/list-models.md): Returns all currently active (published) models with their slug, type, documentation URL, and display description.
 - [Seedance 1.0 Pro Fast I2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-fast-i2v.md): **[Core Function]** Seedance 1.0 Pro Fast I2V is an older generation image-to-video model. **[Strengths]** Known for its rapid generation pipeline and robust performance on standard commercial prompts. Maintained for backward compatibility. **[Best For]** Existing legacy integrations that require th…
 - [Seedance 1.0 Pro Fast T2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-fast-t2v.md): **[Core Function]** Seedance 1.0 Pro Fast T2V is an older generation text-to-video model. **[Strengths]** Known for its rapid generation pipeline and robust performance on standard commercial prompts. Maintained for backward compatibility. **[Best For]** Existing legacy integrations that require the…
 - [Seedance 1.0 Pro I2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-i2v.md): **[Core Function]** Seedance 1.0 Pro I2V is an older generation image-to-video model. **[Strengths]** Known for its rapid generation pipeline and robust performance on standard commercial prompts. Maintained for backward compatibility. **[Best For]** Existing legacy integrations and workflows that s…
@@ -75,11 +78,13 @@
 - [Seedream 5.0 Lite Edit](https://docs.modellix.ai/bytedance/seedream-5-0-lite-edit.md): **[Core Function]** Seedream 5.0 Lite Edit is a reasoning-enhanced, smart image editing model. **[Strengths]** It features superior cross-modal understanding and reasoning, allowing for highly accurate, interactive multi-turn image editing with real-time knowledge enhancement. **[Best For]** Highly…
 - [New Models](https://docs.modellix.ai/changelog/new-models.md): The model integration updates and announcements.
 - [Product Updates](https://docs.modellix.ai/changelog/product-updates.md): The product updates and announcements.
+- [Entitlements](https://docs.modellix.ai/get-started/entitlements.md): Understand the concurrency limits, rate limits (RPM), and team entitlements based on your account funding tier.
 - [AI Onboarding](https://docs.modellix.ai/get-started/index.md): Everything you need to onboard your AI agent to Modellix.
 - [Model Providers](https://docs.modellix.ai/get-started/model-providers.md): List all model providers of Modellix.
-- [Model Select](https://docs.modellix.ai/get-started/model-select.md): Use Modellix documentation and AI assistants to discover the right model for your image or video generation task.
+- [Model Selection](https://docs.modellix.ai/get-started/model-select.md): Follow these steps to find the perfect model for your image or video generation task using Modellix documentation and AI assistants.
 - [Overview](https://docs.modellix.ai/get-started/overview.md): Welcome to Modellix.
 - [Pricing](https://docs.modellix.ai/get-started/pricing.md): The pricing of each model in Modellix.
+- [Top-up](https://docs.modellix.ai/get-started/top-up.md): Learn how to fund your Modellix account, supported payment methods, and available top-up discounts.
 - [Imagen 4.0 Fast](https://docs.modellix.ai/google/imagen-4-0-fast-generate-001.md): Google Imagen 4.0 Fast text-to-image model optimized for speed. Supports `prompt`, `sampleCount`, `aspectRatio`, and `personGeneration`.
 - [Imagen 4.0](https://docs.modellix.ai/google/imagen-4-0-generate-001.md): Google Imagen 4.0 standard text-to-image model. High-quality photorealistic output. Supports batch generation (up to 4), person control, and up to 2K.
 - [Imagen 4.0 Ultra](https://docs.modellix.ai/google/imagen-4-0-ultra-generate-001.md): Google Imagen 4.0 Ultra text-to-image model with the highest quality. Optimized for detail and photorealism. Supports batch generation and up to 2K.
@@ -203,6 +208,9 @@
 
 ## OpenAPI Specs
 
+- [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
+- [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
+- [list-active-models](https://docs.modellix.ai/common-api/list-active-models.json)
 - [xai-v2v](https://docs.modellix.ai/model-api/xai/xai-v2v.json)
 - [xai-t2v](https://docs.modellix.ai/model-api/xai/xai-t2v.json)
 - [xai-t2i](https://docs.modellix.ai/model-api/xai/xai-t2i.json)
@@ -234,12 +242,9 @@
 - [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
 - [alibaba-v2v](https://docs.modellix.ai/model-api/alibaba/alibaba-v2v.json)
-- [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
 - [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
-- [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
 - [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
 - [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
-- [list-active-models](https://docs.modellix.ai/common-api/list-active-models.json)
 - [openapi](https://docs.modellix.ai/api-reference/openapi.json)
 
 ## Optional
