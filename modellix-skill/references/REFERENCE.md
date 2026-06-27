@@ -59,7 +59,9 @@
 - [Wanx 2.5 I2V Preview](https://docs.modellix.ai/alibaba/wanx-2-5-i2v-preview.md): **[Core Function]** Wanx 2.5 I2V Preview is an older generation image-to-video model. **[Strengths]** Maintained primarily for backward compatibility and stable API contracts. **[Best For]** Existing legacy integrations and workflows that strictly depend on this specific model version's quirks. **[L…
 - [Z-Image Turbo](https://docs.modellix.ai/alibaba/z-image-turbo.md): **[Core Function]** Z-Image Turbo is an older generation text-to-image model. **[Strengths]** Historically provided faster generation times and lower latency compared to its standard counterparts. Maintained for backward compatibility. **[Best For]** Existing legacy integrations that require the spe…
 - [Query Task Result](https://docs.modellix.ai/api/get-task-result.md): Query the status and results of an async task by task_id
+- [Get Team Balance](https://docs.modellix.ai/api/get-team-balance.md): Returns the current available balance for the team associated with the provided API Key. The balance is returned in USD with 4 decimal places.
 - [List Active Models](https://docs.modellix.ai/api/list-models.md): Returns all currently active (published) models with their slug, type, documentation URL, and display description.
+- [Validate API Key](https://docs.modellix.ai/api/validate-api-key.md): Checks whether the API Key provided in the Authorization header is valid. Invalid, missing, or malformed credentials return a successful response with is_valid set to false.
 - [Seedance 1.0 Pro Fast I2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-fast-i2v.md): **[Core Function]** Seedance 1.0 Pro Fast I2V is an older generation image-to-video model. **[Strengths]** Known for its rapid generation pipeline and robust performance on standard commercial prompts. Maintained for backward compatibility. **[Best For]** Existing legacy integrations that require th…
 - [Seedance 1.0 Pro Fast T2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-fast-t2v.md): **[Core Function]** Seedance 1.0 Pro Fast T2V is an older generation text-to-video model. **[Strengths]** Known for its rapid generation pipeline and robust performance on standard commercial prompts. Maintained for backward compatibility. **[Best For]** Existing legacy integrations that require the…
 - [Seedance 1.0 Pro I2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-i2v.md): **[Core Function]** Seedance 1.0 Pro I2V is an older generation image-to-video model. **[Strengths]** Known for its rapid generation pipeline and robust performance on standard commercial prompts. Maintained for backward compatibility. **[Best For]** Existing legacy integrations and workflows that s…
@@ -67,8 +69,13 @@
 - [Seedance 1.5 Pro I2V](https://docs.modellix.ai/bytedance/seedance-1-5-pro-i2v.md): **[Core Function]** Seedance 1.5 Pro I2V is a joint audio-video image-to-video model. **[Strengths]** It accurately follows complex instructions to animate a single image with synchronized audio. **[Best For]** Recommended for: standard image animation tasks where 2.0's multi-reference capabilities…
 - [Seedance 1.5 Pro T2V](https://docs.modellix.ai/bytedance/seedance-1-5-pro-t2v.md): **[Core Function]** Seedance 1.5 Pro T2V is a joint audio-video text-to-video generation model. **[Strengths]** It accurately follows complex text instructions to generate high-quality video with synchronized audio. **[Best For]** Highly recommended for: standard text-to-video generation where stric…
 - [Seedance 2.0 Fast I2V](https://docs.modellix.ai/bytedance/seedance-2-0-fast-i2v.md): **[Core Function]** Seedance 2.0 Fast I2V is a high-speed multimodal video generation model. **[Strengths]** Fast generation with the multimodal and multi-shot capabilities of the Seedance 2.0 architecture. **[Best For]** Highly recommended for: rapid prototyping and quick multi-shot video creation.…
+- [Seedance 2.0 Fast T2V](https://docs.modellix.ai/bytedance/seedance-2-0-fast-t2v.md): **[Core Function]** Seedance 2.0 Fast T2V is the faster text-to-video variant. **[Strengths]** Supports 480p/720p, 24 fps, 4-15s MP4 output. **[Routing]** Use when speed is preferred over maximum resolution.
 - [Seedance 2.0 Fast V2V](https://docs.modellix.ai/bytedance/seedance-2-0-fast-v2v.md): **[Core Function]** Seedance 2.0 Fast V2V is a high-speed video-to-video generation model. **[Strengths]** It offers rapid video transformation capabilities based on the 2.0 architecture. **[Best For]** Highly recommended for: quick video restyling and fast iterations. **[Limitations]** Do NOT use t…
 - [Seedance 2.0 I2V](https://docs.modellix.ai/bytedance/seedance-2-0-i2v.md): **[Core Function]** Seedance 2.0 I2V is ByteDance's flagship unified multimodal video generation model. **[Strengths]** It supports complex mixed references (multiple images, audio clips) and generates up to 15s of multi-shot audio-video output with dual-channel audio. **[Best For]** Highly recommen…
+- [Seedance 2.0 Mini I2V](https://docs.modellix.ai/bytedance/seedance-2-0-mini-i2v.md): **[Core Function]** Seedance 2.0 Mini I2V is the lightweight multimodal image-to-video variant. **[Strengths]** Supports 480p/720p, 24 fps, 4-15s MP4 output, with optional first/last frame, reference images, and audio references. **[Routing]** Use for cost-efficient image-to-video.
+- [Seedance 2.0 Mini T2V](https://docs.modellix.ai/bytedance/seedance-2-0-mini-t2v.md): **[Core Function]** Seedance 2.0 Mini T2V is the lightweight text-to-video variant. **[Strengths]** Supports 480p/720p, 24 fps, 4-15s MP4 output. **[Routing]** Use for cost-efficient text-to-video.
+- [Seedance 2.0 Mini V2V](https://docs.modellix.ai/bytedance/seedance-2-0-mini-v2v.md): **[Core Function]** Seedance 2.0 Mini V2V is the lightweight video-to-video variant. **[Strengths]** Supports 480p/720p, 24 fps, 4-15s MP4 output, with required reference video and optional text/image/audio references. **[Routing]** Use for cost-efficient video-to-video transformations.
+- [Seedance 2.0 T2V](https://docs.modellix.ai/bytedance/seedance-2-0-t2v.md): **[Core Function]** Seedance 2.0 T2V is ByteDance Dreamina Seedance 2.0 text-to-video. **[Strengths]** Supports 480p/720p/1080p/4k, 24 fps, 4-15s MP4 output, and optional image/audio references. **[Routing]** Use for high-fidelity text-to-video when quality or 4k output is requested.
 - [Seedance 2.0 V2V](https://docs.modellix.ai/bytedance/seedance-2-0-v2v.md): **[Core Function]** Seedance 2.0 V2V is ByteDance's flagship multimodal video-to-video model. **[Strengths]** It allows powerful editing and stylization of input videos by supporting mixed references (text, images, video, and audio) and producing multi-shot 15s outputs. **[Best For]** Highly recomme…
 - [Seedream 4.0 I2I](https://docs.modellix.ai/bytedance/seedream-4-0-i2i.md): **[Core Function]** Seedream 4.0 I2I is an older generation image-to-image editing model. **[Strengths]** Maintained primarily for backward compatibility and stable API contracts. **[Best For]** Existing legacy integrations and workflows that strictly depend on this specific model version's quirks.…
 - [Seedream 4.0 T2I](https://docs.modellix.ai/bytedance/seedream-4-0-t2i.md): **[Core Function]** Seedream 4.0 T2I is an older high-definition image creation model. **[Strengths]** It generates high-definition images up to 4K. **[Best For]** Existing workflows. **[Limitations]** Superseded by Seedream 4.5 in fidelity and consistency. **[Routing]** Default to Seedream 4.5 unle…
@@ -76,14 +83,14 @@
 - [Seedream 4.5 T2I](https://docs.modellix.ai/bytedance/seedream-4-5-t2i.md): **[Core Function]** Seedream 4.5 T2I is a high-fidelity visual creation model. **[Strengths]** It provides all-round improvements in consistency, aesthetics, and photorealism, supporting high-definition outputs up to 4K resolution. **[Best For]** Highly recommended for: professional visual creatives…
 - [Seedream 5.0 Lite](https://docs.modellix.ai/bytedance/seedream-5-0-lite.md): **[Core Function]** Seedream 5.0 Lite is a smart, reasoning-enhanced image generation model with real-time web search capabilities. **[Strengths]** It excels at generating time-sensitive imagery, infographics, and content requiring deep world knowledge or online search, boasting superior prompt unde…
 - [Seedream 5.0 Lite Edit](https://docs.modellix.ai/bytedance/seedream-5-0-lite-edit.md): **[Core Function]** Seedream 5.0 Lite Edit is a reasoning-enhanced, smart image editing model. **[Strengths]** It features superior cross-modal understanding and reasoning, allowing for highly accurate, interactive multi-turn image editing with real-time knowledge enhancement. **[Best For]** Highly…
-- [New Models](https://docs.modellix.ai/changelog/new-models.md): The model integration updates and announcements.
-- [Product Updates](https://docs.modellix.ai/changelog/product-updates.md): The product updates and announcements.
+- [New Models](https://docs.modellix.ai/changelog/new-models.md): Track newly integrated AI image and video models on Modellix, including provider, capabilities, parameters, and availability announcements as they ship.
+- [Product Updates](https://docs.modellix.ai/changelog/product-updates.md): Follow Modellix product updates and announcements—new API endpoints, console features, billing changes, and platform improvements released each month.
 - [Entitlements](https://docs.modellix.ai/get-started/entitlements.md): Understand the concurrency limits, rate limits (RPM), and team entitlements based on your account funding tier.
-- [AI Onboarding](https://docs.modellix.ai/get-started/index.md): Everything you need to onboard your AI agent to Modellix.
+- [AI Onboarding](https://docs.modellix.ai/get-started/index.md): Set up an AI agent for Modellix with an API key, the official Skill, or CLI. Submit and retrieve asynchronous image and video generation tasks.
 - [Model Providers](https://docs.modellix.ai/get-started/model-providers.md): List all model providers of Modellix.
-- [Model Selection](https://docs.modellix.ai/get-started/model-select.md): Follow these steps to find the perfect model for your image or video generation task using Modellix documentation and AI assistants.
-- [Overview](https://docs.modellix.ai/get-started/overview.md): Welcome to Modellix.
-- [Pricing](https://docs.modellix.ai/get-started/pricing.md): The pricing of each model in Modellix.
+- [Model Selection](https://docs.modellix.ai/get-started/model-select.md): Choose the right Modellix image or video model by output type, quality, speed, cost, and features such as audio, references, and editing.
+- [Overview](https://docs.modellix.ai/get-started/overview.md): Learn how Modellix provides unified API access to image and video models, with transparent pricing, async task workflows, and browser playgrounds.
+- [Pricing](https://docs.modellix.ai/get-started/pricing.md): Understand Modellix API pricing for image and video generation. Compare per-image and per-second costs, model parameters, and billing options.
 - [Top-up](https://docs.modellix.ai/get-started/top-up.md): Learn how to fund your Modellix account, supported payment methods, and available top-up discounts.
 - [Imagen 4.0 Fast](https://docs.modellix.ai/google/imagen-4-0-fast-generate-001.md): Google Imagen 4.0 Fast text-to-image model optimized for speed. Supports `prompt`, `sampleCount`, `aspectRatio`, and `personGeneration`.
 - [Imagen 4.0](https://docs.modellix.ai/google/imagen-4-0-generate-001.md): Google Imagen 4.0 standard text-to-image model. High-quality photorealistic output. Supports batch generation (up to 4), person control, and up to 2K.
@@ -190,11 +197,11 @@
 - [Vidu Q3 Turbo I2V](https://docs.modellix.ai/vidu/viduq3-turbo-i2v.md): **[Core Function]** Vidu Q3 Turbo I2V is a fast Image-to-Video generation model. **[Strengths]** It excels at quickly animating a starting frame into a video sequence with strong motion dynamics and low latency. **[Best For]** Highly recommended for: rapid social media content creation, quick animat…
 - [Vidu Q3 Turbo R2V](https://docs.modellix.ai/vidu/viduq3-turbo-r2v.md): **[Core Function]** Vidu Q3 Turbo R2V is a fast reference-to-video generation model. **[Strengths]** It excels at quickly generating dynamic videos based on a text prompt while preserving the identity of the subjects from provided reference images. **[Best For]** Highly recommended for: rapid charac…
 - [Vidu Q3 Turbo T2V](https://docs.modellix.ai/vidu/viduq3-turbo-t2v.md): **[Core Function]** Vidu Q3 Turbo T2V is a fast text-to-video generation model. **[Strengths]** It excels at rapidly generating smooth, dynamic videos from text descriptions with very low latency. **[Best For]** Highly recommended for: fast prototyping, quick visual brainstorming, generating backgro…
-- [REST API](https://docs.modellix.ai/ways-to-use/api.md): The steps to use the Modellix models API, including how to get an API key, how to use the API, and how to get the result.
-- [CLI](https://docs.modellix.ai/ways-to-use/cli.md): Use Modellix from terminal to create model tasks and fetch results.
-- [MCP](https://docs.modellix.ai/ways-to-use/mcp.md): Modellix Docs MCP Server allows you to search the Modellix documentation in your MCP clients.
-- [Playground](https://docs.modellix.ai/ways-to-use/playground.md): Use the interactive Playground to generate content directly in your browser without writing code.
-- [Agent Skill](https://docs.modellix.ai/ways-to-use/skill.md)
+- [REST API](https://docs.modellix.ai/ways-to-use/api.md): Use the Modellix REST API to authenticate, submit an asynchronous image or video task, poll its status, and retrieve output assets.
+- [CLI](https://docs.modellix.ai/ways-to-use/cli.md): Use the modellix-cli command-line tool to submit asynchronous image and video generation tasks, poll task status, and fetch results from terminal scripts and agents.
+- [MCP](https://docs.modellix.ai/ways-to-use/mcp.md): Connect AI clients like Cursor and Claude Desktop to the Modellix Docs MCP server to search the official documentation without leaving your editor.
+- [Playground](https://docs.modellix.ai/ways-to-use/playground.md): Generate images and videos directly in your browser with the Modellix Playground—no code required. Discover models, tune prompts, and preview outputs instantly.
+- [Agent Skill](https://docs.modellix.ai/ways-to-use/skill.md): Install and use the official Modellix Skill in coding agents to discover supported models and construct AI media generation requests correctly.
 - [Grok Imagine Image](https://docs.modellix.ai/xai/grok-imagine-image.md): **[Core Function]** Grok Imagine Image is xAI's standard text-to-image generation model. **[Strengths]** It excels at quickly generating solid, visually appealing images from a text prompt across a wide range of aspect ratios. **[Best For]** Highly recommended for: rapid prototyping, social media co…
 - [Grok Imagine Image Edit](https://docs.modellix.ai/xai/grok-imagine-image-edit.md): **[Core Function]** Grok Imagine Image Edit is xAI's standard image editing model. **[Strengths]** It excels at quickly applying prompt-guided edits and style changes to one or more source images. **[Best For]** Highly recommended for: fast restyling, quick variations, and lightweight image edits. *…
 - [Grok Imagine Image (Quality)](https://docs.modellix.ai/xai/grok-imagine-image-quality.md): **[Core Function]** Grok Imagine Image (Quality) is xAI's high-fidelity text-to-image generation model. **[Strengths]** It excels at producing richly detailed, high-quality images from a text prompt, with flexible aspect ratios and an optional 2K resolution. **[Best For]** Highly recommended for: de…
@@ -208,43 +215,45 @@
 
 ## OpenAPI Specs
 
-- [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
+- [xai-i2v](https://docs.modellix.ai/model-api/xai/xai-i2v.json)
+- [vidu-v2v](https://docs.modellix.ai/model-api/vidu/vidu-v2v.json)
+- [vidu-i2v](https://docs.modellix.ai/model-api/vidu/vidu-i2v.json)
+- [openai-i2i](https://docs.modellix.ai/model-api/openai/openai-i2i.json)
+- [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
+- [kling-i2v](https://docs.modellix.ai/model-api/kling/kling-i2v.json)
+- [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
+- [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
+- [alibaba-v2v](https://docs.modellix.ai/model-api/alibaba/alibaba-v2v.json)
 - [alibaba-i2v](https://docs.modellix.ai/model-api/alibaba/alibaba-i2v.json)
+- [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
+- [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
+- [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
+- [validate-api-key](https://docs.modellix.ai/common-api/validate-api-key.json)
+- [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
+- [get-team-balance](https://docs.modellix.ai/common-api/get-team-balance.json)
+- [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
 - [list-active-models](https://docs.modellix.ai/common-api/list-active-models.json)
 - [xai-v2v](https://docs.modellix.ai/model-api/xai/xai-v2v.json)
 - [xai-t2v](https://docs.modellix.ai/model-api/xai/xai-t2v.json)
 - [xai-t2i](https://docs.modellix.ai/model-api/xai/xai-t2i.json)
-- [xai-i2v](https://docs.modellix.ai/model-api/xai/xai-i2v.json)
 - [xai-i2i](https://docs.modellix.ai/model-api/xai/xai-i2i.json)
-- [vidu-i2v](https://docs.modellix.ai/model-api/vidu/vidu-i2v.json)
 - [microsoft-t2i](https://docs.modellix.ai/model-api/microsoft/microsoft-t2i.json)
 - [microsoft-i2i](https://docs.modellix.ai/model-api/microsoft/microsoft-i2i.json)
-- [vidu-v2v](https://docs.modellix.ai/model-api/vidu/vidu-v2v.json)
 - [vidu-t2v](https://docs.modellix.ai/model-api/vidu/vidu-t2v.json)
 - [openai-t2i](https://docs.modellix.ai/model-api/openai/openai-t2i.json)
-- [openai-i2i](https://docs.modellix.ai/model-api/openai/openai-i2i.json)
 - [minimax-t2v](https://docs.modellix.ai/model-api/minimax/minimax-t2v.json)
 - [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
-- [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
 - [minimax-i2i](https://docs.modellix.ai/model-api/minimax/minimax-i2i.json)
 - [kling-v2v](https://docs.modellix.ai/model-api/kling/kling-v2v.json)
 - [kling-t2v](https://docs.modellix.ai/model-api/kling/kling-t2v.json)
 - [kling-t2i](https://docs.modellix.ai/model-api/kling/kling-t2i.json)
-- [kling-i2v](https://docs.modellix.ai/model-api/kling/kling-i2v.json)
-- [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
 - [google-t2v](https://docs.modellix.ai/model-api/google/google-t2v.json)
 - [google-t2i](https://docs.modellix.ai/model-api/google/google-t2i.json)
 - [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
 - [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
-- [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
-- [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
 - [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
-- [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
-- [alibaba-v2v](https://docs.modellix.ai/model-api/alibaba/alibaba-v2v.json)
 - [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
-- [alibaba-i2i](https://docs.modellix.ai/model-api/alibaba/alibaba-i2i.json)
-- [query-task-result](https://docs.modellix.ai/common-api/query-task-result.json)
 - [openapi](https://docs.modellix.ai/api-reference/openapi.json)
 
 ## Optional
