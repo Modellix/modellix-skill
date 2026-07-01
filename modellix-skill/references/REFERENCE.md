@@ -215,9 +215,10 @@
 
 ## OpenAPI Specs
 
+- [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
+- [vidu-i2v](https://docs.modellix.ai/model-api/vidu/vidu-i2v.json)
 - [xai-i2v](https://docs.modellix.ai/model-api/xai/xai-i2v.json)
 - [vidu-v2v](https://docs.modellix.ai/model-api/vidu/vidu-v2v.json)
-- [vidu-i2v](https://docs.modellix.ai/model-api/vidu/vidu-i2v.json)
 - [openai-i2i](https://docs.modellix.ai/model-api/openai/openai-i2i.json)
 - [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
 - [kling-i2v](https://docs.modellix.ai/model-api/kling/kling-i2v.json)
@@ -250,7 +251,6 @@
 - [google-t2v](https://docs.modellix.ai/model-api/google/google-t2v.json)
 - [google-t2i](https://docs.modellix.ai/model-api/google/google-t2i.json)
 - [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
-- [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
 - [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
 - [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
 - [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
