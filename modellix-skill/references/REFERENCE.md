@@ -75,7 +75,7 @@
 - [Seedance 2.0 Mini I2V](https://docs.modellix.ai/bytedance/seedance-2-0-mini-i2v.md): [Core Function] Seedance 2.0 Mini I2V is the lightweight multimodal image-to-video variant. [Strengths] Supports 480p/720p, 24 fps, 4-15s MP4 output, with optional first/last frame, reference images, and audio references. [Routing] Use for cost-efficient image-to-video.
 - [Seedance 2.0 Mini T2V](https://docs.modellix.ai/bytedance/seedance-2-0-mini-t2v.md): [Core Function] Seedance 2.0 Mini T2V is the lightweight text-to-video variant. [Strengths] Supports 480p/720p, 24 fps, 4-15s MP4 output. [Routing] Use for cost-efficient text-to-video.
 - [Seedance 2.0 Mini V2V](https://docs.modellix.ai/bytedance/seedance-2-0-mini-v2v.md): [Core Function] Seedance 2.0 Mini V2V is the lightweight video-to-video variant. [Strengths] Supports 480p/720p, 24 fps, 4-15s MP4 output, with required reference video and optional text/image/audio references. [Routing] Use for cost-efficient video-to-video transformations.
-- [Seedance 2.0 T2V](https://docs.modellix.ai/bytedance/seedance-2-0-t2v.md): [Core Function] Seedance 2.0 T2V is ByteDance Dreamina Seedance 2.0 text-to-video. [Strengths] Supports 480p/720p/1080p/4k, 24 fps, 4-15s MP4 output, and optional image/audio references. [Routing] Use for high-fidelity text-to-video when quality or 4k output is requested.
+- [Seedance 2.0 T2V](https://docs.modellix.ai/bytedance/seedance-2-0-t2v.md): [Core Function] Seedance 2.0 T2V is ByteDance Dreamina Seedance 2.0 text-to-video. [Strengths] Supports 480p/720p/1080p/4k, 24 fps, 4-15s MP4 output. Text-only input — do not pass images, video, or audio. [Routing] Use for high-fidelity text-to-video when quality or 4k output is requested.
 - [Seedance 2.0 V2V](https://docs.modellix.ai/bytedance/seedance-2-0-v2v.md): [Core Function] Seedance 2.0 V2V is ByteDance's flagship multimodal video-to-video model. [Strengths] It allows powerful editing and stylization of input videos by supporting mixed references (text, images, video, and audio) and producing multi-shot 15s outputs. [Best For] Highly recommended for: co…
 - [Seedream 4.0 I2I](https://docs.modellix.ai/bytedance/seedream-4-0-i2i.md): [Core Function] Seedream 4.0 I2I is an older generation image-to-image editing model. [Strengths] Maintained primarily for backward compatibility and stable API contracts. [Best For] Existing legacy integrations and workflows that strictly depend on this specific model version's quirks. [Limitations…
 - [Seedream 4.0 T2I](https://docs.modellix.ai/bytedance/seedream-4-0-t2i.md): [Core Function] Seedream 4.0 T2I is an older high-definition image creation model. [Strengths] It generates high-definition images up to 4K. [Best For] Existing workflows. [Limitations] Superseded by Seedream 4.5 in fidelity and consistency. [Routing] Default to Seedream 4.5 unless 4.0 is explicitly…
@@ -229,6 +229,12 @@
 
 ## OpenAPI Specs
 
+- [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
+- [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
+- [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
+- [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
+- [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
+- [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
 - [xai-v2v](https://docs.modellix.ai/model-api/xai/xai-v2v.json)
 - [xai-t2v](https://docs.modellix.ai/model-api/xai/xai-t2v.json)
 - [xai-t2i](https://docs.modellix.ai/model-api/xai/xai-t2i.json)
@@ -255,13 +261,7 @@
 - [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
 - [google-t2v](https://docs.modellix.ai/model-api/google/google-t2v.json)
 - [google-t2i](https://docs.modellix.ai/model-api/google/google-t2i.json)
-- [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
 - [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
-- [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
-- [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
-- [bytedance-t2i](https://docs.modellix.ai/model-api/bytedance/bytedance-t2i.json)
-- [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
-- [bytedance-i2i](https://docs.modellix.ai/model-api/bytedance/bytedance-i2i.json)
 - [alibaba-v2v](https://docs.modellix.ai/model-api/alibaba/alibaba-v2v.json)
 - [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
 - [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
