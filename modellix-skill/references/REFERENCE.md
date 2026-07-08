@@ -244,13 +244,14 @@
 
 ## OpenAPI Specs
 
+- [openai-i2i](https://docs.modellix.ai/model-api/openai/openai-i2i.json)
+- [google-t2i](https://docs.modellix.ai/model-api/google/google-t2i.json)
+- [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
 - [skyreels-v2v](https://docs.modellix.ai/model-api/skywork/skyreels-v2v.json)
 - [skyreels-t2v](https://docs.modellix.ai/model-api/skywork/skyreels-t2v.json)
 - [skyreels-i2v](https://docs.modellix.ai/model-api/skywork/skyreels-i2v.json)
 - [reve-t2i](https://docs.modellix.ai/model-api/reve/reve-t2i.json)
 - [reve-i2i](https://docs.modellix.ai/model-api/reve/reve-i2i.json)
-- [google-t2i](https://docs.modellix.ai/model-api/google/google-t2i.json)
-- [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
 - [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
 - [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
@@ -269,7 +270,6 @@
 - [pixverse-t2v](https://docs.modellix.ai/model-api/pixverse/pixverse-t2v.json)
 - [pixverse-i2v](https://docs.modellix.ai/model-api/pixverse/pixverse-i2v.json)
 - [openai-t2i](https://docs.modellix.ai/model-api/openai/openai-t2i.json)
-- [openai-i2i](https://docs.modellix.ai/model-api/openai/openai-i2i.json)
 - [minimax-t2v](https://docs.modellix.ai/model-api/minimax/minimax-t2v.json)
 - [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
 - [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
