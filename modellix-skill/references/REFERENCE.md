@@ -244,6 +244,8 @@
 
 ## OpenAPI Specs
 
+- [google-t2v](https://docs.modellix.ai/model-api/google/google-t2v.json)
+- [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
 - [openai-i2i](https://docs.modellix.ai/model-api/openai/openai-i2i.json)
 - [google-t2i](https://docs.modellix.ai/model-api/google/google-t2i.json)
 - [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
@@ -252,7 +254,6 @@
 - [skyreels-i2v](https://docs.modellix.ai/model-api/skywork/skyreels-i2v.json)
 - [reve-t2i](https://docs.modellix.ai/model-api/reve/reve-t2i.json)
 - [reve-i2i](https://docs.modellix.ai/model-api/reve/reve-i2i.json)
-- [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
 - [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
 - [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
@@ -281,7 +282,6 @@
 - [kling-t2i](https://docs.modellix.ai/model-api/kling/kling-t2i.json)
 - [kling-i2v](https://docs.modellix.ai/model-api/kling/kling-i2v.json)
 - [kling-i2i](https://docs.modellix.ai/model-api/kling/kling-i2i.json)
-- [google-t2v](https://docs.modellix.ai/model-api/google/google-t2v.json)
 - [alibaba-v2v](https://docs.modellix.ai/model-api/alibaba/alibaba-v2v.json)
 - [alibaba-t2v](https://docs.modellix.ai/model-api/alibaba/alibaba-t2v.json)
 - [alibaba-t2i](https://docs.modellix.ai/model-api/alibaba/alibaba-t2i.json)
