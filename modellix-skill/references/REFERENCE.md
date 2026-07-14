@@ -92,6 +92,10 @@
 - [Overview](https://docs.modellix.ai/get-started/overview.md): Learn how Modellix provides unified API access to image and video models, with transparent pricing, async task workflows, and browser playgrounds.
 - [Pricing](https://docs.modellix.ai/get-started/pricing.md): Understand Modellix API pricing for image and video generation. Compare per-image and per-second costs, model parameters, and billing options.
 - [Top-up](https://docs.modellix.ai/get-started/top-up.md): Learn how to fund your Modellix account, supported payment methods, and available top-up discounts.
+- [Gemini Omni Flash I2V](https://docs.modellix.ai/google/gemini-omni-flash-i2v.md): [Core Function] Gemini Omni Flash I2V is a fast Image-to-Video model that animates a single input image into a short 720p video via the Interactions API. [Strengths] It uses the provided image as the opening frame and generates smooth motion with natively synchronized audio at low latency. [Best For…
+- [Gemini Omni Flash R2V](https://docs.modellix.ai/google/gemini-omni-flash-r2v.md): [Core Function] Gemini Omni Flash R2V (Reference-to-Video) generates a short 720p video guided by up to three reference images via the Interactions API. [Strengths] It fuses the styles, subjects, or elements from multiple reference images (referred to in the text prompt) into a single coherent anima…
+- [Gemini Omni Flash T2V](https://docs.modellix.ai/google/gemini-omni-flash-t2v.md): [Core Function] Gemini Omni Flash T2V is Google's fast multimodal Text-to-Video generation model built on the Interactions API. [Strengths] It quickly turns a text prompt into a short 720p video with natively synchronized audio, offering low latency and solid prompt adherence. [Best For] Highly reco…
+- [Gemini Omni Flash Video Edit](https://docs.modellix.ai/google/gemini-omni-flash-video-edit.md): [Core Function] Gemini Omni Flash Video Edit performs conversational, instruction-driven editing of an existing video via the Interactions API. [Strengths] It applies natural-language edits (changing the scene, mood, style, lighting, background, or time of day) to an input video while preserving the…
 - [Imagen 4.0 Fast](https://docs.modellix.ai/google/imagen-4-0-fast-generate-001.md): [Core Function] Imagen 4.0 Fast is a high-speed text-to-image model optimized for rapid visual generation. [Strengths] It offers incredible generation speed (approximately 2.7 seconds) and high cost-effectiveness while maintaining excellent text rendering inside images. [Best For] Highly recommended…
 - [Imagen 4.0](https://docs.modellix.ai/google/imagen-4-0-generate-001.md): [Core Function] Imagen 4.0 is Google's flagship professional-grade text-to-image model designed for high-fidelity visual generation. [Strengths] It excels at industry-leading photorealism, exceptional typography/text rendering inside images, and strong prompt adherence, supporting up to 2K resolutio…
 - [Imagen 4.0 Ultra](https://docs.modellix.ai/google/imagen-4-0-ultra-generate-001.md): [Core Function] Imagen 4.0 Ultra is Google's premium text-to-image model optimized for the highest quality and instruction alignment. [Strengths] It delivers ultimate photorealistic detail, superior texture rendering, and extremely strict adherence to complex, multi-part prompt instructions, support…
@@ -244,8 +248,10 @@
 
 ## OpenAPI Specs
 
+- [google-v2v](https://docs.modellix.ai/model-api/google/google-v2v.json)
 - [google-t2v](https://docs.modellix.ai/model-api/google/google-t2v.json)
 - [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
+- [openai-t2i](https://docs.modellix.ai/model-api/openai/openai-t2i.json)
 - [openai-i2i](https://docs.modellix.ai/model-api/openai/openai-i2i.json)
 - [google-t2i](https://docs.modellix.ai/model-api/google/google-t2i.json)
 - [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
@@ -270,7 +276,6 @@
 - [pixverse-v2v](https://docs.modellix.ai/model-api/pixverse/pixverse-v2v.json)
 - [pixverse-t2v](https://docs.modellix.ai/model-api/pixverse/pixverse-t2v.json)
 - [pixverse-i2v](https://docs.modellix.ai/model-api/pixverse/pixverse-i2v.json)
-- [openai-t2i](https://docs.modellix.ai/model-api/openai/openai-t2i.json)
 - [minimax-t2v](https://docs.modellix.ai/model-api/minimax/minimax-t2v.json)
 - [minimax-t2i](https://docs.modellix.ai/model-api/minimax/minimax-t2i.json)
 - [minimax-i2v](https://docs.modellix.ai/model-api/minimax/minimax-i2v.json)
