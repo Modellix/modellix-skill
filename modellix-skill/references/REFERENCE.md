@@ -195,9 +195,6 @@
 - [V6 Text-to-Video](https://docs.modellix.ai/pixverse/v6-t2v.md): [Core Function] PixVerse v6 T2V generates a video purely from a text prompt, with no input image. [Strengths] Strong prompt adherence and smooth motion; optional audio and multi-clip generation. [Best For] Turning an idea or script into video, concept visualization, story beats, social clips from te…
 - [V6 Extend Video](https://docs.modellix.ai/pixverse/v6-video-extend.md): [Core Function] PixVerse v6 Extend continues an existing video, generating additional seconds guided by a text prompt. [Strengths] Seamless continuation of the existing motion and scene. [Best For] Lengthening clips, continuing an action, adding an ending to footage. [Limitations] Do NOT use this to…
 - [Restyle Video](https://docs.modellix.ai/pixverse/video-restyle.md): [Core Function] PixVerse Restyle re-renders an existing video into a new visual style. [Strengths] Consistent style transfer across all frames. [Best For] Turning footage into anime/3D/painterly looks, stylized remixes. [Limitations] Do NOT use this to change content, motion, or add new scenes; it o…
-- [Reve Create](https://docs.modellix.ai/reve/reve-create.md): [Core Function] Reve Create is Reve's flagship text-to-image generation model. [Strengths] It excels at precise prompt adherence and accurate in-image text and typography rendering, producing clean, aesthetically strong compositions. [Best For] Highly recommended for: posters and marketing graphics…
-- [Reve Edit](https://docs.modellix.ai/reve/reve-edit.md): [Core Function] Reve Edit is Reve's instruction-based single-image editing model. [Strengths] It excels at precise, localized edits that follow a natural-language instruction while preserving the untouched parts of the source image. [Best For] Highly recommended for: adding, removing or replacing ob…
-- [Reve Remix](https://docs.modellix.ai/reve/reve-remix.md): [Core Function] Reve Remix is Reve's multi-image composition model that blends 1 to 6 reference images guided by a text prompt. [Strengths] It excels at combining subjects, styles and elements from multiple references into one coherent image, and supports inline <img id></img> markers in the prompt…
 - [SkyReels Segmented Camera Motion](https://docs.modellix.ai/skyreels/segmented-camera-motion.md): **[Core Function]** SkyReels Segmented Camera Motion (audio-to-video) generates a talking-avatar video with directed camera movement across time segments. **[Strengths]** Combines an audio-driven avatar with per-segment camera trajectories such as push, pan, crane and rotation. **[Best For]** Dynami…
 - [SkyReels Single-Actor Avatar](https://docs.modellix.ai/skyreels/single-actor-avatar.md): **[Core Function]** SkyReels Single-Actor Avatar (audio-to-video) drives a talking-avatar video from a single portrait image and one audio track. **[Strengths]** Lip-synced single-speaker talking-head video generated from an image plus audio. **[Best For]** Virtual presenters, single-speaker dubbing…
 - [SkyReels Lip Sync](https://docs.modellix.ai/skyreels/sky-lipsync.md): **[Core Function]** SkyReels Lip Sync (retalking) re-drives a talking video so the subject's lips match a given audio track. **[Strengths]** Accurate lip re-synchronization on an existing talking-head video. **[Best For]** Dubbing, re-voicing talking-head video, and localizing spoken video. **[Limit…
@@ -248,18 +245,18 @@
 
 ## OpenAPI Specs
 
+- [openai-t2i](https://docs.modellix.ai/model-api/openai/openai-t2i.json)
+- [openai-i2i](https://docs.modellix.ai/model-api/openai/openai-i2i.json)
+- [reve-t2i](https://docs.modellix.ai/model-api/reve/reve-t2i.json)
+- [reve-i2i](https://docs.modellix.ai/model-api/reve/reve-i2i.json)
 - [google-v2v](https://docs.modellix.ai/model-api/google/google-v2v.json)
 - [google-t2v](https://docs.modellix.ai/model-api/google/google-t2v.json)
 - [google-i2v](https://docs.modellix.ai/model-api/google/google-i2v.json)
-- [openai-t2i](https://docs.modellix.ai/model-api/openai/openai-t2i.json)
-- [openai-i2i](https://docs.modellix.ai/model-api/openai/openai-i2i.json)
 - [google-t2i](https://docs.modellix.ai/model-api/google/google-t2i.json)
 - [google-i2i](https://docs.modellix.ai/model-api/google/google-i2i.json)
 - [skyreels-v2v](https://docs.modellix.ai/model-api/skywork/skyreels-v2v.json)
 - [skyreels-t2v](https://docs.modellix.ai/model-api/skywork/skyreels-t2v.json)
 - [skyreels-i2v](https://docs.modellix.ai/model-api/skywork/skyreels-i2v.json)
-- [reve-t2i](https://docs.modellix.ai/model-api/reve/reve-t2i.json)
-- [reve-i2i](https://docs.modellix.ai/model-api/reve/reve-i2i.json)
 - [bytedance-i2v](https://docs.modellix.ai/model-api/bytedance/bytedance-i2v.json)
 - [bytedance-v2v](https://docs.modellix.ai/model-api/bytedance/bytedance-v2v.json)
 - [bytedance-t2v](https://docs.modellix.ai/model-api/bytedance/bytedance-t2v.json)
