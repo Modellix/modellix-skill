@@ -375,6 +375,63 @@ gh pr create --repo sickn33/agentic-awesome-skills \
 - Expect curation; maintainers may decline. Sparse-checkout carefully — only stage `README.md` (avoid deleting unchecked files like `THIRD_PARTY_NOTICES.md`).
 - **Example PR**: https://github.com/anthropics/skills/pull/1445
 
+#### 6) [Qoder-AI/qoder-community](https://github.com/Qoder-AI/qoder-community)
+
+- **Type**: Astro content collection (listing + localized body), not a vendored full skill tree.
+- **Guide**: [CONTRIBUTING.md](https://github.com/Qoder-AI/qoder-community/blob/main/CONTRIBUTING.md)
+- **Where**:
+  1. English: `src/content/skills/modellix.md` (full frontmatter + body)
+  2. Chinese: `src/content/skills-zh/modellix.md` (frontmatter is only `slug: modellix`; body in Chinese)
+- **Category**: `design` (image/video generation). Other allowed values: `development | design | marketing | productivity | automation | data | security | document | meta`.
+- **Sparse paths**: `src/content/skills` `src/content/skills-zh` (optional: `CONTRIBUTING.md`).
+- **English frontmatter pattern**:
+
+```yaml
+---
+name: modellix
+title: Modellix
+description: Generate images and videos via Modellix's unified model API and CLI (model run --wait, task download).
+source: community
+author: Modellix
+githubUrl: https://github.com/Modellix/modellix-skill/tree/main/modellix-skill
+docsUrl: https://docs.modellix.ai/llms.txt
+category: design
+tags:
+  - image-generation
+  - video-generation
+  - modellix
+  - cli
+  - api
+roles:
+  - designer
+  - developer
+  - marketer
+featured: false
+popular: false
+isOfficial: false
+installCommand: |
+  git clone https://github.com/Modellix/modellix-skill
+  cp -r modellix-skill/modellix-skill ~/.qoder/skills/modellix
+  npm i -g modellix-cli@latest
+date: YYYY-MM-DD
+lastUpdated: YYYY-MM-DD
+---
+```
+
+- **Chinese file** starts with:
+
+```yaml
+---
+slug: modellix
+---
+```
+
+- **Body sections** (match existing skills): Use Cases / Core Capabilities / Example / Notes (EN); 使用场景 / 核心能力 / 示例 / 注意事项 (ZH).
+- **Install note**: copy only `modellix-skill/` into `~/.qoder/skills/modellix`, then install `modellix-cli`.
+- **PR title**: `Add Modellix skill for AI image and video generation`
+- **PR body**: link the package URL; mention EN + ZH files; note content-only change.
+- **Example PR**: https://github.com/Qoder-AI/qoder-community/pull/79
+
 ### Update vs first submit
 
 | Situation | Action |
