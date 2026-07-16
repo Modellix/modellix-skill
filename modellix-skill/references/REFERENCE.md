@@ -58,9 +58,12 @@
 - [Wanx 2.1 T2V Turbo](https://docs.modellix.ai/alibaba/wanx-2-1-t2v-turbo.md): [Core Function] Wanx 2.1 T2V Turbo is an older generation text-to-video model. [Strengths] Delivered strong Chinese-language prompt understanding and regional aesthetic preferences. Maintained for backward compatibility. [Best For] Existing legacy integrations that require the specific speed/cost tr…
 - [Wanx 2.5 I2V Preview](https://docs.modellix.ai/alibaba/wanx-2-5-i2v-preview.md): [Core Function] Wanx 2.5 I2V Preview is an older generation image-to-video model. [Strengths] Maintained primarily for backward compatibility and stable API contracts. [Best For] Existing legacy integrations and workflows that strictly depend on this specific model version's quirks. [Limitations] Do…
 - [Z-Image Turbo](https://docs.modellix.ai/alibaba/z-image-turbo.md): [Core Function] Z-Image Turbo is an older generation text-to-image model. [Strengths] Historically provided faster generation times and lower latency compared to its standard counterparts. Maintained for backward compatibility. [Best For] Existing legacy integrations that require the specific speed/…
+- [Delete Media File](https://docs.modellix.ai/api/delete-media-file.md): Delete a media file. After deletion, the file no longer counts toward your upload limit. Returns `404` if the file is not found. See [How to Use](/file-api/how-to-use) for the full workflow.
 - [Query Task Result](https://docs.modellix.ai/api/get-task-result.md): Query the status and results of an async task by task_id
 - [Get Team Balance](https://docs.modellix.ai/api/get-team-balance.md): Returns the current available balance for the team associated with the provided API Key. The balance is returned in USD with 4 decimal places.
+- [List Media Files](https://docs.modellix.ai/api/list-media-files.md): List non-expired media files belonging to the authenticated team. Default page size is 100; `limit` is capped at 100. See [How to Use](/file-api/how-to-use) for the full workflow.
 - [List Active Models](https://docs.modellix.ai/api/list-models.md): Returns all currently active (published) models with their slug, type, documentation URL, and display description.
+- [Upload Media File](https://docs.modellix.ai/api/upload-media-file.md): Upload a single media file via `multipart/form-data` (field name: `file`). Returns a `file_id` and `url` you can pass into prediction APIs. See [How to Use](/file-api/how-to-use) for limits, supported formats, and the full workflow.
 - [Validate API Key](https://docs.modellix.ai/api/validate-api-key.md): Checks whether the API Key provided in the Authorization header is valid. Invalid, missing, or malformed credentials return a successful response with is_valid set to false.
 - [Seedance 1.0 Pro Fast I2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-fast-i2v.md): [Core Function] Seedance 1.0 Pro Fast I2V is an older generation image-to-video model. [Strengths] Known for its rapid generation pipeline and robust performance on standard commercial prompts. Maintained for backward compatibility. [Best For] Existing legacy integrations that require the specific s…
 - [Seedance 1.0 Pro Fast T2V](https://docs.modellix.ai/bytedance/seedance-1-0-pro-fast-t2v.md): [Core Function] Seedance 1.0 Pro Fast T2V is an older generation text-to-video model. [Strengths] Known for its rapid generation pipeline and robust performance on standard commercial prompts. Maintained for backward compatibility. [Best For] Existing legacy integrations that require the specific sp…
@@ -85,6 +88,7 @@
 - [Seedream 5.0 Lite Edit](https://docs.modellix.ai/bytedance/seedream-5-0-lite-edit.md): [Core Function] Seedream 5.0 Lite Edit is a reasoning-enhanced, smart image editing model. [Strengths] It features superior cross-modal understanding and reasoning, allowing for highly accurate, interactive multi-turn image editing with real-time knowledge enhancement. [Best For] Highly recommended…
 - [New Models](https://docs.modellix.ai/changelog/new-models.md): Track newly integrated AI image and video models on Modellix, including provider, capabilities, parameters, and availability announcements as they ship.
 - [Product Updates](https://docs.modellix.ai/changelog/product-updates.md): Follow Modellix product updates and announcements—new API endpoints, console features, billing changes, and platform improvements released each month.
+- [How to Use](https://docs.modellix.ai/file-api/how-to-use.md): Upload media files with the Modellix File API, pass the returned URL into prediction APIs, and manage retention and upload quota.
 - [Entitlements](https://docs.modellix.ai/get-started/entitlements.md): Understand the concurrency limits, rate limits (RPM), and team entitlements based on your account funding tier.
 - [AI Onboarding](https://docs.modellix.ai/get-started/index.md): Set up an AI agent for Modellix with an API key, the official Skill, or CLI. Submit and retrieve asynchronous image and video generation tasks.
 - [Model Providers](https://docs.modellix.ai/get-started/model-providers.md): List all model providers of Modellix.
@@ -245,6 +249,7 @@
 
 ## OpenAPI Specs
 
+- [media-files](https://docs.modellix.ai/file-api/media-files.json)
 - [openai-t2i](https://docs.modellix.ai/model-api/openai/openai-t2i.json)
 - [openai-i2i](https://docs.modellix.ai/model-api/openai/openai-i2i.json)
 - [reve-t2i](https://docs.modellix.ai/model-api/reve/reve-t2i.json)
