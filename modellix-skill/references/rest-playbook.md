@@ -2,6 +2,8 @@
 
 Use this reference when CLI is unavailable, unsuitable, or missing required capability.
 
+When `modellix-cli` is available, prefer the CLI flow in `cli-playbook.md` (`model run --wait` → `task download`) instead of hand-rolled polling.
+
 ## Base URL
 
 `https://api.modellix.ai/api/v1`
@@ -33,7 +35,7 @@ GET /tasks/{task_id}
 Submit:
 
 ```bash
-curl -X POST "https://api.modellix.ai/api/v1/alibaba/qwen-image-plus/async" \
+curl -X POST "https://api.modellix.ai/api/v1/google/nano-banana-2-lite/async" \
   -H "Authorization: Bearer $MODELLIX_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"prompt":"A cute cat playing in a garden on a sunny day"}'
@@ -88,5 +90,8 @@ Non-retryable:
 
 ## Notes
 
-- Task outputs expire after 24 hours.
-- Parameter shapes vary per model; always verify model docs before invocation.
+- Task outputs expire after 24 hours — download promptly.
+- Parameter shapes vary per model; verify against the model `.md` from https://docs.modellix.ai/llms.txt (or `docs_url` from CLI `model describe` when available).
+- Default T2I slug when the user omits a model: `google/nano-banana-2-lite`.
+- Default T2V slug when the user omits a model: `bytedance/seedance-2.0-mini-t2v`.
+- See `capability-matrix.md` for CLI ↔ REST mapping.

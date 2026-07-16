@@ -1,0 +1,44 @@
+{
+  "skill_name": "modellix",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Generate an image of a red panda sitting on a mossy stone in a misty bamboo forest at dawn. I don't care which model you use — just make it look good and save the file locally when it's done.",
+      "expected_output": "Uses default T2I model google/nano-banana-2-lite via modellix-cli model run --wait (or equivalent), then task download (or persists the result locally). Does not invent a different default slug unless the user named one.",
+      "files": [],
+      "assertions": [
+        "Used model slug google/nano-banana-2-lite (skill default for unspecified T2I)",
+        "Submitted via modellix-cli model run (not inventing a non-CLI-only path when CLI is available)",
+        "Used --wait or task wait instead of a hand-rolled task get polling loop",
+        "Saved at least one image file locally under the run outputs directory",
+        "Did not print or log the raw API key value"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Make a short text-to-video of ocean waves under a cloudy sunset. No model preference from me — pick whatever the skill says is default, wait for it to finish, and download the mp4.",
+      "expected_output": "Uses default T2V model bytedance/seedance-2.0-mini-t2v with model run --wait (longer timeout ok) and task download. Does not hand-roll a task get polling loop when CLI wait is available.",
+      "files": [],
+      "assertions": [
+        "Used model slug bytedance/seedance-2.0-mini-t2v (skill default for unspecified T2V)",
+        "Submitted via modellix-cli model run with wait (or model run + task wait)",
+        "Did not implement a manual exponential-backoff task get poll loop while CLI wait is available",
+        "Saved at least one .mp4 (or video) file locally under the run outputs directory",
+        "Did not print or log the raw API key value"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I want to use Modellix but I'm not sure if my CLI/auth is set up. Check my environment first, then if things look good generate a simple square image that says 'hello modellix' as typography art using the default image model.",
+      "expected_output": "Runs modellix-cli doctor (or preflight wrapping doctor) before generation; proceeds with google/nano-banana-2-lite only after auth looks usable, or clearly asks for MODELLIX_API_KEY / auth login if missing.",
+      "files": [],
+      "assertions": [
+        "Ran modellix-cli doctor or scripts/preflight.py before submitting a generation task",
+        "Used model slug google/nano-banana-2-lite after environment check passed",
+        "Produced a local image file under the run outputs directory",
+        "Did not skip auth/environment check and jump straight to model run",
+        "Did not print or log the raw API key value"
+      ]
+    }
+  ]
+}

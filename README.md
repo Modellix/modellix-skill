@@ -2,19 +2,30 @@
 
 Agent skill for integrating [Modellix](https://modellix.ai), a unified Model-as-a-Service (MaaS) platform for image and video generation.
 
-## What This Skill Provides
+The published package lives in [`modellix-skill/`](modellix-skill/). Install URLs must point at that subdirectory, not the repo root.
 
-- CLI-first with auto-install, REST-fallback workflow for async generation tasks
-- Model discovery using bundled `references/REFERENCE.md`
-- Task submission + polling guidance (`pending` / `success` / `failed`)
-- Retry/error handling for `429`, `500`, `503`
-- Credential and egress transparency (`MODELLIX_API_KEY`, outbound calls to `api.modellix.ai`)
+## What this skill provides
+
+- CLI-first workflow: `modellix-cli doctor` → `model run --wait` → `task download`
+- REST fallback when the CLI is unavailable
+- Default models when the user does not specify one
+- Model discovery via `modellix-cli model list` / `model describe`, plus live docs at [llms.txt](https://docs.modellix.ai/llms.txt)
+- Retry and error guidance aligned with CLI exit codes and paid-submit safety
+- Credential handling for `MODELLIX_API_KEY` and CLI auth profiles
+
+## Requirements
+
+- A Modellix API key from the [Console](https://modellix.ai/console/api-key)
+- Recommended: [modellix-cli](https://www.npmjs.com/package/modellix-cli) (Node.js 18.17+)
+
+```bash
+npm i -g modellix-cli@latest
+modellix-cli doctor --json
+```
 
 ## Install
 
 ### From GitHub
-
-General:
 
 ```bash
 npx skills add https://github.com/Modellix/modellix-skill/tree/main/modellix-skill
@@ -26,15 +37,13 @@ Cursor:
 npx skills add https://github.com/Modellix/modellix-skill/tree/main/modellix-skill --agent cursor
 ```
 
-Update skills:
+Update installed skills:
 
 ```bash
 npx skills update
 ```
 
 ### From Smithery
-
-General:
 
 ```bash
 npx @smithery/cli@latest skill add modellix/modellix-skill
@@ -50,34 +59,72 @@ npx @smithery/cli@latest skill add modellix/modellix-skill --agent cursor
 
 ```bash
 clawhub install modellix
-```
-
-Update all installed skills:
-
-```bash
 clawhub update --all
 ```
 
 ## Credential
 
-This skill requires:
+| Item | Value |
+| --- | --- |
+| Primary credential / env | `MODELLIX_API_KEY` |
+| Console | https://modellix.ai/console/api-key |
 
-- `MODELLIX_API_KEY` (required)
-- Primary credential: `MODELLIX_API_KEY`
-- Required env vars: `MODELLIX_API_KEY`
-- Registry-facing requirement: package metadata should expose `MODELLIX_API_KEY` as both primary credential and required env var.
-- CLI usage policy: default to the two-command flow (`modellix-cli model invoke` and `modellix-cli task get`); use `--help` as assistive fallback, not as trial-and-error.
-- If CLI is missing, it will auto-install globally (`npm i -g modellix-cli`); if the install fails, it silently falls back to REST.
+- REST requires `MODELLIX_API_KEY`.
+- CLI may use the env var **or** a saved profile (`modellix-cli auth login` / `init`).
+- Prefer session-only keys; persist only when the user explicitly asks.
+- Never print API keys in logs or commits.
 
-Create API key at: <https://modellix.ai/console/api-key>
+Key resolution order in the CLI: `--api-key` → `MODELLIX_API_KEY` → selected saved profile.
 
-## Execution Guidance
+## Quick start (CLI)
 
-- Preferred path: direct CLI pair (`modellix-cli model invoke` -> `modellix-cli task get`).
-- Python scripts in `modellix-skill/scripts/` are optional automation helpers.
-- If a Python helper fails on your platform, switch directly to the CLI pair and continue.
+```bash
+export MODELLIX_API_KEY="your_api_key"
 
-## Supported Task Types
+modellix-cli doctor --json
+
+modellix-cli model run \
+  --model-slug google/nano-banana-2-lite \
+  --body '{"prompt":"A cinematic sunset over a futuristic city skyline"}' \
+  --wait --timeout 5m --json
+
+modellix-cli task download <task_id> --output-dir ./outputs --json
+```
+
+If `task download` fails with a private/reserved network error (common behind local proxies that map CDN hosts into `198.18.0.0/15`), retry with `--allow-private-network` for trusted Modellix CDN hosts, or download the resource URL with `curl`.
+
+`model invoke` remains a compatibility alias of `model run`. Prefer `model run` in new scripts.
+
+## Default models
+
+Used when the user does **not** name a model:
+
+| Task type | Default model slug |
+| --- | --- |
+| Text-to-image (T2I) | `google/nano-banana-2-lite` |
+| Text-to-video (T2V) | `bytedance/seedance-2.0-mini-t2v` |
+| Image editing / I2I | `bytedance/seedream-5.0-lite-edit` |
+| Image-to-video / I2V | `bytedance/seedance-2.0-fast-i2v` |
+| Video-to-video (V2V) | `bytedance/seedance-2.0-v2v` |
+
+To discover or inspect other models:
+
+```bash
+modellix-cli model list --type text-to-image --output slugs
+modellix-cli model describe <provider/model> --json
+```
+
+Request-body schemas come from each model’s docs (`docs_url` from `model describe`, or links in [llms.txt](https://docs.modellix.ai/llms.txt)).
+
+## Execution guidance
+
+1. Prefer CLI when installed; otherwise use REST ([API guide](https://docs.modellix.ai/ways-to-use/api.md)).
+2. Do not hand-roll `task get` polling loops when `model run --wait` or `task wait` is available.
+3. Do not blindly retry a paid `model run` after an unknown submission outcome — check `modellix-cli task history` first.
+4. Optional helpers in `modellix-skill/scripts/` wrap CLI/REST; if they fail, call the CLI commands directly.
+5. CLI behavior source of truth: [npm modellix-cli](https://www.npmjs.com/package/modellix-cli) and `modellix-cli --help` (not the website CLI guide page, which may lag).
+
+## Supported task types
 
 | Type | Description |
 | --- | --- |
@@ -87,22 +134,36 @@ Create API key at: <https://modellix.ai/console/api-key>
 | `image-to-video` | Convert static images into video sequences |
 | `video-to-video` | Transform existing videos |
 
-## Skill Structure
+## Repository structure
 
 ```text
-modellix-skill/
-├── SKILL.md
-├── scripts/
-├── references/
-└── assets/
+.
+├── README.md                 # This file (humans)
+├── AGENTS.md                 # Maintainer / coding-agent instructions
+├── modellix-skill/           # Published skill package
+│   ├── SKILL.md
+│   ├── skill.json
+│   ├── evals/
+│   ├── scripts/
+│   ├── references/
+│   └── assets/
+└── .github/workflows/        # Publish sync (Smithery / skills add)
 ```
+
+## Maintaining this skill
+
+See [AGENTS.md](AGENTS.md) for sources of truth, update checklists, smoke tests, versioning, and PR conventions.
+
+Current package version: see [`modellix-skill/skill.json`](modellix-skill/skill.json).
 
 ## Links
 
+- Product: [modellix.ai](https://modellix.ai)
 - Docs: [docs.modellix.ai](https://docs.modellix.ai)
-- Agent Skill Guide: [ways-to-use/skill](https://docs.modellix.ai/ways-to-use/skill.md)
-- REST API Guide: [ways-to-use/api](https://docs.modellix.ai/ways-to-use/api.md)
-- CLI Guide: [ways-to-use/cli](https://docs.modellix.ai/ways-to-use/cli.md)
+- Models index: [llms.txt](https://docs.modellix.ai/llms.txt)
+- Agent skill guide: [ways-to-use/skill](https://docs.modellix.ai/ways-to-use/skill.md)
+- REST API: [ways-to-use/api](https://docs.modellix.ai/ways-to-use/api.md)
+- CLI package: [npmjs.com/package/modellix-cli](https://www.npmjs.com/package/modellix-cli)
 - Pricing: [get-started/pricing](https://docs.modellix.ai/get-started/pricing)
 - Support: [support@modellix.ai](mailto:support@modellix.ai)
 - Community: [Discord](https://discord.gg/N2FbcB2cZT)
